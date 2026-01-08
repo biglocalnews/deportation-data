@@ -1,7 +1,6 @@
 # ignore local stuff I don't want others to grab or too big
 .DS_Store
 .vscode
-working/
 .quarto
 *_cache/
 /.quarto/
