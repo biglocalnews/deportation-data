@@ -1,0 +1,152 @@
+# Data enhancements
+
+Many of the categories used in the ICE data exist across more than one table. Definitions that only exist on one table are included in the documentation for that area. You can see which variables are in which tables on the Deportation Data Project site's documentation.
+
+
+
+
+### Final program
+
+Use the `apprehension method` field instead of final program to find the way that someone was actually arrested.
+
+The `final program` refers to the program that ICE officers are assigned to. They may be imprecise because the officer is temporarily detailed. The Migration Policy Institute says that many of the categories can't be easily earmarked as either at-large or from the criminal justice system.  The Migration Policy Instituted categorized the final program as follows: ^[footnote on Page 25 of the Migration Policy Institute's 2018 paper, "[Revving up the Deportation Machinery](https://www.migrationpolicy.org/sites/default/files/publications/ImmigrationEnforcement-FullReport_FINALWEB.pdf)"]
+
+New category | Includes
+---- | ----------
+Criminal justice system  | ERO Criminal Alien Program (CAP) ; 287G Program; 287g Task Force; ERO Criminal Prosecutions
+At-large arrests | Fugitive Operations; Joint Criminal Alien Response Team; Law Enforcement Area Response Units;  Mobile Criminal Alien Team; Violent Criminal Alien Section
+Uncategorized |  Alternatives to Detention; Non-Detained Docket Control; Juvenile ; Detained Docket Control; Detention and Deportation;
+
+Consider dropping this column .
+
+### Case status
+
+The `case_status` refers to the legal reason that someone was taken out of ICE control.  Someone might have voluntarily left the country before charges were filed, or they might have even died. I collapsed the 14 categories into 6 to  make analysis a little easier. Anything that isn't an "Active case" or missing data (only about 4,500 cases) is in progress. Everything else means they've left ICE control.
+
+I have recoded as follows, but need to check this with some experts:
+
+
+
+## Case status and category codes
+
+The case status and category codes contain remnants of the law as it
+existed before 1996, and have been constantly updated piecemeal. That
+makes them really difficult to understand. I've tried to combine and
+rename these codes into meaningful groups.
+
+Although they mean different things, the case status and category tend
+to go together. In arrests, for example, they have the exact same number
+of missing values.
+
+::: callout-warning
+I still need to run these by an expert -- use with care.
+:::
+
+### Case status
+
+At the highest level, refers to whether it is in ICE's purview. Anything
+that is ACTIVE is still on their books. Everything else is a reason that
+they're not. I've grouped ACTIVE with the missing values to create
+"Active case", and then grouped the 13 more detailed reasons into more
+general categories. The recodes are called `case_status_bln` in the
+tables.
+
+| New category | Original categories |
+|------------------|------------------------------------------------------|
+| Active case | ACTIVE |
+| Left voluntarily | 0-Withdrawal Permitted - I-275 Issued ; 3-Voluntary Departure Confirmed ; 9-VR Witnessed |
+| Alien Enemies Act expulsion | 5-Title 50 Expulsion |
+| Excluded / removed | 6-Deported/Removed - Deportability ; 8-Excluded/Removed - Inadmissibility; |
+| No further action | 7-Died ; A-Proceedings Terminated ; E-Charging Document Canceled by ICE; |
+| Allowed to stay | L-Legalization - Permanent Residence Granted ; Z-SAW - Permanent Residence Granted; |
+| Unknown | Missing values |
+
+
+### Case category
+
+Case category is the detailed legal reason that they are seeking removal -- it doesn't refer to what has happened in the case. I'm leaving this out of our analysis -- it's pretty complicated, and I don't think most people care about the detailed legal reason.
+
+
+### Most serious criminal codes
+
+### Most serious crime categories
+
+::: todo
+-   [ ] Decide how to deal with crime codes so they're collapsed into
+    meaningful categories that would be able to be used in a sentence.
+:::
+
+::: question
+-   [ ] Can we say that someone was only convicted of immigration
+    offenses if that is the most serious crime? How can we characterize
+    that?
+:::
+
+It's really unclear what is considered the "most serious" crime. In
+particular, it's unclear whether any immigration offense, such as
+illegal entry, is considered more serious than, say, a DUI.
+
+1.  TRAC, at some point, [got a list of offense codes from
+    DHS](https://tracreports.org/immigration/reports/330/include/DocumentReleased_13-15734_Criminal_Offense_Level_Business_Rules.pdf)
+    that lists the 'level' of each crime, as 1, 2, or 3. We can see
+    there that illegal entry to the US is the lowest crime category. But
+    it doesn't really help within the levels. (These were based on the
+    old Morton memo, and haven't been in use for a long time, I don't
+    think.)
+
+2.  The [American Immigration Council examined the "Most serious
+    charge"](https://www.americanimmigrationcouncil.org/wp-content/uploads/2025/01/enforcement_overdrive_a_comprehensive_assessment_of_ices_criminal_alien_program_final.pdf)
+    in the Criminal Alien Program that gives some detail on what they
+    consider more and less serious.
+
+
+
+3.   [USCIS has a list of aggravated
+    felonies](https://www.uscis.gov/policy-manual/volume-12-part-f-chapter-4)
+    on its website, but I'm not sure how up to date it is.) (You can
+    also be deported for crimes of "moral turpitude".)
+
+4.  The ICE custody worksheet suggests that the most serious crime
+    conviction is based on the sentence, and nothing else:
+    <https://www.ice.gov/doclib/detention-standards/2011/2-2.pdf>
+
+Also from the American Immigration Council, a description of what "aggravated felony" means:
+
+::: blockquote
+“Aggravated felony” is a term of art used to describe a category of
+offenses carrying particularly harsh immigration consequences for
+noncitizens convicted of such crimes. Regardless of their immigration
+status, noncitizens who have been convicted of an “aggravated felony”
+are prohibited from receiving most forms of relief that would spare them
+from deportation, including asylum, and from being readmitted to the
+United States at any time in the future.
+
+Despite what the ominous-sounding name may suggest, an “aggravated
+felony” does not require the crime to be “aggravated” or a “felony” to
+qualify. Instead, an “aggravated felony” is simply an offense that
+Congress sees fit to label as such, and today includes many nonviolent
+and seemingly minor offenses.
+
+...
+
+As initially enacted in 1988, the term “aggravated felony” referred only
+to murder, federal drug trafficking, and illicit trafficking of certain
+firearms and destructive devices. Congress has since expanded the
+definition of “aggravated felony” on numerous occasions, but has never
+removed a crime from the list. Today, the definition of “aggravated
+felony” covers more than thirty types of offenses, including simple
+battery, theft, filing a false tax return, and failing to appear in
+court.
+:::
+
+
+The most serious conviction code is shown in detention, removal and detainer; the most serious charge code is in detainers.
+
+These refer to sections of the NCIC^[<https://wilenet.widoj.gov/sites/default/files/public_files-2025-04/NCICCodeManualTransformed%20%285%29.pdf> as of March 2025 beginning page 422] , with one major omission:  The NCIC codes are supposed to be suffixed with "general applicability" codes, such as "Attempt" or "conspiracy" so that the person looking at the charge would know it isn't the substantive charge. But these are not shown in the ICE data -- they are treating all of them the same way.
+
+There are worksheets in state courts to determine the "most serious" charge codes (they differ depending on the state code), but they are generally created using the longest possible sentence. They aren't supposed to be just any charge within a case or a person. In practice, I've found a couple of things: First, simple immigration crimes such as re-entry are usually only shown when there is nothing substantively more serious.  Second, drug offenses are problematic: many don't distinguish between possession and distribution (it just doesn't say either way), so there's no real way to know if it's someone caught with some marijuana for personal use, or if it's a cocaine trafficker.
+
+We don't have a good way to check whether or not there are other, more serious, crimes that the person was involved in. But these have historically been used to show that the government was targeting really serious criminals and it's in their interest to have them conform to what the public thinks of as "serious".
+
+The "aggravated felon" categorization is a legal one: [Congress decides which crimes to include in aggravated felonies](https://www.law.cornell.edu/uscode/text/8/1101#a_43) for the purpose of deportation, and some of them don't seem that bad (such as prostitution). Crimes of moral turpitude can be aggravated felonies even if they're neither aggravated nor felonies.  Most of the lesser offenses that are included in the list are limited to something with at least a one-year sentence as punishment, and often exclude crimes committed solely for a child or spouse.
+

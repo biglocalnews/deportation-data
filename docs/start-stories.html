@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sarah Cohen">
-<meta name="dcterms.date" content="2026-01-08">
 
-<title>ICE data recipes from Big Local News</title>
+<title>Stories from the Deportation Data Project – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./start-intro.html" rel="next">
+<link href="./start-structure.html" rel="next">
+<link href="./start-intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Preface</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-stories.html"><span class="chapter-title">Stories from the Deportation Data Project</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -129,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-stories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Stories from the Deportation Data Project</span></a>
+  <a href="./start-stories.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Stories from the Deportation Data Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -205,29 +204,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-stories.html"><span class="chapter-title">Stories from the Deportation Data Project</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ICE data recipes from Big Local News</h1>
-<p class="subtitle lead">Based on data provided by the Deportation Data Project</p>
+<h1 class="title"><span class="chapter-title">Stories from the Deportation Data Project</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta column-page-right">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sarah Cohen </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -237,24 +223,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1">
-<h1>Preface</h1>
-<section id="the-data-deportation-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-data-deportation-project">The Data Deportation Project</h3>
-<p>Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.</p>
-<p>The <a href="https://deportationdata.org/index.html">Deportation data project</a>, run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.) As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
-<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.</p>
-<p>These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
-<p>Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.</p>
-</section>
-<section id="credits" class="level3">
-<h3 class="anchored" data-anchor-id="credits">Credits</h3>
-<p>Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.</p>
-<p>Big Local News is responsible for any errors or omissions.</p>
+<p>In December, <a href="https://www.nytimes.com/interactive/2025/12/04/us/ice-arrests-criminal-records-data.html?unlocked_article_code=1.7E8.on5I.OSUqiHl8kSYW&amp;smid=url-share">Albert Sun at The New York Times (gift link)</a> found that immigration crackdowns in Los Angeles, Chicago, Washington and Massachusetts resulted in even fewer people arrested by ICE had criminal convictions than the nationwide average, and less than 10 percent of them nationwide had violent convictions. That finding mirrored stories from <a href="https://www.texastribune.org/2025/11/03/texas-trump-immigration-crackdown-ice-arrests-deportation/">Texas</a>, <a href="https://www.charlotteobserver.com/news/local/article313429082.html?giftCode=b52ab5c24c1574d6fb77ce72c4c110c6b98e3ce4c1bce1bba44b98bae3bf3a73">Charlotte</a> (gift link) and <a href="https://www.latimes.com/california/story/2025-07-16/ice-arrests-accelerate-socal-june">Los Angeles</a> along with smaller jurisdictions like <a href="https://missionlocal.org/2025/12/sf-ice-arrests-criminal-history/">Mission Local</a>’s coverage in Northern California and the <a href="https://idahocapitalsun.com/2025/08/04/ice-arrests-and-detentions-rise-steeply-in-idaho/">Idaho Capital Sun</a>.</p>
+<p>The Guardian had a different question: How often was the ICE keeping detainees in holding facilities meant for stays less than 12 hours? It found that these 170 short-term holding facilities around the country routinely violated the original 12-hour limit, and <a href="https://www.theguardian.com/us-news/2025/oct/30/ice-hidden-detention-sites">some violated a new limit of three days</a>.</p>
+<p>Some reporters have been able to tease out patterns of particular importance in their areas, such as <a href="https://www.thecity.nyc/2025/08/11/26-federal-plaza-immigration-court-trump-arrests-data-analysis/">The City’s analysis</a>, with researcher James Gunther, of people arrested on their way out of the New York City immigration courthouse. The <a href="assets/pdfs/tribune-joemahr-detention-factiva.pdf">Chicago Tribune analyzed book-ins</a> at l;local initial holding facilities during the Midway Blitz late in 2025 to encompass arrests by agencies other than ICE.</p>
+<p>Some stories have focused on local law enforcement’s cooperation with ICE, such as <a href="https://suncoastsearchlight.org/the-tally-ice-detainers-in-florida/">Suncoast Searchlight’s analysis of detainers</a> in Florida, or the University of Maryland’s Howard Center stories on <a href="https://cnsmaryland.org/2025/11/13/marylands-surprising-role-in-implementing-trumps-immigration-agenda/">a few rural sheriffs</a> becoming responsible for many of the arrests across the state.</p>
+<p>In Ventura County, reporters took a different approach: Follow people arrested during one high-profile raid on a local marijuana farm, using DDP data to fill out some of the information.</p>
+<p>The pages that follow lay out how you can do stories like this in your area using the data and advice from the reporters.</p>
+<p>If you need more inspiration, <a href="https://deportationdata.org/news.html">scroll through the stories</a> at the DDP site – and send them links to your own stories when you publish.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -658,10 +635,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
-        <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./start-structure.html" class="pagination-link" aria-label="start-structure.html">
+        <span class="nav-page-text"><span class="chapter-title">start-structure.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,14 @@
+# ICE Data Primer
+
+The data collected by the DDP fall under four general categories:
+
+1. Arrests: These are the easiest records to understand, but lack the geographic specificity that many local reporters would need. It's particularly difficult to do state level trend analysis, because about 10 percent of the records didn't record any state until about July 2025. We are providing some other hints to finding arrests in your area.
+
+2. Detentions: On the other end of the spectrum are detentions, which is a table containing one row for each time a detainee is booked into a new facility. Many detainees are moved four or five times before being released, or are detained, released and re-detained. Without care, you risk counting people multiple times for the same arrest.
+
+3. Detainers: The federal government can ask local law enforcement to hold people in their jails past their scheduled release so that ICE can come pick them up. These are "detainers". Some states, like California, bar local law enforcement from cooperating with ICE -- the so-called "Sanctuary Cities". Others REQUIRE cooperation with ICE, such as Texas, Florida and North Carolina. Still others, like Maryland, leave it up to the local authorities.
+
+4. Removals: These are people sent back to their home countries or to third countries in the case of asylees or others in danger. (Information on the status of a detainee or arrestee is included in some of the other tables, but it's not as complete as the removals table would be if it were accurate.) For now, this table isn't available.
+
+There is one other table produced by ICE that seemd enticing but turned out to have very little of use. The encounters data is supposed to log every encounter made by ICE, whether or not it ended in an arrest. But it contained virtually no information.
+

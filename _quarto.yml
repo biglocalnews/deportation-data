@@ -1,53 +1,94 @@
-author: Sarah Cohen
-date: last-modified
-title: Untitled
-subtitle: ""
-
 project:
-  type: website
+  type: book
   output-dir: docs
+  preview:
+    port: 4300
+
+language:
+  toc-title-appendices: "Reference Materials"
+
+book:
+  sidebar:
+    search: true
+    style: floating
+
+
+  title: "ICE data recipes from Big Local News"
+  subtitle: "Based on data provided by the Deportation Data Project"
+  page-navigation: true
+  reader-mode: false
+
+  date: last-modified
+  author: Sarah Cohen
+
+  chapters:
+  - index.qmd
+
+  - part: "Getting started with ICE data"
+    chapters:
+      - start-intro.qmd
+      - start-stories.qmd
+      - start-structure.qmd
+      - start-strategies.qmd
+  #   - start-ddpsite.qmd
+  #   - story-detention-holds.qmd
+  #   - story-detention-faraway.qmd
+  #   - story-follow-case.qmd
+  #   - story-removals.qmd
+  #   - story-more-examples.qmd
+  - part: "Arrests"
+    chapters:
+      - arrests-intro.qmd
+  #    - arrests-trends.qmd
+  #    - arrests-where.qmd
+  #    - arrests-who.qmd
+  #    - arrests-follow.qmd
+  #- part: "Detentions"
+  #  chapters:
+  #    - detention-intro.qmd
+
+  #- part: "Detainers"
+  appendices:
+    - app-documentation.qmd
+    - app-arrests.qmd
+  # - app-detentions.qmd
+  # - app-detainers.qmd
+    - app-common-defs.qmd
+    - app-enhancements.qmd
+    - app-ice-overview.qmd
 
 
 format:
-  scdefault-html:   #/ requires _quarto.yml in root of project folder
-    code-overflow: wrap
-    grid:
-      sidebar-width: 100px
-      body-width: 1200px
-      margin-width: 100px
-      gutter-width: 1.5rem
-    toc: true
+  html:
+      theme:
+        - sandstone
+        - custom.scss
+#      embed-resources: true
+      toc: false
+      code-fold: true
+      code-tools: false
+      page-layout: full
+      default-image-extension: png
+      callout-icon: false
+      number-sections: false
+      grid:
+        margin-width: 10%;
+        sidebar-width: 20%;
 
 execute:
-  echo: true
+  echo: fenced
   warning: false
   message: false
   error: true
-  cache: false
-  include: true
+  include: false
   eval: false
-  freeze: auto
 
 extensions:
-  - _extensions/scdefault
-  - _extensions/coatless-quarto/custom-callout
-
+  - coatless-quarto/custom-callout
 
 engine:
   knitr
 
-website:
-  navbar:
-    background: primary
-    left:
-      - text: "Home"
-        href: documentation/documentation.qmd
-      - text: "Common data"
-        href: documentation/docs-alldata.qmd
-      - text: "Arrests"
-        href: documentation/docs-arrests.qmd
-      - href: documentation/docs-backgrounder.qmd
-        text: "Backgrounder"
 
 
 custom-callout:
@@ -58,6 +99,3 @@ custom-callout:
   question:
     color: red
     title: "Questions"
-
-filters:
-- custom-callout

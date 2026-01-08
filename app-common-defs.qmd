@@ -1,0 +1,123 @@
+# Common elements used across tables
+
+The deportation data project posts five datasets: encounters,
+arrests, detainers, detentions, and removals. They
+also have a list of offices scraped from the sub-office website of ICE.
+
+In the `data/raw` folder, I've made an exact copy of the data that the
+project posts. (Most recent in most cases.) There is also a copy that I
+can use for hand-editing, with more descriptive data names. That's in
+the `data/processed` folder, even though it's raw.
+
+The project is pretty good about doing basic vetting of the datasets
+when they arrive. For example, it immediately post the removals data
+from July, when they found a serious flaw. They also post when each
+dataset is usable as history.
+
+The data originally is extracted from DHS's Enforcement Integrated
+Database, or EID, which is the back end to the department's ENFORCE
+application. It's supposed to hold details on the entire enforcement
+infrastructure, and is supposed to contain information from all of the
+enforcement agencies (I think).
+
+The original data was downloaded from the Deportation Data Project, as
+of Oct. 13, 2025 (the date of this documentation). I'll update it when
+they get a new batch. I downloaded the original, not cleaned, data.
+
+There are some things to remember about all of the datasets, and some
+specific to individual ones.
+
+### Other documentation
+
+-   [Deportation data
+    project](https://deportationdata.org/docs/ice.html)'s original
+    documentation for ICE data. In particular, the full "codebook" is
+    the source for a lot of our understanding.
+
+-   There are some definitions that are still meaningful in the paper
+    "[Piecing together the US Immigration Detention Puzzle One Night at
+    a
+    Time](https://journals.sagepub.com/doi/reader/10.1177/233150241500300402),
+    Donald Kerwin and Daniela Alulema (Center for Migration Studies),
+    Journal on Migration and Human Security, 2012.
+
+
+
+### Case category
+
+There are
+
+## Data cleaning checks
+
+#### Duplicates
+
+True duplicates (every column exactly the same) are removed. But there
+are other types of duplication that are handled table-by-table. In some
+cases, they actually aren't duplicates -- they refer to more than one
+thing happening to a person or a case. In others, they're artifacts of a
+relational system and how they're handled depends on what the
+substantive question is. In still other cases, they **may** be
+duplicates, but we're not sure.
+
+Generally:
+
+-   Duplicates across all fields, including missing values. Just save
+    one -- it doesn't matter which.
+
+-   Dupes created by the relational nature of the data. For example, a
+    person could be arrested twice, or they will show up over and over
+    in the detention data. In each dataset, we can decide how to handle
+    them for the purpose of local reporting. Using the same example in
+    detention, for example, might mean that we want to create a snapshot
+    for each detention location that has anyone who was ever in that
+    area. For arrests, we may only want to keep the most recent OR we
+    may want to create some summaries of arrests, and summaries of
+    people, separately.
+
+-   Dupes that appear to be the same, but have different information. An
+    example is an arrest record that differs in most cells, but has the
+    same unique person ID and the same date and time as others. One
+    answer is to look at the order that the file came in, and choose the
+    one that appears to be the most recent (top or bottom of list in
+    their original order), or see whether one of the values suggests it
+    is a record that SHOULD be deleted (entered in error).
+
+#### Missing unique identifiers
+
+ICE is supposed to provide a scrambled unique identifier for each person
+but there are quite a few missing.
+
+#### Dates and times
+
+In each table, I checked to see if there is a meaningful time element to
+the date. If not, I converted the original column from date-time to just
+date. How this gets handled by others depends on the data processing
+software they use. If there is a meaningful time, then I added a column
+with the original name and the suffix `_part`
+
+## Progress notes
+
+::: question
+-   [ ] Is there any meaning to the original order of the file? This
+    would affect what we do with duplicates. (Arrests: By UID, then
+    date/time of arrest)
+-   [ ] Are there any indicators of mistakes made in the data? (This
+    might be a program code or something, or might be in the way they're
+    ordred. In LIONS, for example, they're not allowed to just delete
+    something, so they have to mark something for deletion instead when
+    they make a mistake.)
+:::
+
+
+## Geography questions
+
+* Is there a way to estimate the closest place by looking at the first detention location after the arrest for an individual?
+* Is there a problem in joining the most serious criminal conviction to to the arrest data?
+
+- All of this depends on the unique identifier being there for the vast majority of cases. In detentions, as of October 2025, only 2826/1607 649 are missing (less than 2 percent). In arrests, only 2473 of 289249. so these are pretty good in terms of being able to match the arrests with detention data.
+
+- Using Vera Institute locations - this should work for the vast majority. Check to see when last updated.
+https://raw.githubusercontent.com/vera-institute/ice-detention-trends/refs/heads/main/metadata/facilities.csv
+(last updated a while back)
+
+

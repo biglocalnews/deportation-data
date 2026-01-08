@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sarah Cohen">
-<meta name="dcterms.date" content="2026-01-08">
 
-<title>ICE data recipes from Big Local News</title>
+<title>start-structure – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./start-intro.html" rel="next">
+<link href="./start-strategies.html" rel="next">
+<link href="./start-stories.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Preface</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-structure.html"><span class="chapter-title">start-structure.html</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -134,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">start-structure.html</span></a>
+  <a href="./start-structure.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">start-structure.html</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,58 +202,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">ICE data recipes from Big Local News</h1>
-<p class="subtitle lead">Based on data provided by the Deportation Data Project</p>
-</div>
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-structure.html"><span class="chapter-title">start-structure.html</span></a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta column-page-right">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sarah Cohen </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
 
 
-</header>
 
-
-<section id="preface" class="level1">
-<h1>Preface</h1>
-<section id="the-data-deportation-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-data-deportation-project">The Data Deportation Project</h3>
-<p>Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.</p>
-<p>The <a href="https://deportationdata.org/index.html">Deportation data project</a>, run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.) As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
-<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.</p>
-<p>These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
-<p>Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.</p>
-</section>
-<section id="credits" class="level3">
-<h3 class="anchored" data-anchor-id="credits">Credits</h3>
-<p>Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.</p>
-<p>Big Local News is responsible for any errors or omissions.</p>
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -658,10 +612,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./start-stories.html" class="pagination-link" aria-label="Stories from the Deportation Data Project">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Stories from the Deportation Data Project</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
-        <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./start-strategies.html" class="pagination-link" aria-label="ICE Data Primer">
+        <span class="nav-page-text"><span class="chapter-title">ICE Data Primer</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,20 @@
+
+# Preface
+
+### The Data Deportation Project
+
+Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.
+
+The [Deportation data project](https://deportationdata.org/index.html), run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven't yet been analyzed or cleaned by the project.)  As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.
+
+Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.
+
+These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions -- people held in ICE facilities -- cover xx million individual detentions, as the federal government moves people from place to place.
+
+Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data.  But every story idea can't be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.
+
+### Credits
+
+Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.
+
+Big Local News is responsible for any errors or omissions.

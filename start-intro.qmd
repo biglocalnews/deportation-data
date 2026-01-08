@@ -1,0 +1,34 @@
+# Immigration data ecosystem
+
+The Deportation Data Project is one of several major efforts at documenting arrests, detentions and removals in the immigration system. Before you delve into working on your own, consider whether some of these other sources might provide what your story needs.
+
+
+One of the easiest parts of this complex data system to understand is the portion that tracks arrests, which refer to those arrests conducted by and in conjunction with ICE. (Notably, arrests effectuated entirely by Customs and Border Patrol are *probably* missing from these arrest data.) However, it's not as straightforward to identify arrests that occurred by locality, or the specific criminal background of each person.
+
+This reporting recipe will go through several scenarios for typical local stories, including how to search the Deportation Data project's own site as well as how to use some enhanced and simplified data compiled by Big Local News.
+
+## Alternative data sources
+
+It might not be necessary for you to do the work yourself! Before delving into a difficult data project, consider using these other efforts:
+
+### Relevant Research
+
+[Relevant Research](https://relevant-research.com/work) aims to help academics analyze data for their work. The company is led by Austin Kocher, a Syracuse University researcher, and Adam Sawyer, formerly of the Transaction Records A?? Clearinghouse.^[TRAC filed the original lawsuit against DHS in the early 2000's, and has continued to fight for more transparency. It also provides some analysis of immigration court and ICE statistics, most of which is for paid clients.]  Kocher [often provides additional datasets on his Substack](https://austinkocher.substack.com/p/live-breakdown-of-new-immigration), such as his state-by-state arrest trends produced during his his initial review of the December 2 release of ICE data by DDP.
+
+The [immigration enforcement dashboard](https://austinkocher.substack.com/p/live-new-immigration-enforcement) provides summary data on arrests and detainers, which you can filter by state. It lets you download monthly totals for your filtered data.
+
+The detainer data on that site can also be filtered by state, and lists the 10 most common facilities that have detainers from ICE.
+
+Another site by Relevant Research is its ongoing [analysis of detention facilities](https://detentionreports.com/) owned and operated by ICE. This is a subset of the actual locations of detentions.
+
+### Vera Institute Detention trends
+
+The Vera Institute provides [analysis of each detention facility](https://www.vera.org/ice-detention-trends) owned, operated or contracted by ICE. It has put together data going back to 2008 on detention by location, which it lets you [download from its Github site](https://github.com/vera-institute/ice-detention-trends/tree/main/facilities/by_state) by state.
+
+### Stateline.org analysis
+
+Tim Henderson at Stateline.org is often the source of local reporters' arrest analyses -- [his stories after each of the data releases](https://stateline.org/2025/12/12/an-ever-larger-share-of-ices-arrested-immigrants-have-no-criminal-record/) are accompanied by a downloadable dataset that went into the analysis.
+
+### [#Detention kills](https://detentionkills.substack.com/)
+
+Andrew Free, an Atlanta immigration attorney and activist, [tracks deaths in DHS custody](https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQNGMQYGmCDrQAs8gHgXo_0mGnQ7IyJrpY6Fv1J4yI3GM_covsBEzFPq1dyUnG7UoBWLgM5wCH_iuis/pubhtml?gid=0&single=true) .

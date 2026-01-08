@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sarah Cohen">
-<meta name="dcterms.date" content="2026-01-08">
 
-<title>ICE data recipes from Big Local News</title>
+<title>Appendix C — Common elements used across tables – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./start-intro.html" rel="next">
+<link href="./app-enhancements.html" rel="next">
+<link href="./app-arrests.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Preface</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-documentation.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-common-defs.html"><span class="chapter-title">Common elements used across tables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -181,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./app-common-defs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Common elements used across tables</span></a>
+  <a href="./app-common-defs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Common elements used across tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -205,29 +204,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-documentation.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-common-defs.html"><span class="chapter-title">Common elements used across tables</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ICE data recipes from Big Local News</h1>
-<p class="subtitle lead">Based on data provided by the Deportation Data Project</p>
+<h1 class="title">Appendix C — Common elements used across tables</h1>
 </div>
 
 
 
 <div class="quarto-title-meta column-page-right">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sarah Cohen </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -237,23 +223,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1">
-<h1>Preface</h1>
-<section id="the-data-deportation-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-data-deportation-project">The Data Deportation Project</h3>
-<p>Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.</p>
-<p>The <a href="https://deportationdata.org/index.html">Deportation data project</a>, run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.) As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
-<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.</p>
-<p>These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
-<p>Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.</p>
+<p>The deportation data project posts five datasets: encounters, arrests, detainers, detentions, and removals. They also have a list of offices scraped from the sub-office website of ICE.</p>
+<p>In the <code>data/raw</code> folder, I’ve made an exact copy of the data that the project posts. (Most recent in most cases.) There is also a copy that I can use for hand-editing, with more descriptive data names. That’s in the <code>data/processed</code> folder, even though it’s raw.</p>
+<p>The project is pretty good about doing basic vetting of the datasets when they arrive. For example, it immediately post the removals data from July, when they found a serious flaw. They also post when each dataset is usable as history.</p>
+<p>The data originally is extracted from DHS’s Enforcement Integrated Database, or EID, which is the back end to the department’s ENFORCE application. It’s supposed to hold details on the entire enforcement infrastructure, and is supposed to contain information from all of the enforcement agencies (I think).</p>
+<p>The original data was downloaded from the Deportation Data Project, as of Oct.&nbsp;13, 2025 (the date of this documentation). I’ll update it when they get a new batch. I downloaded the original, not cleaned, data.</p>
+<p>There are some things to remember about all of the datasets, and some specific to individual ones.</p>
+<section id="other-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="other-documentation">Other documentation</h3>
+<ul>
+<li><p><a href="https://deportationdata.org/docs/ice.html">Deportation data project</a>’s original documentation for ICE data. In particular, the full “codebook” is the source for a lot of our understanding.</p></li>
+<li><p>There are some definitions that are still meaningful in the paper “<a href="https://journals.sagepub.com/doi/reader/10.1177/233150241500300402">Piecing together the US Immigration Detention Puzzle One Night at a Time</a>, Donald Kerwin and Daniela Alulema (Center for Migration Studies), Journal on Migration and Human Security, 2012.</p></li>
+</ul>
 </section>
-<section id="credits" class="level3">
-<h3 class="anchored" data-anchor-id="credits">Credits</h3>
-<p>Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.</p>
-<p>Big Local News is responsible for any errors or omissions.</p>
+<section id="case-category" class="level3">
+<h3 class="anchored" data-anchor-id="case-category">Case category</h3>
+<p>There are</p>
+</section>
+<section id="data-cleaning-checks" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-checks">Data cleaning checks</h2>
+<section id="duplicates" class="level4">
+<h4 class="anchored" data-anchor-id="duplicates">Duplicates</h4>
+<p>True duplicates (every column exactly the same) are removed. But there are other types of duplication that are handled table-by-table. In some cases, they actually aren’t duplicates – they refer to more than one thing happening to a person or a case. In others, they’re artifacts of a relational system and how they’re handled depends on what the substantive question is. In still other cases, they <strong>may</strong> be duplicates, but we’re not sure.</p>
+<p>Generally:</p>
+<ul>
+<li><p>Duplicates across all fields, including missing values. Just save one – it doesn’t matter which.</p></li>
+<li><p>Dupes created by the relational nature of the data. For example, a person could be arrested twice, or they will show up over and over in the detention data. In each dataset, we can decide how to handle them for the purpose of local reporting. Using the same example in detention, for example, might mean that we want to create a snapshot for each detention location that has anyone who was ever in that area. For arrests, we may only want to keep the most recent OR we may want to create some summaries of arrests, and summaries of people, separately.</p></li>
+<li><p>Dupes that appear to be the same, but have different information. An example is an arrest record that differs in most cells, but has the same unique person ID and the same date and time as others. One answer is to look at the order that the file came in, and choose the one that appears to be the most recent (top or bottom of list in their original order), or see whether one of the values suggests it is a record that SHOULD be deleted (entered in error).</p></li>
+</ul>
+</section>
+<section id="missing-unique-identifiers" class="level4">
+<h4 class="anchored" data-anchor-id="missing-unique-identifiers">Missing unique identifiers</h4>
+<p>ICE is supposed to provide a scrambled unique identifier for each person but there are quite a few missing.</p>
+</section>
+<section id="dates-and-times" class="level4">
+<h4 class="anchored" data-anchor-id="dates-and-times">Dates and times</h4>
+<p>In each table, I checked to see if there is a meaningful time element to the date. If not, I converted the original column from date-time to just date. How this gets handled by others depends on the data processing software they use. If there is a meaningful time, then I added a column with the original name and the suffix <code>_part</code></p>
+</section>
+</section>
+<section id="progress-notes" class="level2">
+<h2 class="anchored" data-anchor-id="progress-notes">Progress notes</h2>
+<div class="question">
+<ul class="task-list">
+<li><label><input type="checkbox">Is there any meaning to the original order of the file? This would affect what we do with duplicates. (Arrests: By UID, then date/time of arrest)</label></li>
+<li><label><input type="checkbox">Are there any indicators of mistakes made in the data? (This might be a program code or something, or might be in the way they’re ordred. In LIONS, for example, they’re not allowed to just delete something, so they have to mark something for deletion instead when they make a mistake.)</label></li>
+</ul>
+</div>
+</section>
+<section id="geography-questions" class="level2">
+<h2 class="anchored" data-anchor-id="geography-questions">Geography questions</h2>
+<ul>
+<li><p>Is there a way to estimate the closest place by looking at the first detention location after the arrest for an individual?</p></li>
+<li><p>Is there a problem in joining the most serious criminal conviction to to the arrest data?</p></li>
+<li><p>All of this depends on the unique identifier being there for the vast majority of cases. In detentions, as of October 2025, only 2826/1607 649 are missing (less than 2 percent). In arrests, only 2473 of 289249. so these are pretty good in terms of being able to match the arrests with detention data.</p></li>
+<li><p>Using Vera Institute locations - this should work for the vast majority. Check to see when last updated. https://raw.githubusercontent.com/vera-institute/ice-detention-trends/refs/heads/main/metadata/facilities.csv (last updated a while back)</p></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -658,10 +684,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./app-arrests.html" class="pagination-link" aria-label="Arrests">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Arrests</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
-        <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./app-enhancements.html" class="pagination-link" aria-label="Data enhancements">
+        <span class="nav-page-text"><span class="chapter-title">Data enhancements</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sarah Cohen">
-<meta name="dcterms.date" content="2026-01-08">
 
-<title>ICE data recipes from Big Local News</title>
+<title>Local arrests – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./start-intro.html" rel="next">
+<link href="./app-documentation.html" rel="next">
+<link href="./start-strategies.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Preface</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./arrests-intro.html">Arrests</a></li><li class="breadcrumb-item"><a href="./arrests-intro.html"><span class="chapter-title">Local arrests</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -155,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./arrests-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Local arrests</span></a>
+  <a href="./arrests-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Local arrests</span></a>
   </div>
 </li>
       </ul>
@@ -205,29 +204,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./arrests-intro.html">Arrests</a></li><li class="breadcrumb-item"><a href="./arrests-intro.html"><span class="chapter-title">Local arrests</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ICE data recipes from Big Local News</h1>
-<p class="subtitle lead">Based on data provided by the Deportation Data Project</p>
+<h1 class="title"><span id="local-arrests" class="quarto-section-identifier"><span class="chapter-title">Local arrests</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta column-page-right">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sarah Cohen </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -237,20 +223,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1">
-<h1>Preface</h1>
-<section id="the-data-deportation-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-data-deportation-project">The Data Deportation Project</h3>
-<p>Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.</p>
-<p>The <a href="https://deportationdata.org/index.html">Deportation data project</a>, run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.) As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
-<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.</p>
-<p>These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
-<p>Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.</p>
+<p>Some of the most common stories in local news outlets examine the growth of arrests by ICE and the failure of the federal government to focus mainly on convicted criminals. Across the country, reporters have found that few of the people arrested have violent convictions, and less than half have any criminal history at all. yourself.</p>
+<p>Some other stories include:</p>
+<ul>
+<li><p>Los Angeles Times, “Majority of people arrested in LA immigration raids had no criminal history”, Jul.&nbsp;16, 2025, Rachel Uranga and Sean Greene.</p></li>
+<li><p>Cato Institute, “<a href="https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order">One in Five ICE Arrests are Latinos on the streets with no criminal past or removal order</a>”, David J. Bier.</p></li>
+<li><p>Idaho Capitol Sun, “<a href="https://idahocapitalsun.com/2025/08/04/ice-arrests-and-detentions-rise-steeply-in-idaho/">ICE arrests and detentions rise steeply in Idaho</a>”, Laura Guido, Aug.&nbsp;4, 2025</p></li>
+</ul>
+<p>This story is more difficult than it might seem. The arrest data provided by ICE has several problems:</p>
+<ol type="1">
+<li><p>It could exclude arrests made by agencies other than ICE. Early in 2025, this wasn’t that much of an issue: Most arrests of people away from the immediate border were being conducted by the agency. But beginning in the summer, Customs and Border Patrol were dispatched around the country to begin large-scale arrests. It’s unclear how many – if any – of these arrests are included in the data.</p></li>
+<li><p>The information on WHERE the arrest took place is spotty at best. Until July, about 10 percent of the arrests were missing the state in which it occurred (this is rare since July); a freeform “landmark site” is sometimes helpful, but it’s hard to search.</p></li>
+<li><p>It might exclude people arrested without warrants. It’s unclear how often this happens, but it means that no US citizens are included in the arrest data, and it may undercount people encountered at the same time as someone who was arrested.</p></li>
+</ol>
+<p>That said, local reporters have been able to overcome these obstacles in a number of ways. McGlade, for example, downloaded all of the rows for one of the 25 “area of responsibility” regions – the one that includes North Carolina, South Carolina and Georgia – scoured the landmark information to isolate those in and around Mecklenberg County. (This guide will show you one strategy for doing this in a Google Sheet without the need for computer programming). You can use this strategy using the data provided directly by the Deportation Data Project.</p>
+<p>Big Local News has taken another approach: Most people arrested are taken to an ICE detention holding or intake center, which is often within a few hours’ drive of the arrest location. We have added the first detention location’s county to the enhanced data, giving you a little more information on where it likely happened. In addition, local jails are asked to hold potential immigration violators until ICE can come pick them up if they were arrested on a local charge such as a DUI. These jails are, in turn, the location of those arrests. For arrests stemming from these detainers, we have added that location to the arrest data.</p>
+<section id="get-your-local-data" class="level2">
+<h2 class="anchored" data-anchor-id="get-your-local-data">Get your local data</h2>
+<p>The DDP has a slicer that lets you look for specific kinds of arrests and download the results, but it’s a little difficult to use for the purpose of getting arrests in your area. Instead, this guide shows you how to use the data downloaded from Big Local News, which includes the enhanced geographic information described above and simplifies the information for the purpose of reporting on arrests. This means we’ve eliminated some of the columns that might not be useful, simplified some of the categories, and lost some other details from the original data in favor of making it easier to use.</p>
 </section>
-<section id="credits" class="level3">
-<h3 class="anchored" data-anchor-id="credits">Credits</h3>
-<p>Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.</p>
-<p>Big Local News is responsible for any errors or omissions.</p>
+<section id="details-about-arrests-in-your-area" class="level2">
+<h2 class="anchored" data-anchor-id="details-about-arrests-in-your-area">Details about arrests in your area</h2>
+<section id="trends-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="trends-over-time">Trends over time</h3>
+</section>
+<section id="at-large-vs.-custody-arrests" class="level3">
+<h3 class="anchored" data-anchor-id="at-large-vs.-custody-arrests">At-large vs.&nbsp;custody arrests</h3>
+</section>
+<section id="demographics-of-people-arrested" class="level3">
+<h3 class="anchored" data-anchor-id="demographics-of-people-arrested">Demographics of people arrested</h3>
+</section>
+<section id="where-they-were-sent-after-arrest---tk" class="level3">
+<h3 class="anchored" data-anchor-id="where-they-were-sent-after-arrest---tk">Where they were sent after arrest - TK</h3>
+<p>TRY THE EXAMPLE OF THE SEP 4 RAID ON HYUNDAI PLANT IN GEORGIA - THere’s a lot there that you can see, but a lot of it is really confusing. I will have to go through this with the folks at DDP about this - it seems like the way to find most of them is to be pretty open about the date, but look at the first book-in – they all went to the same place.</p>
 
 
 </section>
@@ -658,10 +663,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./start-strategies.html" class="pagination-link" aria-label="ICE Data Primer">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ICE Data Primer</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
-        <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./app-documentation.html" class="pagination-link" aria-label="About the data">
+        <span class="nav-page-text"><span class="chapter-title">About the data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

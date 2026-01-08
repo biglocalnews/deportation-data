@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sarah Cohen">
-<meta name="dcterms.date" content="2026-01-08">
 
-<title>ICE data recipes from Big Local News</title>
+<title>Appendix D — Data enhancements – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./start-intro.html" rel="next">
+<link href="./app-ice-overview.html" rel="next">
+<link href="./app-common-defs.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Preface</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-documentation.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-enhancements.html"><span class="chapter-title">Data enhancements</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -186,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./app-enhancements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data enhancements</span></a>
+  <a href="./app-enhancements.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Data enhancements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -205,29 +204,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-documentation.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-enhancements.html"><span class="chapter-title">Data enhancements</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ICE data recipes from Big Local News</h1>
-<p class="subtitle lead">Based on data provided by the Deportation Data Project</p>
+<h1 class="title">Appendix D — Data enhancements</h1>
 </div>
 
 
 
 <div class="quarto-title-meta column-page-right">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sarah Cohen </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -237,23 +223,155 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1">
-<h1>Preface</h1>
-<section id="the-data-deportation-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-data-deportation-project">The Data Deportation Project</h3>
-<p>Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.</p>
-<p>The <a href="https://deportationdata.org/index.html">Deportation data project</a>, run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.) As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
-<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.</p>
-<p>These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
-<p>Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.</p>
+<p>Many of the categories used in the ICE data exist across more than one table. Definitions that only exist on one table are included in the documentation for that area. You can see which variables are in which tables on the Deportation Data Project site’s documentation.</p>
+<section id="final-program" class="level3">
+<h3 class="anchored" data-anchor-id="final-program">Final program</h3>
+<p>Use the <code>apprehension method</code> field instead of final program to find the way that someone was actually arrested.</p>
+<p>The <code>final program</code> refers to the program that ICE officers are assigned to. They may be imprecise because the officer is temporarily detailed. The Migration Policy Institute says that many of the categories can’t be easily earmarked as either at-large or from the criminal justice system. The Migration Policy Instituted categorized the final program as follows: <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 71%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>New category</th>
+<th>Includes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Criminal justice system</td>
+<td>ERO Criminal Alien Program (CAP) ; 287G Program; 287g Task Force; ERO Criminal Prosecutions</td>
+</tr>
+<tr class="even">
+<td>At-large arrests</td>
+<td>Fugitive Operations; Joint Criminal Alien Response Team; Law Enforcement Area Response Units; Mobile Criminal Alien Team; Violent Criminal Alien Section</td>
+</tr>
+<tr class="odd">
+<td>Uncategorized</td>
+<td>Alternatives to Detention; Non-Detained Docket Control; Juvenile ; Detained Docket Control; Detention and Deportation;</td>
+</tr>
+</tbody>
+</table>
+<p>Consider dropping this column .</p>
 </section>
-<section id="credits" class="level3">
-<h3 class="anchored" data-anchor-id="credits">Credits</h3>
-<p>Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.</p>
-<p>Big Local News is responsible for any errors or omissions.</p>
+<section id="case-status" class="level3">
+<h3 class="anchored" data-anchor-id="case-status">Case status</h3>
+<p>The <code>case_status</code> refers to the legal reason that someone was taken out of ICE control. Someone might have voluntarily left the country before charges were filed, or they might have even died. I collapsed the 14 categories into 6 to make analysis a little easier. Anything that isn’t an “Active case” or missing data (only about 4,500 cases) is in progress. Everything else means they’ve left ICE control.</p>
+<p>I have recoded as follows, but need to check this with some experts:</p>
+</section>
+<section id="case-status-and-category-codes" class="level2">
+<h2 class="anchored" data-anchor-id="case-status-and-category-codes">Case status and category codes</h2>
+<p>The case status and category codes contain remnants of the law as it existed before 1996, and have been constantly updated piecemeal. That makes them really difficult to understand. I’ve tried to combine and rename these codes into meaningful groups.</p>
+<p>Although they mean different things, the case status and category tend to go together. In arrests, for example, they have the exact same number of missing values.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I still need to run these by an expert – use with care.</p>
+</div>
+</div>
+<section id="case-status-1" class="level3">
+<h3 class="anchored" data-anchor-id="case-status-1">Case status</h3>
+<p>At the highest level, refers to whether it is in ICE’s purview. Anything that is ACTIVE is still on their books. Everything else is a reason that they’re not. I’ve grouped ACTIVE with the missing values to create “Active case”, and then grouped the 13 more detailed reasons into more general categories. The recodes are called <code>case_status_bln</code> in the tables.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>New category</th>
+<th>Original categories</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Active case</td>
+<td>ACTIVE</td>
+</tr>
+<tr class="even">
+<td>Left voluntarily</td>
+<td>0-Withdrawal Permitted - I-275 Issued ; 3-Voluntary Departure Confirmed ; 9-VR Witnessed</td>
+</tr>
+<tr class="odd">
+<td>Alien Enemies Act expulsion</td>
+<td>5-Title 50 Expulsion</td>
+</tr>
+<tr class="even">
+<td>Excluded / removed</td>
+<td>6-Deported/Removed - Deportability ; 8-Excluded/Removed - Inadmissibility;</td>
+</tr>
+<tr class="odd">
+<td>No further action</td>
+<td>7-Died ; A-Proceedings Terminated ; E-Charging Document Canceled by ICE;</td>
+</tr>
+<tr class="even">
+<td>Allowed to stay</td>
+<td>L-Legalization - Permanent Residence Granted ; Z-SAW - Permanent Residence Granted;</td>
+</tr>
+<tr class="odd">
+<td>Unknown</td>
+<td>Missing values</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="case-category" class="level3">
+<h3 class="anchored" data-anchor-id="case-category">Case category</h3>
+<p>Case category is the detailed legal reason that they are seeking removal – it doesn’t refer to what has happened in the case. I’m leaving this out of our analysis – it’s pretty complicated, and I don’t think most people care about the detailed legal reason.</p>
+</section>
+<section id="most-serious-criminal-codes" class="level3">
+<h3 class="anchored" data-anchor-id="most-serious-criminal-codes">Most serious criminal codes</h3>
+</section>
+<section id="most-serious-crime-categories" class="level3">
+<h3 class="anchored" data-anchor-id="most-serious-crime-categories">Most serious crime categories</h3>
+<div class="todo">
+<ul class="task-list">
+<li><label><input type="checkbox">Decide how to deal with crime codes so they’re collapsed into meaningful categories that would be able to be used in a sentence.</label></li>
+</ul>
+</div>
+<div class="question">
+<ul class="task-list">
+<li><label><input type="checkbox">Can we say that someone was only convicted of immigration offenses if that is the most serious crime? How can we characterize that?</label></li>
+</ul>
+</div>
+<p>It’s really unclear what is considered the “most serious” crime. In particular, it’s unclear whether any immigration offense, such as illegal entry, is considered more serious than, say, a DUI.</p>
+<ol type="1">
+<li><p>TRAC, at some point, <a href="https://tracreports.org/immigration/reports/330/include/DocumentReleased_13-15734_Criminal_Offense_Level_Business_Rules.pdf">got a list of offense codes from DHS</a> that lists the ‘level’ of each crime, as 1, 2, or 3. We can see there that illegal entry to the US is the lowest crime category. But it doesn’t really help within the levels. (These were based on the old Morton memo, and haven’t been in use for a long time, I don’t think.)</p></li>
+<li><p>The <a href="https://www.americanimmigrationcouncil.org/wp-content/uploads/2025/01/enforcement_overdrive_a_comprehensive_assessment_of_ices_criminal_alien_program_final.pdf">American Immigration Council examined the “Most serious charge”</a> in the Criminal Alien Program that gives some detail on what they consider more and less serious.</p></li>
+<li><p><a href="https://www.uscis.gov/policy-manual/volume-12-part-f-chapter-4">USCIS has a list of aggravated felonies</a> on its website, but I’m not sure how up to date it is.) (You can also be deported for crimes of “moral turpitude”.)</p></li>
+<li><p>The ICE custody worksheet suggests that the most serious crime conviction is based on the sentence, and nothing else: <a href="https://www.ice.gov/doclib/detention-standards/2011/2-2.pdf" class="uri">https://www.ice.gov/doclib/detention-standards/2011/2-2.pdf</a></p></li>
+</ol>
+<p>Also from the American Immigration Council, a description of what “aggravated felony” means:</p>
+<div class="blockquote">
+<p>“Aggravated felony” is a term of art used to describe a category of offenses carrying particularly harsh immigration consequences for noncitizens convicted of such crimes. Regardless of their immigration status, noncitizens who have been convicted of an “aggravated felony” are prohibited from receiving most forms of relief that would spare them from deportation, including asylum, and from being readmitted to the United States at any time in the future.</p>
+<p>Despite what the ominous-sounding name may suggest, an “aggravated felony” does not require the crime to be “aggravated” or a “felony” to qualify. Instead, an “aggravated felony” is simply an offense that Congress sees fit to label as such, and today includes many nonviolent and seemingly minor offenses.</p>
+<p>…</p>
+<p>As initially enacted in 1988, the term “aggravated felony” referred only to murder, federal drug trafficking, and illicit trafficking of certain firearms and destructive devices. Congress has since expanded the definition of “aggravated felony” on numerous occasions, but has never removed a crime from the list. Today, the definition of “aggravated felony” covers more than thirty types of offenses, including simple battery, theft, filing a false tax return, and failing to appear in court.</p>
+</div>
+<p>The most serious conviction code is shown in detention, removal and detainer; the most serious charge code is in detainers.</p>
+<p>These refer to sections of the NCIC<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> , with one major omission: The NCIC codes are supposed to be suffixed with “general applicability” codes, such as “Attempt” or “conspiracy” so that the person looking at the charge would know it isn’t the substantive charge. But these are not shown in the ICE data – they are treating all of them the same way.</p>
+<p>There are worksheets in state courts to determine the “most serious” charge codes (they differ depending on the state code), but they are generally created using the longest possible sentence. They aren’t supposed to be just any charge within a case or a person. In practice, I’ve found a couple of things: First, simple immigration crimes such as re-entry are usually only shown when there is nothing substantively more serious. Second, drug offenses are problematic: many don’t distinguish between possession and distribution (it just doesn’t say either way), so there’s no real way to know if it’s someone caught with some marijuana for personal use, or if it’s a cocaine trafficker.</p>
+<p>We don’t have a good way to check whether or not there are other, more serious, crimes that the person was involved in. But these have historically been used to show that the government was targeting really serious criminals and it’s in their interest to have them conform to what the public thinks of as “serious”.</p>
+<p>The “aggravated felon” categorization is a legal one: <a href="https://www.law.cornell.edu/uscode/text/8/1101#a_43">Congress decides which crimes to include in aggravated felonies</a> for the purpose of deportation, and some of them don’t seem that bad (such as prostitution). Crimes of moral turpitude can be aggravated felonies even if they’re neither aggravated nor felonies. Most of the lesser offenses that are included in the list are limited to something with at least a one-year sentence as punishment, and often exclude crimes committed solely for a child or spouse.</p>
 
 
 </section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>footnote on Page 25 of the Migration Policy Institute’s 2018 paper, “<a href="https://www.migrationpolicy.org/sites/default/files/publications/ImmigrationEnforcement-FullReport_FINALWEB.pdf">Revving up the Deportation Machinery</a>”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://wilenet.widoj.gov/sites/default/files/public_files-2025-04/NCICCodeManualTransformed%20%285%29.pdf" class="uri">https://wilenet.widoj.gov/sites/default/files/public_files-2025-04/NCICCodeManualTransformed%20%285%29.pdf</a> as of March 2025 beginning page 422<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -658,10 +776,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./app-common-defs.html" class="pagination-link" aria-label="Common elements used across tables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Common elements used across tables</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
-        <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./app-ice-overview.html" class="pagination-link" aria-label="Understanding the immigration enforcement system">
+        <span class="nav-page-text"><span class="chapter-title">Understanding the immigration enforcement system</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

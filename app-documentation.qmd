@@ -1,0 +1,167 @@
+# About the data
+
+The Deportation Data Project has [a detailed codebook](https://deportationdata.org/docs/ice/codebook.html) explaining the project's understanding of each element of the data. But the government has refused to answer questions about how it is collected, compiled and extracted. Many of its internal forms are unavailable publicly.
+
+We have to rely, instead, on our understanding based on previous iterations of the data, former employees and the experience of journalilsts and researchers. We encourage you to let us know if your ground reporting can clarify or correct any of the questions or misunderstandings inherent in  undocumented data.
+
+Additionally, ICE seems to have randomly decided which columns to include in each table, even though all of the common elements should be available. For example, one obvious story would be the number of local people who have been in the country for decades are being arrested, versus relative newcomers; whether people arrested have legal permanent residence status, or whether they have temporary protected status. But those columns are only available in the removals table -- they're missing in the arrests, detentions and detainer data. ^[When the federal government finally produces usable removal data, we will add the information on legal status and year of entry into the U.S. in our enhanced data, but it will only exist for people who have left the country.]
+
+We have added insights from others' reporting where we could in this book.
+
+
+
+### Follow up from symposium of reporters
+
+In June, Berkeley Journalism and a few other places [hosted a
+symposium](https://docs.google.com/document/d/1TOFnulRtde2uO2xGK-ln0MYpgEZZzGDqsGoJSX6GeMU/edit?usp=sharing)
+of reporters, experts, etc. to discuss immigration reporting. Our
+contact there is Andrés Cediel, a documentarian with a lot of interest
+in immigration issues. We spoke with him on Oct 10. They want to make
+the data more transparent, and are focused on visualizations that could
+be embedded. Others who are still involved include Mark Lima of CBS and
+(I think) Lourdes Duarte from Chicago WGN.
+
+Their inspiration was the COVID tracking project from the Atlantic.
+
+His story ideas were pretty straightforward: US citizens getting caught
+up in raids, looking at children , those without criminal records. They
+are working with the Berkeley-based California News Fellowship (the
+group that is funded by the Calif. government to fill holes in local
+reporting.)
+
+Ryan explained our model of working with a national outlet to do a story
+that we can help get localized by partners that we've worked with
+before, then have training materials, cleaned data, etc. to provide to
+anyone once we know what we're doing. In a followup note, Andrès still
+seemed focused on dashboard / visualizations, but Ryan clarified that.
+
+He mentioned that LAT did a good job using the data after their
+protests.
+
+We had a followup conversation with them about where the FOIAs are in DDP, and also an introduction to what we are doing, and an invitation to talk with us about it.
+
+### Guardian US
+
+Will Craft, who has done a lot of work with Big Local in the past, is
+using the Deportation Data project pretty effectively, and may be interested
+in being our national partner.
+
+After talking with him in late October, it seems that he is quite understandably very focused on getting to stories that haven't been done yet, warning us that this is a pretty crowded space for national stories. But he'll help us when it comes time to work with local reporters. For example, his story on [ICE violating its own policies on detention](https://www.theguardian.com/us-news/2025/oct/30/ice-hidden-detention-sites) could be localized. He has method to get to this, though it seems like it's reasonably straightforward. The big thing is that the detention data reported in aggregate by ICE is midnight -- you need to work with actual times to get this right.
+
+
+
+
+
+### Enforcement dashboard
+
+The [immigration enforcement dashboard](https://austinkocher.substack.com/p/live-new-immigration-enforcement) was initialy released in September, but includes only arrest data for the time being. The project is led by [Austin Kocher](https://austinkocher.com/) an asst. research professor at Syracuse Journalism in the Office of Research and
+Creative Technology.[^1]
+
+[^1]: These are usually grant management divisions of schools, and there
+    is nothing about it in the Newhouse School's website. So it's really
+    unclear whether he works there or not. He's associated with Margaret
+    Talev's group as well. Although he says he has a lot of research and
+    media outlet work, it seems really out of date -- CSpan last year,
+    and then nothing after 2022. He worked at TRAC while getting his PhD
+    in geography.
+
+There is a proof of concept at
+<https://enforcementdashboard.com/ice-arrests/> for arrests, but it's
+unclear if they are going beyond that. It's done by Kocher's company,
+Relevant Research, which also has a site called
+<https://detentionreports.com>. His numbers in detention can't be
+separately sourced because he is using an imputation method to convert
+year-to-date averages into daily populations by month.[^2]
+
+[^2]: He starts with the [facilities
+    report](https://www.ice.gov/detain/detention-management) published
+    by ICE bi-monthly, then [calculates an
+    "Interval"](https://relevant-research.com/assets/pdf/methodology_writeup.pdf)
+    value. He takes a whole paper to say that he estimates the most
+    recent two weeks' values by backing out the number of days. (ADP is
+    calculated as total pop / total \# days for the fiscal year. Taking
+    two time periods, can back out an ADP for the two weeks by taking
+    ADP*Days period 1 - ADP* Days period 2 to get Days for Period 2, and
+    then divide by the number of days.)
+
+He has gotten historical numbers by week by going to the wayback
+machine. ICE takes down the old links, but WAYBACK has them
+
+On <https://austinkocher.substack.com/> , he has done some work
+explaining what is in the data and what isn't.
+
+The enforcement dashboard has some issues with functionality -- my guess
+is that although the concept worked for aggregated stats that are in the
+ICE detention data, it doesn't work for datasets with way more values in
+it.
+
+### Other possible sources
+
+#### Interest groups
+
+* Cato Institute, immigration project. It's unclear who we'd want to speak with - they have several people writing articles, including Scott Lincicome and David J. Bier. Bier published [at least one article](https://www.cato.org/blog/ice-arresting-1100-percent-more-noncriminals-streets-2017) referencing "nonpublic data" acquired by Cato that isn't anywhere else.
+
+#### Reporters
+
+* LA Times reporters who have been working with all of the data
+
+* Tim Henderson, Stateline - Tim's Stateline package is the one that has been localized by a lot of the smaller newsrooms affiliated with it.
+
+* I spoke with Anthony DeBarros, WSJ, who [analyzed the Deportation Data Project's datasets](https://www.wsj.com/us-news/ice-deportations-charts-b3593e29?st=Gbjv6u&reflink=desktopwebshare_permalink) in context of other available sources. He is happy to help us, and had some good ideas for stories, such as focusing on communities that local reporters know are important in their areas.
+
+* Caitlin McGlade, Charlotte Observer, has been working hard to get the arrest and detainer data to a local level. She's published her work on [Github](https://github.com/crmcglade/north-carolina-ice-arrests), and also has a pretty detailed explainer on this story: <https://www.charlotteobserver.com/news/local/article312515332.html> . I spoke with her 12/3/25, and she stressed that reporters have to be really cognizant of missing data. In detainers, for example, there are a ton of individuals with no unique identifier, meaning it's really hard to say how many arrests come from detainers through that data. We also talked about the arrest geography, and how she whittled it down to local examples.
+
+* Aisha Wallace-Palomares, LA TACO, who has been running a daily list people captured by ICE and border patrol, to talk about possible stories. She is most interested in seeing how they can follow people once they are arrested.
+
+
+
+### Tracking cases through the system
+
+Aisha plans to provide me with a few raids that happened in the June-July period, so that we can see how to find those folks in the arrest and detention data, and also to track them through the system. It will help us see if data changes between arrest / detention / removal.
+
+
+## Progress notes
+
+::: {.todo}
+- [ ] Get a list of famous cases that should be followed through the system
+  - Moving around detention
+  - Arrest at courthouse
+  - US citizens
+  - Deaths
+  - Children
+:::
+
+::: {.question}
+-   [x] Is the unique identifier the same over time? ANSWER : NO
+-   [ ] What is the impact of this coming from ICE's Integrated Enforcement Database? Is any CBP data included? (NO) Should it be? The DDP's lawyer didn't seem to think this was a huge deal. CBP hasn't updated its apprehension data since July, but for detentions, it may be unnecessary . ICE manages the detention locations, not CBP. For arrests, I'm not sure what happens.
+
+:::
+
+
+## Folder structure
+
+I have not put the `/data/` files into the github repo, but everything needed to get there is in the programs. (I don't want to make copies of the Deportation Data Project's work, so I am referring anyone who wants the originals to their site. )
+
+In my project, the folder structure is:
+
+<!-- why isn't my wrapping working? I don't care that much, but it annoys me -->
+::: {.sourceCode .code .pre style="text-wrap:wrap;font-family:monospace;"}
+
+```
++-- documentation (most name are self-explanatory
+|   `-- master_data_dictionary_lookups.xlsx
+|   `-- documenatation.html is currently the root of the website, though other pages are public
++-- programs (names are self-explanatory)
++-- data
+|   +-- raw
+|   |  +-- ddp : Data exactly as provided by deportation data project with the original names.
+|   |-- processed: this is data that has already been through processing, but isn't yet cleaned up at all.
+|   +-- clean: datasets we'll eventually want to split up / share
+|   +-- interim: Datasets we won't share but are conveniences when we're getting to clean
++-- share
+|   +-- data: shared datasets in any form
+|   +-- code: any SQL , R, Python code we want to share with people
+
+```
+:::
+

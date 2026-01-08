@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sarah Cohen">
-<meta name="dcterms.date" content="2026-01-08">
 
-<title>ICE data recipes from Big Local News</title>
+<title>Immigration data ecosystem – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./start-intro.html" rel="next">
+<link href="./start-stories.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Preface</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-intro.html"><span class="chapter-title">Immigration data ecosystem</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -124,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Immigration data ecosystem</span></a>
+  <a href="./start-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Immigration data ecosystem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -205,29 +204,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-intro.html"><span class="chapter-title">Immigration data ecosystem</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ICE data recipes from Big Local News</h1>
-<p class="subtitle lead">Based on data provided by the Deportation Data Project</p>
+<h1 class="title"><span class="chapter-title">Immigration data ecosystem</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta column-page-right">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sarah Cohen </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -237,23 +223,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1">
-<h1>Preface</h1>
-<section id="the-data-deportation-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-data-deportation-project">The Data Deportation Project</h3>
-<p>Big Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of immigrants caught in the immigration enforcement system.</p>
-<p>The <a href="https://deportationdata.org/index.html">Deportation data project</a>, run by Graeme Blair of UCLA and David Hausman of Berkeley Law, began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. The project is actively updating information from Immigration and Customs Enforcement, or ICE. (Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.) As of this writing, the project publishes data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
-<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have ICE to produce the files.</p>
-<p>These datasets are large and complex. For example, there are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
-<p>Big Local News is helping reporters in two ways. First, this guide provides step-by-step instructions for using the data posted on the DDP website. In addition, we have simplified some of the datasets to directly contribute to common story recipes without the need to deal with every column and every row provided in the original data. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.</p>
+<p>The Deportation Data Project is one of several major efforts at documenting arrests, detentions and removals in the immigration system. Before you delve into working on your own, consider whether some of these other sources might provide what your story needs.</p>
+<p>One of the easiest parts of this complex data system to understand is the portion that tracks arrests, which refer to those arrests conducted by and in conjunction with ICE. (Notably, arrests effectuated entirely by Customs and Border Patrol are <em>probably</em> missing from these arrest data.) However, it’s not as straightforward to identify arrests that occurred by locality, or the specific criminal background of each person.</p>
+<p>This reporting recipe will go through several scenarios for typical local stories, including how to search the Deportation Data project’s own site as well as how to use some enhanced and simplified data compiled by Big Local News.</p>
+<section id="alternative-data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="alternative-data-sources">Alternative data sources</h2>
+<p>It might not be necessary for you to do the work yourself! Before delving into a difficult data project, consider using these other efforts:</p>
+<section id="relevant-research" class="level3">
+<h3 class="anchored" data-anchor-id="relevant-research">Relevant Research</h3>
+<p><a href="https://relevant-research.com/work">Relevant Research</a> aims to help academics analyze data for their work. The company is led by Austin Kocher, a Syracuse University researcher, and Adam Sawyer, formerly of the Transaction Records A?? Clearinghouse.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Kocher <a href="https://austinkocher.substack.com/p/live-breakdown-of-new-immigration">often provides additional datasets on his Substack</a>, such as his state-by-state arrest trends produced during his his initial review of the December 2 release of ICE data by DDP.</p>
+<p>The <a href="https://austinkocher.substack.com/p/live-new-immigration-enforcement">immigration enforcement dashboard</a> provides summary data on arrests and detainers, which you can filter by state. It lets you download monthly totals for your filtered data.</p>
+<p>The detainer data on that site can also be filtered by state, and lists the 10 most common facilities that have detainers from ICE.</p>
+<p>Another site by Relevant Research is its ongoing <a href="https://detentionreports.com/">analysis of detention facilities</a> owned and operated by ICE. This is a subset of the actual locations of detentions.</p>
 </section>
-<section id="credits" class="level3">
-<h3 class="anchored" data-anchor-id="credits">Credits</h3>
-<p>Reporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.</p>
-<p>Big Local News is responsible for any errors or omissions.</p>
+<section id="vera-institute-detention-trends" class="level3">
+<h3 class="anchored" data-anchor-id="vera-institute-detention-trends">Vera Institute Detention trends</h3>
+<p>The Vera Institute provides <a href="https://www.vera.org/ice-detention-trends">analysis of each detention facility</a> owned, operated or contracted by ICE. It has put together data going back to 2008 on detention by location, which it lets you <a href="https://github.com/vera-institute/ice-detention-trends/tree/main/facilities/by_state">download from its Github site</a> by state.</p>
+</section>
+<section id="stateline.org-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="stateline.org-analysis">Stateline.org analysis</h3>
+<p>Tim Henderson at Stateline.org is often the source of local reporters’ arrest analyses – <a href="https://stateline.org/2025/12/12/an-ever-larger-share-of-ices-arrested-immigrants-have-no-criminal-record/">his stories after each of the data releases</a> are accompanied by a downloadable dataset that went into the analysis.</p>
+</section>
+<section id="detention-kills" class="level3">
+<h3 class="anchored" data-anchor-id="detention-kills"><a href="https://detentionkills.substack.com/">#Detention kills</a></h3>
+<p>Andrew Free, an Atlanta immigration attorney and activist, <a href="https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQNGMQYGmCDrQAs8gHgXo_0mGnQ7IyJrpY6Fv1J4yI3GM_covsBEzFPq1dyUnG7UoBWLgM5wCH_iuis/pubhtml?gid=0&amp;single=true">tracks deaths in DHS custody</a> .</p>
 
 
 </section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>TRAC filed the original lawsuit against DHS in the early 2000’s, and has continued to fight for more transparency. It also provides some analysis of immigration court and ICE statistics, most of which is for paid clients.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -658,10 +660,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Preface</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start-intro.html" class="pagination-link" aria-label="Immigration data ecosystem">
-        <span class="nav-page-text"><span class="chapter-title">Immigration data ecosystem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./start-stories.html" class="pagination-link" aria-label="Stories from the Deportation Data Project">
+        <span class="nav-page-text"><span class="chapter-title">Stories from the Deportation Data Project</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
