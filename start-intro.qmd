@@ -17,6 +17,8 @@ It might not be necessary for you to do the work yourself! Before delving into a
 
 The [immigration enforcement dashboard](https://austinkocher.substack.com/p/live-new-immigration-enforcement) provides summary data on arrests and detainers, which you can filter by state. It lets you download monthly totals for your filtered data.
 
+![enforcement dashbaord](/assets/images/start-intro-enf-dashboard.png)
+
 The detainer data on that site can also be filtered by state, and lists the 10 most common facilities that have detainers from ICE.
 
 Another site by Relevant Research is its ongoing [analysis of detention facilities](https://detentionreports.com/) owned and operated by ICE. This is a subset of the actual locations of detentions.
