@@ -29,25 +29,21 @@ book:
       - start-intro.qmd
       - start-stories.qmd
       - start-structure.qmd
-      - start-strategies.qmd
-  #   - start-ddpsite.qmd
-  #   - story-detention-holds.qmd
-  #   - story-detention-faraway.qmd
-  #   - story-follow-case.qmd
-  #   - story-removals.qmd
-  #   - story-more-examples.qmd
-  - part: "Arrests"
+
+  - part: "Recipes"
     chapters:
       - arrests-intro.qmd
   #    - arrests-trends.qmd
-  #    - arrests-where.qmd
-  #    - arrests-who.qmd
+  #    - arrests-whereto.qmd
+  #    - arrests-demographics.qmd
   #    - arrests-follow.qmd
-  #- part: "Detentions"
-  #  chapters:
   #    - detention-intro.qmd
+  #    - detention-trends.qmd
+  #    - detention-fromwhere.qmd
+  #    - detention-holds.qmd
+  #    - detainers.intro
+  #    - detainers.sheriffs
 
-  #- part: "Detainers"
   appendices:
     - app-documentation.qmd
     - app-arrests.qmd
@@ -61,7 +57,7 @@ book:
 format:
   html:
       theme:
-        - sandstone
+        - cosmo
         - custom.scss
 #      embed-resources: true
       toc: false
@@ -88,8 +84,6 @@ extensions:
 
 engine:
   knitr
-
-
 
 custom-callout:
   todo:

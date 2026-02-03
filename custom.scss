@@ -12,10 +12,11 @@
 
 
 // Import both Lato and Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Phudu:500');
+// Decided to simplify - everything is Roboto.
+//@import url('https://fonts.googleapis.com/css?family=Phudu:500');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,600;1,600&display=swap');
-
 
 // color system
 // redefine some of the colors in the original sandstone theme
@@ -31,6 +32,12 @@ $theme-light:  #f8f5f0 !default; /* same as gray-200 */
 $theme-dark:   #3e3f3a !default; /* same as gray-800 */
 
 
+// Fonts
+
+$font-family-sans-serif:  Roboto, -apple-system,  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-root: 16px;
+$font-family-monospace: "Roboto Mono", "Consolas", "Courier New", monospace;
+
 // Tables
 
 $tbl-header-sort:  $theme-light !default;
@@ -40,18 +47,24 @@ $tbl-striped-col: $theme-bg-subtle;
 
 // Headings
 $headings-color: #325d88 ;  /* same as $blue or primary */
-$headings-font-family: "Phudu";
+$headings-font-family: "Lato";
+
+// reduce the size of h1, h2 and h3.
+// The defaults are calculated from the base font size, which is 1rem (usually 16px).
+// Default $h1-font-size: $font-size-base * 2.5;   (i.e., 2.5rem)
+// Default $h2-font-size: $font-size-base * 2;     (i.e., 2.0rem)
+// Default $h3-font-size: $font-size-base * 1.75;  (i.e., 1.75rem)
+
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 1.75;
+$h2-font-size: $font-size-base * 1.5;  // A bit smaller than the old H3
+$h3-font-size: $font-size-base * 1.2;   // A new, smaller H3 size
+
 
 // Links
 
 $link-color:   $theme-red;
 
-// Fonts
-// Sandstone default is Roboto. It isn't being imported here, though.
-
-$font-family-sans-serif:      "Lato", Roboto, -apple-system,  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-size-root: 16px;
-$font-family-monospace: "Roboto Mono", "Consolas", "Courier New", monospace;
 
 // Grid sizes: Don't use as much for sidebar and margin - not really using them.
 
@@ -76,6 +89,18 @@ $code-block-bg: $theme-bg-subtle;
   width: 100%;
 }
 
+.lead {
+  font-weight: 500;
+}
+
+.title {
+  padding-bottom: 1rem;
+}
+
+img {
+  border-top: .5px solid;
+  border-bottom: .5px solid;
+}
 // Reactable defaults
 
 .rt-header {
@@ -115,4 +140,10 @@ pre, code {
   max-width: 100%;
   font-weight: light;
 
+}
+
+.imgwidth {
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0 1rem 0;
 }

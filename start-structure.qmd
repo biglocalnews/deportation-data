@@ -1,0 +1,54 @@
+# ICE data overview
+
+
+The Deportation Data Project has extensive documentation on their process, the structure of the tables, and individual data elements on its website. We strongly recommend you watch its webinar produced in December 2025 as a primer to the data.
+
+::: {.imgwidth}
+
+{{< video https://youtu.be/9vBAZq0Rh0A >}}
+
+:::
+
+The data acquired by the Deportation Data Project comes in four separate tables that can be linked together (sometimes) by a unique identifier for each immigrant.^[We're ignoring one tantalizing table called `encounters` because the way that ICE produced it created something of very limited use for local reporters -- there is no state recorded and most of the rows don't contain a unique identifier for the person. The most recent release also had problems and the project is withholding the data until it can be clarified]
+
+
+#### Arrests
+
+ICE records each arrest made under its authority, called "administrative warrants". These are different than criminal warrants, and allow ICE to arrest people without being reviewed by a judge. Instead, an ICE official can sign off on the warrant. It's unclear whether arrests made without warrants are included in the arrest data. There are two situations in which an arrests would NOT be included in the arrest table: First, when ICE arrests someone on a criminal warrant and sends them through the normal U.S. prosecution and court system. These would normally include any U.S. citizen, including those arrested for interfering with ICE. The second case is when an arrest is made under that authority of Customs and Border Protection, which includes the Border Patrol.^[Some Border Patrol arrests might be included in the data, when they are made using an administrative warrant. We don't actually know whether those are included.]
+
+Although the data already included an indicator for criminality -- whether the person had been convicted of a crime in the U.S., whether they were facing charges, or were simply immigration law violators -- the BLN has enhanced the data based on information in other datasets included in the collection. As long as they were detained, we have additional details on the most serious criminal conviction, which are often DUI or drug possession, not violent crimes.
+
+The most serious drawback to this data is geography: We don't know where the person was arrested. Until July 2025 -- after which it's rare -- about 10 percent of the rows didn't even show in which state the arrest happened.  There were hints as to the location. In some states, the ICE "Area of Responsibility" is reasonably small, such as California and Texas. But in the interior of the country, this region can span many states. There is a "landmark" listed, but it's usually quite broad. You will have to do some calisthenics to make it usable, and it often only refers to the closest detention site.
+
+We have enhanced the data to help with geographic specificity. First, if the arrest was the result of asking local jails to hold the immigrant for ICE (the "detainer"), we can sometimes add that location to the data. Second, if the arrest resulted in a detention (which it usually does in the Trump administration) , we can use the first location of detention as a proxy for knowing the arrest. Just know that you will not usually be able to isolate a specific location, or even just your own county, from the arrest data.
+
+There is a place in the data to tell us whether the immigrant has been deported, but others who have used it say that this is not as reliable as using the official removals dataset.
+
+#### Detainers
+
+A detainer is a request that an immigrant who is jailed locally be held for ICE. Historically, ICE only requested this for violent criminals, but the Trump administration is now requesting it for virtually everyone whose fingerprints match someone out of status. Some states, like California, don't allow their jails to cooperate with ICE. Others, like Texas and North Carolina, require that jails cooperate. Most leave it up to local officials.
+
+The detainer data is of most use if you want to report on how your local jails work with ICE, either using the 287g program (which deputizes local law enforcement to act on ICE's behalf) or with detainers.
+
+The detainer data has a lot of columns, but many of them are missing values. For example, there is a column for the date of entry to this country, but about three-quarters of the rows are empty. It's also unclear from the table what, exactly, happened to the person from the detainer -- about 40 percent of the rows have no information about what happened.
+
+Because the detainer data is so unclear without local reporting, we are not supplying a simplified version. We have added the location of the facility for the detainer in the arrest data for those that ended in an ICE arrest. But you can filter and download the raw data [using the slicer](https://deportationdata-ice-detainers.share.connect.posit.cloud/) from the Deportation Data Project's site.
+
+![](/assets/images/detainer-slicer.png)
+
+(Documentation for each column and the number of empty rows is shown in the [project's codebook](https://deportationdata.org/docs/ice/codebook).)
+
+
+
+#### Detentions
+
+The detention data is the most complex, but also the richest, data in the system. One reason is that everyone in detention is officially engaged with the government, which means there are very few rows that are missing the unique identifiers we use to track people rather than events. Another reason is that each stop is tracked from the time of initial processing through deportation. Finally, for the purpose of local reporting, we know the exact location of each detention site, unlike the geography of arrests or encounters.
+
+#### Removals
+
+The most recent release of the data had a lot of inaccurate information about people who have been deported, or removed. The DDP is withholding the data until it can resolve some of these problems. Most troubling is that this version of the data had many fewer people logged than previous versions, which should be impossible. However, when it becomes available, we will use it to fill in some information about people that is mysteriously left out of the other tables. One of the most important of these is the date that the immigrant first came to the U.S. Without that, for example, it's impossible to identify Dreamers (immigrants brought to the U.S. as children). It also has the date of the most serious conviction, which is also missing elsewhere. From that, we could identify people whose most serious offense was, for example, marijuana possession many decades ago.
+
+Anecdotally, reporters have found that the removal date and status in other tables is inaccurate compared with this table.
+
+BLN will integrate this data into arrest and detention tables when it becomes available.
+

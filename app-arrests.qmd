@@ -1,22 +1,12 @@
 # Arrests
 
-ICE arrests contain a row for each person arrested by the ICE Enforcement and Removal Operations division.
+Below is full documentation of the arrest data as used by BLN and available on our github site. We have also created simpler subsets of the data to support specific stories, which are documented in those sections.
 
-These are the "administrative" arrests, which exclude a lot of things we'd be interested in, such as arrests that were prosecuted by US attorneys in the criminal justice system, anything done entirely by Customs and Border Protection, and the HHS division that handles resettlement of refugee children.
+You should note that the date of arrest isn't exact. They sometimes don't log the arrest until someone is processed at an initial detention center, or when they are sent to immigration court.
 
-This means that this is a
+About x percent of the rows in this dataset do not contain unique identifiers for the person. This happens when the person has never been part of the immigration enforcement system before (based usually on fingerprint matches). Beginning in April 2025, everyone who has been in the U.S. for at least 30 days must have an A-number. This requirement was always a possibility in the past, based on immigration laws, but wasn't used for everyone until last year.
 
-## Stories
-
-A lot of people have done stories on arrests -- they're the easiest to understand.^[For stories that require logins, I'm trying to get the text from Nexis or Proquest to link here, but they may not be included. We may have to call the reporters to get access to their stories.]. Here are ones that may lead us to good analyses and reporters who can help others.
-
-* Los Angeles Times, "Majority of people arrested in LA immigration raids had no criminal history", Jul. 16, 2025, Rachel Uranga and Sean Greene.
-
-* Cato Institute, "[One in Five ICE Arrests are Latinos on the streets with no criminal past or removal order](https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order)", David J. Bier. They are defining this as "general area" arrests -- otherwise, they would know? I wonder if this is right.
-
-* Stateline, "[Convicted Criminals make up less than half of ICE arrests under Trump](https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order)", Tim Henderson. Some of the local reporters have used this as the start for their stories.
-
-* Idaho Capitol Sun, "[ICE arrests and detentions rise steeply in Idaho](https://idahocapitalsun.com/2025/08/04/ice-arrests-and-detentions-rise-steeply-in-idaho/)", Laura Guido, Aug. 4, 2025
+This happens most frequently with people who crossed the border illegally and have never been caught by immigration officials before.
 
 
 ## BLN Record layout

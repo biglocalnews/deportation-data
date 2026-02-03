@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Immigration data ecosystem – ICE data recipes from Big Local News</title>
+<title>The Deportation Data Project – ICE data recipes from Big Local News</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-60ffb205c5aff53c20e9d60c397f980d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c30bc8f116b567c71369e0970075de0d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0c28578fd018f76b969037a87c9478f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-intro.html"><span class="chapter-title">Immigration data ecosystem</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-intro.html"><span class="chapter-title">The Deportation Data Project</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Immigration data ecosystem</span></a>
+  <a href="./start-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">The Deportation Data Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">start-structure.html</span></a>
+  <a href="./start-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ICE data overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Arrests</span></a>
+ <span class="menu-text">Recipes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -204,9 +204,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-intro.html"><span class="chapter-title">Immigration data ecosystem</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./start-intro.html">Getting started with ICE data</a></li><li class="breadcrumb-item"><a href="./start-intro.html"><span class="chapter-title">The Deportation Data Project</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Immigration data ecosystem</span></h1>
+<h1 class="title"><span class="chapter-title">The Deportation Data Project</span></h1>
 </div>
 
 
@@ -223,24 +223,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The Deportation Data Project is one of several major efforts at documenting arrests, detentions and removals in the immigration system. Before you delve into working on your own, consider whether some of these other sources might provide what your story needs.</p>
-<p>One of the easiest parts of this complex data system to understand is the portion that tracks arrests, which refer to those arrests conducted by and in conjunction with ICE. (Notably, arrests effectuated entirely by Customs and Border Patrol are <em>probably</em> missing from these arrest data.) However, it’s not as straightforward to identify arrests that occurred by locality, or the specific criminal background of each person.</p>
-<p>This reporting recipe will go through several scenarios for typical local stories, including how to search the Deportation Data project’s own site as well as how to use some enhanced and simplified data compiled by Big Local News.</p>
-<section id="alternative-data-sources" class="level2">
-<h2 class="anchored" data-anchor-id="alternative-data-sources">Alternative data sources</h2>
-<p>It might not be necessary for you to do the work yourself! Before delving into a difficult data project, consider using these other efforts:</p>
-<section id="relevant-research" class="level3">
-<h3 class="anchored" data-anchor-id="relevant-research">Relevant Research</h3>
-<p><a href="https://relevant-research.com/work">Relevant Research</a> aims to help academics analyze data for their work. The company is led by Austin Kocher, a Syracuse University researcher, and Adam Sawyer, formerly of the Transaction Records A?? Clearinghouse.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Kocher <a href="https://austinkocher.substack.com/p/live-breakdown-of-new-immigration">often provides additional datasets on his Substack</a>, such as his state-by-state arrest trends produced during his his initial review of the December 2 release of ICE data by DDP.</p>
-<p>The <a href="https://austinkocher.substack.com/p/live-new-immigration-enforcement">immigration enforcement dashboard</a> provides summary data on arrests and detainers, which you can filter by state. It lets you download monthly totals for your filtered data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./assets/images/start-intro-enf-dashboard.png" class="img-fluid figure-img"></p>
-<figcaption>enforcement dashbaord</figcaption>
+<p><img src="assets/images/ddp-coversheet.png" class="img-fluid figure-img"></p>
+<figcaption>Deportation Data Project</figcaption>
 </figure>
 </div>
-<p>The detainer data on that site can also be filtered by state, and lists the 10 most common facilities that have detainers from ICE.</p>
-<p>Another site by Relevant Research is its ongoing <a href="https://detentionreports.com/">analysis of detention facilities</a> owned and operated by ICE. This is a subset of the actual locations of detentions.</p>
+<p>The <a href="https://deportationdata.org">Deportation Data Project</a> is the most widely used effort at documenting arrests, detentions and removals in the immigration system. Run by Graeme Blair of UCLA and David Hausman of Berkeley Law, the project and its lawyers began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. It is actively updating information from Immigration and Customs Enforcement, or ICE.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> As of this writing, the project posts original FOIA data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
+<p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have told ICE to produce the files.</p>
+<p>There are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
+<p>The project itself allows users to filter and download the raw data, which is a great place to start for people who know how to program or can handle detailed and complicated datsets.</p>
+<p>But before you delve into working on your own, consider whether some other sources might provide what your story needs. All of these sources start with the deportation project’s original files, but provide different views of the data that might need your needs.</p>
+<section id="relevant-research" class="level3">
+<h3 class="anchored" data-anchor-id="relevant-research">Relevant Research</h3>
+<p><a href="https://relevant-research.com/work">Relevant Research</a> aims to help academics analyze data for their work. The company is led by Austin Kocher, a Syracuse University researcher, and Adam Sawyer, formerly of the Transaction Records Access Clearinghouse, or TRAC.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Kocher <a href="https://austinkocher.substack.com/p/live-breakdown-of-new-immigration">often provides additional datasets on his Substack</a>, such as his state-by-state arrest trends produced during his his initial review of the December 2 release of ICE data by DDP.</p>
+<p>The <a href="https://enforcementdashboard.com/">immigration enforcement dashboard</a> provides summary data on arrests and detainers, which you can filter by state. It lets you download monthly totals for your filtered data. The detainer data on that site can also be filtered by state, and lists the 10 most common facilities that have detainers from ICE.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/start-intro-enf-dashboard.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Enforcement Dashboard</figcaption>
+</figure>
+</div>
+<p>Another site by Relevant Research is its ongoing <a href="https://detentionreports.com/">analysis of detention facilities</a> owned and operated by ICE. This compiles the history of facility-level statistics published by ICE for its own detention facilities. (It’s a small subset of the locations used to house immigrants.)</p>
 </section>
 <section id="vera-institute-detention-trends" class="level3">
 <h3 class="anchored" data-anchor-id="vera-institute-detention-trends">Vera Institute Detention trends</h3>
@@ -249,18 +253,38 @@ ul.task-list li input[type="checkbox"] {
 <section id="stateline.org-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="stateline.org-analysis">Stateline.org analysis</h3>
 <p>Tim Henderson at Stateline.org is often the source of local reporters’ arrest analyses – <a href="https://stateline.org/2025/12/12/an-ever-larger-share-of-ices-arrested-immigrants-have-no-criminal-record/">his stories after each of the data releases</a> are accompanied by a downloadable dataset that went into the analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/stateline-states.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="transactional-records-access-clearinghouse-trac" class="level3">
+<h3 class="anchored" data-anchor-id="transactional-records-access-clearinghouse-trac">Transactional Records Access Clearinghouse (TRAC)</h3>
+<p>TRAC has been collecting, analyzing and posting data from the <a href="https://tracreports.org/immigration/quickfacts/eoir.html">immigrations courts</a> for almost 20 years. It was the first to acquire the monthly release of detailed individual records from the immigration court dockets, which is released each month on the Justice Department’s <a href="https://www.justice.gov/eoir/foia-library-0">Executive Office of Immigration Review website (under EOIR Case Data)</a>. Its website is hard to use – consider calling them if you have specific questions.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 </section>
 <section id="detention-kills" class="level3">
 <h3 class="anchored" data-anchor-id="detention-kills"><a href="https://detentionkills.substack.com/">#Detention kills</a></h3>
 <p>Andrew Free, an Atlanta immigration attorney and activist, <a href="https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQNGMQYGmCDrQAs8gHgXo_0mGnQ7IyJrpY6Fv1J4yI3GM_covsBEzFPq1dyUnG7UoBWLgM5wCH_iuis/pubhtml?gid=0&amp;single=true">tracks deaths in DHS custody</a> .</p>
-
-
 </section>
+<section id="icemap" class="level3">
+<h3 class="anchored" data-anchor-id="icemap">ICEMap</h3>
+<p>Two Rice University computer science students created a <a href="https://www.icemap.dev/">live feed of news reported incidents</a>, mapped to general regions</p>
+</section>
+<section id="government-foia-sites" class="level3">
+<h3 class="anchored" data-anchor-id="government-foia-sites">Government FOIA sites</h3>
+<p>Customs and Border Patrol posts individual-level apprehensions on its <a href="https://www.cbp.gov/document/foia-record/customs-and-border-protection-border-patrol-statistics">FOIA website</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, but these do not include any indication of where the arrest happened, and do not have identifiers for individuals. They’re really only useful for national level analysis of arrests by country of origin and some indication of how many people were removed vs.&nbsp;turned over to ICE.</p>
+<p>ICE’s own <a href="https://www.ice.gov/foia/library">FOIA site</a> contain some information on contracts with detention facilities, but not much else of use. Most of these are really old, even when they have been posted recently. They are in response to a 2021 appropriations law requiring DHS to provide details on sole source contracts.</p>
+
+
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>TRAC filed the original lawsuit against DHS in the early 2000’s, and has continued to fight for more transparency. It also provides some analysis of immigration court and ICE statistics, most of which is for paid clients.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven’t yet been analyzed or cleaned by the project.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>TRAC filed the original lawsuit against DHS in the early 2000’s, and has continued to fight for more transparency. It also provides some analysis of immigration court and ICE statistics, most of which is for paid clients.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>BLN plans to work on making this data more accessible in the future.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The sort function on the dates doesn’t work, but look for recent releases titled “USBP Nationwide Apprehensions”<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

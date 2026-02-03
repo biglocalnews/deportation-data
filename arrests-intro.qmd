@@ -1,36 +1,27 @@
 # Local arrests {#local-arrests}
 
 Some of the most common stories in local news outlets examine the growth of arrests by ICE and the failure of the federal government to focus mainly on convicted criminals. Across the country, reporters have found that few of the people arrested have violent convictions, and less than half have any criminal history at all.
-yourself.
 
+We have enhanced the original data to include some more information on the person's most serious criminal conviction and the first place they were detained after the arrest.
 
-Some other stories include:
-
-* Los Angeles Times, "Majority of people arrested in LA immigration raids had no criminal history", Jul. 16, 2025, Rachel Uranga and Sean Greene.
-
-* Cato Institute, "[One in Five ICE Arrests are Latinos on the streets with no criminal past or removal order](https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order)", David J. Bier.
-
-
-* Idaho Capitol Sun, "[ICE arrests and detentions rise steeply in Idaho](https://idahocapitalsun.com/2025/08/04/ice-arrests-and-detentions-rise-steeply-in-idaho/)", Laura Guido, Aug. 4, 2025
-
-
-This story is more difficult than it might seem. The arrest data provided by ICE has several problems:
-
-1. It could exclude arrests made by agencies other than ICE. Early in 2025, this wasn't that much of an issue: Most arrests of people away from the immediate border were being conducted by the agency. But beginning in the summer, Customs and Border Patrol were dispatched around the country to begin large-scale arrests. It's unclear how many -- if any -- of these arrests are included in the data.
-
-2. The information on WHERE the arrest took place is spotty at best. Until July, about 10 percent of the arrests were missing the state in which it occurred (this is rare since July); a freeform "landmark site" is sometimes helpful, but it's hard to search.
-
-3. It might exclude people arrested without warrants. It's unclear how often this happens, but it means that no US citizens are included in the arrest data, and it may undercount people encountered at the same time as someone who was arrested.
-
-That said, local reporters have been able to overcome these obstacles in a number of ways. McGlade, for example, downloaded all of the rows for one of the 25 "area of responsibility" regions  -- the one that includes North Carolina, South Carolina and Georgia -- scoured the landmark information to isolate those in and around Mecklenberg County. (This guide will show you one strategy for doing this in a Google Sheet without the need for computer programming). You can use this strategy using the data provided directly by the Deportation Data Project.
-
-Big Local News has taken another approach: Most people arrested are taken to an ICE detention holding or intake center, which is often within a few hours' drive of the arrest location. We have added the first detention location's county to the enhanced data, giving you a little more information on where it likely happened. In addition, local jails are asked to hold potential immigration violators until ICE can come pick them up if they were arrested on a local charge such as a DUI. These jails are, in turn, the location of those arrests. For arrests stemming from these detainers, we have added that location to the arrest data.
+You can use the same approach for each of the following story recipes to get a dataset that contains  your state or local area.
 
 ## Get your local data
 
-The DDP has a slicer that lets you look for specific kinds of arrests and download the results, but it's a little difficult to use for the purpose of getting arrests in your area. Instead, this guide shows you how to use the data downloaded from Big Local News, which includes the enhanced geographic information described above and simplifies the information for the purpose of reporting on arrests. This means we've eliminated some of the columns that might not be useful, simplified some of the categories, and lost some other details from the original data in favor of making it easier to use.
+It's more difficult than it should be to get the arrest data for your area. One solution is to stick with analysis at the state level since July 2025.
 
-## Details about arrests in your area
+There are several alternatives:
+
+1. In very populated areas, use the EOR Area of Responsibility. This is the ICE office in charge of your area and differentiates between, for example, Northern and Southern California. But it combines many states in the interior of the country. You can look up your state on the ICE website to find the areas of responsibility, searching for your state "Enforcement and Removal Operations":
+
+![ICE ERO office example](/assets/images/erosearch-page.png)
+
+2. Use all of the data for your state. We expect most people will do this. Since July 2025, this is pretty reliable. Before then, about 10 percent of the rows were missing the state. This means that any trends will OVERSTATE the increase in arrests, since there are likely some arrests from earlier periods that should have been marked as in  your state but weren't. You can supplement this with information from detention and detainer sites where the state is missing.  We have found that XX percent of the missing information could be filled in using those tables, but there are still YY with missing states.
+
+3. Use the closest place of first detention instead of all arrests. This, too, will overstate the increase in arrests between the Biden and Trump years, because fewer people were automatically detained before 2025. But it will provide you with more local data for the past year.
+
+SCREEN SHOT HERE.
+
 
 ### Trends over time
 

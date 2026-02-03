@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-60ffb205c5aff53c20e9d60c397f980d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c30bc8f116b567c71369e0970075de0d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0c28578fd018f76b969037a87c9478f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Immigration data ecosystem</span></a>
+  <a href="./start-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The Deportation Data Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -133,12 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">start-structure.html</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./start-strategies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ICE Data Primer</span></a>
+  <a href="./start-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ICE data overview</span></a>
   </div>
 </li>
       </ul>
@@ -146,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Arrests</span></a>
+ <span class="menu-text">Recipes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -223,19 +218,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>ICE arrests contain a row for each person arrested by the ICE Enforcement and Removal Operations division.</p>
-<p>These are the “administrative” arrests, which exclude a lot of things we’d be interested in, such as arrests that were prosecuted by US attorneys in the criminal justice system, anything done entirely by Customs and Border Protection, and the HHS division that handles resettlement of refugee children.</p>
-<p>This means that this is a</p>
-<section id="stories" class="level2">
-<h2 class="anchored" data-anchor-id="stories">Stories</h2>
-<p>A lot of people have done stories on arrests – they’re the easiest to understand.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Here are ones that may lead us to good analyses and reporters who can help others.</p>
-<ul>
-<li><p>Los Angeles Times, “Majority of people arrested in LA immigration raids had no criminal history”, Jul.&nbsp;16, 2025, Rachel Uranga and Sean Greene.</p></li>
-<li><p>Cato Institute, “<a href="https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order">One in Five ICE Arrests are Latinos on the streets with no criminal past or removal order</a>”, David J. Bier. They are defining this as “general area” arrests – otherwise, they would know? I wonder if this is right.</p></li>
-<li><p>Stateline, “<a href="https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order">Convicted Criminals make up less than half of ICE arrests under Trump</a>”, Tim Henderson. Some of the local reporters have used this as the start for their stories.</p></li>
-<li><p>Idaho Capitol Sun, “<a href="https://idahocapitalsun.com/2025/08/04/ice-arrests-and-detentions-rise-steeply-in-idaho/">ICE arrests and detentions rise steeply in Idaho</a>”, Laura Guido, Aug.&nbsp;4, 2025</p></li>
-</ul>
-</section>
+<p>Below is full documentation of the arrest data as used by BLN and available on our github site. We have also created simpler subsets of the data to support specific stories, which are documented in those sections.</p>
+<p>You should note that the date of arrest isn’t exact. They sometimes don’t log the arrest until someone is processed at an initial detention center, or when they are sent to immigration court.</p>
+<p>About x percent of the rows in this dataset do not contain unique identifiers for the person. This happens when the person has never been part of the immigration enforcement system before (based usually on fingerprint matches). Beginning in April 2025, everyone who has been in the U.S. for at least 30 days must have an A-number. This requirement was always a possibility in the past, based on immigration laws, but wasn’t used for everyone until last year.</p>
+<p>This happens most frequently with people who crossed the border illegally and have never been caught by immigration officials before.</p>
 <section id="bln-record-layout" class="level2">
 <h2 class="anchored" data-anchor-id="bln-record-layout">BLN Record layout</h2>
 <p>As of October 2025. I removed fields that were redacted or always blank. I’ll only update counts when I change the data substantially,not when it’s updated.</p>
@@ -651,12 +637,6 @@ Tip
 </ul>
 
 
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>For stories that require logins, I’m trying to get the text from Nexis or Proquest to link here, but they may not be included. We may have to call the reporters to get access to their stories.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
