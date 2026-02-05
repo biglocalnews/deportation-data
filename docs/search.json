@@ -69,7 +69,7 @@
     "href": "arrests-intro.html",
     "title": "Local arrests",
     "section": "",
-    "text": "Get your local data\nSome of the most common stories in local news outlets examine the growth of arrests by ICE and the failure of the federal government to focus mainly on convicted criminals. Across the country, reporters have found that few of the people arrested have violent convictions, and less than half have any criminal history at all.\nWe have enhanced the original data to include some more information on the person’s most serious criminal conviction and the first place they were detained after the arrest.\nYou can use the same approach for each of the following story recipes to get a dataset that contains your state or local area.\nIt’s more difficult than it should be to get the arrest data for your area. One solution is to stick with analysis at the state level since July 2025.\nThere are several alternatives:\nSCREEN SHOT HERE.",
+    "text": "Download your local data\nThe following chapters will lead you through reproducing some of the most common data-driven stories from around the country. We’ll use the stories produced by The Colorado Sun, with data anlaysis by Sandra Fish, as our guide.\nTK\nYou will have several choices on how to determine your local area, none of which are perfect:",
     "crumbs": [
       "Recipes",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
@@ -366,7 +366,7 @@
     "href": "start-structure.html",
     "title": "ICE data overview",
     "section": "",
-    "text": "Arrests\nThe Deportation Data Project has extensive documentation on their process, the structure of the tables, and individual data elements on its website. We strongly recommend you watch its webinar produced in December 2025 as a primer to the data.\nThe data acquired by the Deportation Data Project comes in four separate tables that can be linked together (sometimes) by a unique identifier for each immigrant.1\nThe tables are:\nICE records each arrest made under its authority, called “administrative warrants”. These are different than criminal warrants, and allow ICE to arrest people without being reviewed by a judge. Instead, an ICE official can sign off on the warrant. It’s unclear whether arrests made without warrants are included in the arrest data. There are two situations in which an arrests would NOT be included in the arrest table: First, when ICE arrests someone on a criminal warrant and sends them through the normal U.S. prosecution and court system. These would normally include any U.S. citizen, including those arrested for interfering with ICE. The second case is when an arrest is made under that authority of Customs and Border Protection, which includes the Border Patrol.2\nAlthough the data already included an indicator for criminality – whether the person had been convicted of a crime in the U.S., whether they were facing charges, or were simply immigration law violators – the BLN has enhanced the data based on information in other datasets included in the collection. As long as they were detained, we have additional details on the most serious criminal conviction, which are often DUI or drug possession, not violent crimes.\nThe most serious drawback to this data is geography: We don’t know where the person was arrested. Until July 2025 – after which it’s rare – about 10 percent of the rows didn’t even show in which state the arrest happened. There were hints as to the location. In some states, the ICE “Area of Responsibility” is reasonably small, such as California and Texas. But in the interior of the country, this region can span many states. There is a “landmark” listed, but it’s usually quite broad. You will have to do some calisthenics to make it usable, and it often only refers to the closest detention site.\nWe have enhanced the data to help with geographic specificity. First, if the arrest was the result of asking local jails to hold the immigrant for ICE (the “detainer”), we can sometimes add that location to the data. Second, if the arrest resulted in a detention (which it usually does in the Trump administration) , we can use the first location of detention as a proxy for knowing the arrest. Just know that you will not usually be able to isolate a specific location, or even just your own county, from the arrest data.\nThere is a place in the data to tell us whether the immigrant has been deported, but others who have used it say that this is not as reliable as using the official removals dataset.",
+    "text": "Arrests\nThe Deportation Data Project has extensive documentation on their process, the structure of the tables, and individual data elements on its website. We strongly recommend you watch its webinar produced in December 2025 as a primer to the data.\nThe data acquired by the Deportation Data Project comes in four separate tables that can be linked together (sometimes) by a unique identifier for each immigrant.1\nICE records each arrest made under its authority, called “administrative warrants”. These are different than criminal warrants, and allow ICE to arrest people without being reviewed by a judge. Instead, an ICE official can sign off on the warrant. It’s unclear whether arrests made without warrants are included in the arrest data. There are two situations in which an arrests would NOT be included in the arrest table: First, when ICE arrests someone on a criminal warrant and sends them through the normal U.S. prosecution and court system. These would normally include any U.S. citizen, including those arrested for interfering with ICE. The second case is when an arrest is made under that authority of Customs and Border Protection, which includes the Border Patrol.2\nAlthough the data already included an indicator for criminality – whether the person had been convicted of a crime in the U.S., whether they were facing charges, or were simply immigration law violators – the BLN has enhanced the data based on information in other datasets included in the collection. As long as they were detained, we have additional details on the most serious criminal conviction, which are often DUI or drug possession, not violent crimes.\nThe most serious drawback to this data is geography: We don’t know where the person was arrested. Until July 2025 – after which it’s rare – about 10 percent of the rows didn’t even show in which state the arrest happened. There were hints as to the location. In some states, the ICE “Area of Responsibility” is reasonably small, such as California and Texas. But in the interior of the country, this region can span many states. There is a “landmark” listed, but it’s usually quite broad. You will have to do some calisthenics to make it usable, and it often only refers to the closest detention site.\nWe have enhanced the data to help with geographic specificity. First, if the arrest was the result of asking local jails to hold the immigrant for ICE (the “detainer”), we can sometimes add that location to the data. Second, if the arrest resulted in a detention (which it usually does in the Trump administration) , we can use the first location of detention as a proxy for knowing the arrest. Just know that you will not usually be able to isolate a specific location, or even just your own county, from the arrest data.\nThere is a place in the data to tell us whether the immigrant has been deported, but others who have used it say that this is not as reliable as using the official removals dataset.",
     "crumbs": [
       "Getting started with ICE data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ICE data overview</span>"
@@ -392,6 +392,149 @@
     "crumbs": [
       "Recipes",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "arrests-intro.html#download-your-local-data",
+    "href": "arrests-intro.html#download-your-local-data",
+    "title": "Local arrests",
+    "section": "",
+    "text": "BLN estimated state of arrest: BLN has backfilled the missing states in the original data based on either the location of detainers or the first detention location. It’s possible these are wrong, but it’s better than ignoring the missing states altogether.1\nLocation of the first detention: About 85 percent of people arrested are booked into a detention center within a week of the arrest. This is pretty consistent across the Biden and Trump administrations. There’s one argument that you care more about this subset of people, as they are the ones who may be removed or imprisoned. It’s also more precise than the state – you know just where the detention facility is. This is how the New York Times estimated the county of arrest in its stories.2\nArea of Responsbility: In some cases, the ICE Enforcement office that is responsible for the arrest is MORE specific than the state, such as Los Angeles, Dallas, and New York City. For these major immigration hubs, you can just search for that area of responsbility.\n\n\n\n\nICE ERO office example\n\n\n\nSite landmark: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person’s landmark is actually the location of the first detention. But in other cases, you’ll see an abbreviation of a city or metro area in most of the landmark entries. We suggest using these entries as a way to refine your search rather than as a way to start it.3",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "arrests-intro.html#footnotes",
+    "href": "arrests-intro.html#footnotes",
+    "title": "Local arrests",
+    "section": "",
+    "text": "If you were to download the original data with about 10 percent of the rows missing a state of arrest before mid-2025, you would overestimate the growth in arrests under President Trump. Don’t do this.↩︎\nPeople who accepted the government’s offer to buy a plane ticket home may not be included in these detentions.↩︎\nCaitlin McGlade’s Github site documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.↩︎",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests-intro.html",
+    "href": "recipes-arrests-intro.html",
+    "title": "Local arrests",
+    "section": "",
+    "text": "Download your local data\nThe following chapters will lead you through reproducing some of the most common data-driven stories from around the country. We’ll use the stories produced by The Colorado Sun, with data anlaysis by Sandra Fish, as our guide.\nTK\nYou will have several choices on how to determine your local area, none of which are perfect:\nCreate another new column to the left of the date, and choose the dropdown menu on the date column to turn on a filter. Right now, the data runs from around September 2023 through Oct. 15, 2025. This example sets the comparable time frames as Jan 1 to Oct 15 in both of the years that we have.\nIn the filter, choose the item “Filter by Condition” instead of choosing the individual dates. At the bottom of the list, choose “Is between” as your condition, and type in 2024-01-01 to 2024-10-15 in the boxes. This filters all of your rows to just those between those two dates. Once you’re sure you’re at the top of the table, type in two consecutive rows of “2024”, select both of those cells and double-click on the plus sign that appears at the bottom right corner of the selection:\n(If you don’t type in two cells, it’s possible Google will think you want it to give you consecutive years, not just repeat the same year over and over.)\nRepeat the process , changing 2024 to 2025 in the boxes. Again, make sure your cursor is in the first row of the table before you try to copy anything.\nFinally, remove the filter on the date column by choosing “None” in the filter by condition box, then filter the new, partially filled out column for blanks. You can fill in “Neither” to fill out the rest of the rows, though it’s not strictly needed.4\nHere’s what the left portion of your spreadsheet might look like after a little formatting:",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests-intro.html#download-your-local-data",
+    "href": "recipes-arrests-intro.html#download-your-local-data",
+    "title": "Local arrests",
+    "section": "",
+    "text": "BLN estimated state of arrest: BLN has backfilled the missing states in the original data based on either the location of detainers or the first detention location. It’s possible these are wrong, but it’s better than ignoring the missing states altogether.1\nLocation of the first detention: About 85 percent of people arrested are booked into a detention center within a week of the arrest. This is pretty consistent across the Biden and Trump administrations. There’s one argument that you care more about this subset of people, as they are the ones who may be removed or imprisoned. It’s also more precise than the state – you know just where the detention facility is. This is how the New York Times estimated the county of arrest in its stories.2\nArea of Responsbility: In some cases, the ICE Enforcement office that is responsible for the arrest is MORE specific than the state, such as Los Angeles, Dallas, and New York City. For these major immigration hubs, you can just search for that area of responsibility.\n\n\n\n\nICE ERO office example\n\n\n\nSite landmark: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person’s landmark is actually the location of the first detention. But in other cases, you’ll see an abbreviation of a city or metro area in most of the landmark entries. We suggest using these entries as a way to refine your search rather than as a way to start it.3(https://github.com/crmcglade/north-carolina-ice-arrests/tree/main) documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.]",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests-intro.html#footnotes",
+    "href": "recipes-arrests-intro.html#footnotes",
+    "title": "Local arrests",
+    "section": "",
+    "text": "If you were to download the original data with about 10 percent of the rows missing a state of arrest before mid-2025, you would overestimate the growth in arrests under President Trump. Don’t do this.↩︎\nPeople who accepted the government’s offer to buy a plane ticket home may not be included in these detentions.↩︎\nCaitlin McGlade’s Github site↩︎\nIt’s good practice that, whenever possible, you don’t leave a empty values in your table. It just makes everything else more difficult and error-prone.↩︎",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests.html",
+    "href": "recipes-arrests.html",
+    "title": "Profiling the arrest data",
+    "section": "",
+    "text": "Criminal histories\nThis section reviews particular passages in stories and studies that you can replicate in your own area. It assumes you have taken the first steps, outlined in the previous chapter, to download and organize the records you want to use in your analysis.\nThe pieces include:\nWe recommend reviewing each of these pieces when you’re analyzing your own area. Substantial differences in trends could suggest either an error in the data or the analysis, or could suggest newsworthiness. Only you can tell the difference.\nThese analyses relies on three elements:\nThe New York Times, Stateline and the Colorado Sun have gone beyond knowing that most people arrested in 2025 lacked a known criminal conviction. They also looked at the charges and the proportion that were violent. The BLN data slice provides the “charge group”, which is a general categorization for major crime types such as homicide, assault, traffic offenses and drugs.1\nHere’s what the Colorado Sun and WyomingFile said, based on data through July 2025 :\nThere are three ways to look at criminal histories, and each depends a little on rejiggering the data to meet your needs. Whether or not a person had a criminal conviction at the time of apprehension is listed in the arrests table, but the details of those charges are only found elsewhere in the ICE data. The BLN data matches the most recent “most serious criminal conviction” from the detention table to arrests.",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Profiling the arrest data</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests.html#footnotes",
+    "href": "recipes-arrests.html#footnotes",
+    "title": "Profiling the arrest data",
+    "section": "",
+    "text": "Although there is a difference in the detail coding between drug possession and sale, the actual data usually lumps it all together into “Dangerous Drugs”. We’re not trying to split them out here.↩︎\nThis analysis will use traffic violations rather than the detailed drunken driving specification↩︎\nThe DDP uses only data for arrests that resulted in a detention, which is why its headings are a little different↩︎",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Profiling the arrest data</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests.html#criminal-histories",
+    "href": "recipes-arrests.html#criminal-histories",
+    "title": "Profiling the arrest data",
+    "section": "",
+    "text": "Most people arrested by U.S. Immigration and Customs Enforcement agents between Jan. 20 and June 26 of this year in Colorado and Wyoming did not have any criminal convictions, according to ICE data released over the last few weeks. Among those arrested who had a conviction at the time of their arrest, the most serious crime is most often noted by ICE as drunken driving.2 in both Colorado and Wyoming, the data shows.\n\n\n\nCriminality at the time of apprehension:\nCreate a pivot table of the column called arrest_criminality:\n\n(“Other immigration violator” is the way that ICE says that someone has no pending charges or convictions – they contend that everyone they arrest is an immigration violator.)\nWhile not exactly the same, these numbers for the Los Angeles area are in rough agreement with the data from elsewhere, including the Colorado story. It suggests that ICE thinks there are pending criminal charges against many more immigrants in the previous year, but many fewer have actual convictions.\nBreaking out the different administrations (either by looking at monthly trends or comparing like portions of years) can change the interpretation a lot! In this case, a majority of arrests were of people with criminal convictions since 2023, but the 2025 data shows a much different pattern.\n\n\nViolent criminal history\nBLN has added a “special” code to the data, referring to special categories of criminal convictions. Here’s what they look like for the Los Angeles area when combined with the criminality code:\n\n\n\nCrime types\n\n\nThis shows the proportion of arrests with violent criminal histories has fallen, to 11 percent, in the Los Angeles area.\n\n\nMost frequent charges\nThe Colorado Sun / WyomingFile data through June surprisingly showed that the most frequent charge was drunken driving. Here’s what the charges look like in Los Angeles, through Oct. 15. (Note that the Filters section is used instead of comparing the two periods in this chart.)\n\n\n\nArrest charges\n\n\nBLN has also created a column called bln_charge_group, which combines crimes based on their standard FBI codes into more general groupings. For instance, all homicides are grouped together instead of being broken out by a specific type. Here’s a portion of the Los Angeles data showing the different crime categories :\n\n\n\nCharge groupings",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Profiling the arrest data</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests-intro.html#importing-your-data-into-a-google-sheet",
+    "href": "recipes-arrests-intro.html#importing-your-data-into-a-google-sheet",
+    "title": "Local arrests",
+    "section": "Importing your data into a Google sheet",
+    "text": "Importing your data into a Google sheet\nHere is what your data might look like after you’ve brought it into a Google Sheet.\n\nMake sure to keep the orig_row_number column on the very left. It’s important to have a column that shows you the order that the original file came in, and have a way to un-sort it. (This row number is the order in the orginal, national, file).\nBefore you go any further, convert the spreadsheet to a “data table”, which will make widen all of your columns and improve the chances that all of your rows and columns will stay together as you work.",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests-intro.html#assign-date-categories",
+    "href": "recipes-arrests-intro.html#assign-date-categories",
+    "title": "Local arrests",
+    "section": "Assign date categories",
+    "text": "Assign date categories\nIf you want to look at the data by month, you’ll need to convert the date of the arrest to the first of the month. If you want to look at it for comparable periods over 2024 and 2025, as the Colorado Sun did, you’ll need to assign those. Here’s how to take two different approaches to doing that.\n\nAssign the beginning of the month and format the date\nRight-click on the heading row near the arrest data, and choose Insert 1 column to the left. You’ll enter a formula into this column. Every formula starts with an equal sign =, and then the name of a command, or function. The function to use here is eomonth, which gives you the date as of the end of a month. We have to adjust it so that it gives us the BEGINNING of the month instead:\n\n\n\n=eomonth(c2,-1)+1\n\n\nHit Cmd-Enter to fill in the formula for the entire column of the table.\n\n\nGet comparable 2024 and 2025 data\nIn this case, you could set up a complicated formula, but it’s worth getting used to setting some values by using one filter after another. Just be REALLY careful.",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests-intro.html#pitfalls-with-filters",
+    "href": "recipes-arrests-intro.html#pitfalls-with-filters",
+    "title": "Local arrests",
+    "section": "Pitfalls with filters",
+    "text": "Pitfalls with filters\nHere are the things you have to be super careful to do when you edit with filters:\n\nAlways start at the top row. An easy way to get there is to select a cell within a column that’s always filled out (in this case, both the date and the original row ID’s area always filled out), and then press CMD-up. That takes you back to the column heading. (You could also select the heading cell, then hit the down arrow once.)\nBe sure that you’ve cleared all of the filter selections before you start. That way you don’t risk filling in things you don’t mean to.\nWhenever possible, do your editing on a column TO THE RIGHT of a column that’s always filled out. This will prevent anything you quck-copy down from stopping halfway through your data.\nALWAYS check your answers – make sure there are no unexpected missing values and that the values are what you expect.\n\n\n\n\nHere’s what happens if you start editing a filtered list without starting at the top: You will miss filling out anything that’s above the row you started in!\n\n\n\n\n\nMistake!",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local arrests</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests.html#custodial-vs.-street-arrests",
+    "href": "recipes-arrests.html#custodial-vs.-street-arrests",
+    "title": "Profiling the arrest data",
+    "section": "Custodial vs. street arrests",
+    "text": "Custodial vs. street arrests\nStreet arrests are considered any arrest made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.\n\n\n\n\n\nHere’s what a similar chart of the Los Angeles data would look like, based on a pivot table by month3:\n\n\n\nStreet arrests\n\n\nThe overall number of arrests didn’t increase as much, partly because California does not honor the detainers that lead to custodial arrests. But the spike in at-large, or street arrests, is noticeable during the surge over the summer of 2025 in Southern California.\n\n\n\n\n\n\nPeople vs. arrest counts\n\n\n\nPeople are duplicated in the arrest data when they appear to have been arrested more than once. You can handle this in several ways. The easiest is to make sure you are careful with your language, and write about “arrests” rather than “people” counts.\nBut if you want to make sure you’re not double-counting anyone, you can use the bln_person_id as a way to count “unique” values. This makes sure no one is counted twice in the same sentence, but can lead to confusing totals – the number of “people arrested” will differ between the total, the total for a year, or the total for a month.\nHere’s how you would avoid double-counting people, and how it changes the totals:\n\n\n\ncount unique people",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Profiling the arrest data</span>"
+    ]
+  },
+  {
+    "objectID": "recipes-arrests.html#countries-and-ages",
+    "href": "recipes-arrests.html#countries-and-ages",
+    "title": "Profiling the arrest data",
+    "section": "Countries and ages",
+    "text": "Countries and ages\nHere’s what the Colorado Sun wrote about the youngest person arrested since January 2025:\n\nAmong the youngest people arrested in Colorado was a baby girl born in 2024, the data shows, with Mexican citizenship. ICE arrested her July 30 in the Denver area and deported her Aug. 8 to Venezuela, according to the data.\n\nHere’s how you might find the same thing for your area:\n\nFilter for dates since Jan. 20, 2025\nSort the table by birth year, in descending order\nLook across the table to see what happened to that toddler\n\n\n\n\nFind youngest\n\n\nHere, the youngest is a Mexican boy born in 2023, arrested on January 28 and removed the next day to Honduras, according to the data.\nYou can reverse the sorting and filter for “No criminal conviction” to find the oldest person without a criminal conviction - a Mexican man in his late 70s, arrested out in public in September, who then agreed to go leave voluntarily:\n\n\n\nOldest Non-criminal",
+    "crumbs": [
+      "Recipes",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Profiling the arrest data</span>"
     ]
   }
 ]

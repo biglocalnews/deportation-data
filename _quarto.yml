@@ -32,17 +32,13 @@ book:
 
   - part: "Recipes"
     chapters:
-      - arrests-intro.qmd
-  #    - arrests-trends.qmd
+      - recipes-arrests-intro.qmd
+      - recipes-arrests.qmd
   #    - arrests-whereto.qmd
-  #    - arrests-demographics.qmd
-  #    - arrests-follow.qmd
   #    - detention-intro.qmd
   #    - detention-trends.qmd
-  #    - detention-fromwhere.qmd
+  #    - detention-facilities.qmd
   #    - detention-holds.qmd
-  #    - detainers.intro
-  #    - detainers.sheriffs
 
   appendices:
     - app-documentation.qmd
@@ -59,7 +55,6 @@ format:
       theme:
         - cosmo
         - custom.scss
-#      embed-resources: true
       toc: false
       code-fold: true
       code-tools: false

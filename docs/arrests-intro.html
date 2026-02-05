@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-60ffb205c5aff53c20e9d60c397f980d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c28578fd018f76b969037a87c9478f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-80c33773e73fb59ca3b2b20f2238370b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -218,15 +218,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Some of the most common stories in local news outlets examine the growth of arrests by ICE and the failure of the federal government to focus mainly on convicted criminals. Across the country, reporters have found that few of the people arrested have violent convictions, and less than half have any criminal history at all.</p>
-<p>We have enhanced the original data to include some more information on the person’s most serious criminal conviction and the first place they were detained after the arrest.</p>
-<p>You can use the same approach for each of the following story recipes to get a dataset that contains your state or local area.</p>
-<section id="get-your-local-data" class="level2">
-<h2 class="anchored" data-anchor-id="get-your-local-data">Get your local data</h2>
-<p>It’s more difficult than it should be to get the arrest data for your area. One solution is to stick with analysis at the state level since July 2025.</p>
-<p>There are several alternatives:</p>
+<p>The following chapters will lead you through reproducing some of the most common data-driven stories from around the country. We’ll use the stories produced by The Colorado Sun, with data anlaysis by Sandra Fish, as our guide.</p>
+<section id="download-your-local-data" class="level2">
+<h2 class="anchored" data-anchor-id="download-your-local-data">Download your local data</h2>
+<p>TK</p>
+<p>You will have several choices on how to determine your local area, none of which are perfect:</p>
 <ol type="1">
-<li>In very populated areas, use the EOR Area of Responsibility. This is the ICE office in charge of your area and differentiates between, for example, Northern and Southern California. But it combines many states in the interior of the country. You can look up your state on the ICE website to find the areas of responsibility, searching for your state “Enforcement and Removal Operations”:</li>
+<li><p>BLN estimated state of arrest: BLN has backfilled the missing states in the original data based on either the location of detainers or the first detention location. It’s possible these are wrong, but it’s better than ignoring the missing states altogether.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p>Location of the first detention: About 85 percent of people arrested are booked into a detention center within a week of the arrest. This is pretty consistent across the Biden and Trump administrations. There’s one argument that you care more about this subset of people, as they are the ones who may be removed or imprisoned. It’s also more precise than the state – you know just where the detention facility is. This is how the New York Times estimated the county of arrest in its stories.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
+<li><p>Area of Responsbility: In some cases, the ICE Enforcement office that is responsible for the arrest is MORE specific than the state, such as Los Angeles, Dallas, and New York City. For these major immigration hubs, you can just search for that area of responsbility.</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -234,26 +234,19 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>ICE ERO office example</figcaption>
 </figure>
 </div>
-<ol start="2" type="1">
-<li><p>Use all of the data for your state. We expect most people will do this. Since July 2025, this is pretty reliable. Before then, about 10 percent of the rows were missing the state. This means that any trends will OVERSTATE the increase in arrests, since there are likely some arrests from earlier periods that should have been marked as in your state but weren’t. You can supplement this with information from detention and detainer sites where the state is missing. We have found that XX percent of the missing information could be filled in using those tables, but there are still YY with missing states.</p></li>
-<li><p>Use the closest place of first detention instead of all arrests. This, too, will overstate the increase in arrests between the Biden and Trump years, because fewer people were automatically detained before 2025. But it will provide you with more local data for the past year.</p></li>
+<ol start="4" type="1">
+<li>Site landmark: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person’s landmark is actually the location of the first detention. But in other cases, you’ll see an abbreviation of a city or metro area in most of the landmark entries. We suggest using these entries as a way to refine your search rather than as a way to start it.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
 </ol>
-<p>SCREEN SHOT HERE.</p>
-<section id="trends-over-time" class="level3">
-<h3 class="anchored" data-anchor-id="trends-over-time">Trends over time</h3>
-</section>
-<section id="at-large-vs.-custody-arrests" class="level3">
-<h3 class="anchored" data-anchor-id="at-large-vs.-custody-arrests">At-large vs.&nbsp;custody arrests</h3>
-</section>
-<section id="demographics-of-people-arrested" class="level3">
-<h3 class="anchored" data-anchor-id="demographics-of-people-arrested">Demographics of people arrested</h3>
-</section>
-<section id="where-they-were-sent-after-arrest---tk" class="level3">
-<h3 class="anchored" data-anchor-id="where-they-were-sent-after-arrest---tk">Where they were sent after arrest - TK</h3>
-<p>TRY THE EXAMPLE OF THE SEP 4 RAID ON HYUNDAI PLANT IN GEORGIA - THere’s a lot there that you can see, but a lot of it is really confusing. I will have to go through this with the folks at DDP about this - it seems like the way to find most of them is to be pretty open about the date, but look at the first book-in – they all went to the same place.</p>
 
 
 </section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>If you were to download the original data with about 10 percent of the rows missing a state of arrest before mid-2025, you would overestimate the growth in arrests under President Trump. Don’t do this.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>People who accepted the government’s offer to buy a plane ticket home may not be included in these detentions.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://github.com/crmcglade/north-carolina-ice-arrests/tree/main">Caitlin McGlade’s Github site</a> documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
