@@ -10,7 +10,7 @@ BLN has enhanced some of the data to improve its usefulness for local reporters 
 
 [Part I](start-intro.qmd) of this guide introduces you to the data sources, alternatives, and stories that have already been done with deportation data. It provides some strategies for simplifying your analysis, and the overall structure of the data system, including what it can and can't tell us.
 
-[Part II](arrests-intro.qmd) provides recipes for specific stories like the ones highlighted in Part I. For each of the main data tables, it provides an introduction on how to obtain just the information for your area. Each subsequent chapter provides a short recipe for doing the analysis for a single story.
+[Part II](recipes-arrests-intro.qmd) provides recipes for specific stories like the ones highlighted in Part I. For each of the main data tables, it provides an introduction on how to obtain just the information for your area. Each subsequent chapter provides a short recipe for doing the analysis for a single story.
 
 The [Appendices](app-arrests.qmd) provide additional resources, including full documentation of the data provide by BLN and some background on ICE and immigration legal terms.
 
