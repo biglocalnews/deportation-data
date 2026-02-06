@@ -2,11 +2,11 @@
 
 ![Deportation Data Project](assets/images/ddp-coversheet.png)
 
-The [Deportation Data Project](https://deportationdata.org) is the most widely used effort at documenting arrests, detentions and removals in the immigration system.  Run by Graeme Blair of UCLA and David Hausman of Berkeley Law, the project and its lawyers began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. It is actively updating information from Immigration and Customs Enforcement, or ICE.^[Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven't yet been analyzed or cleaned by the project.]  As of this writing, the project posts original FOIA data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.
+The [Deportation Data Project](https://deportationdata.org) is the most widely used effort at documenting arrests, detentions and removals in the immigration system.  Run by Graeme Blair of UCLA and David Hausman of Berkeley Law, the project and its lawyers began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. It is actively updating information from Immigration and Customs Enforcement, or ICE.^[Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven't yet been analyzed or cleaned by the project.]  As of this writing, the project posts some of the original FOIA data through Oct. 15, 2025. It is trying to get the agency to correct recent versions of the remaining tables.
 
 Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have told ICE to produce the files.
 
-There are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions -- people held in ICE facilities -- cover xx million individual detentions, as the federal government moves people from place to place.
+There are nearly than 375,000 apprehensions representing about 300,000 people in the arrest data alone. Detentions -- people held in ICE facilities -- cover about 2 million (?) individual steps in the system, as the federal government moves people from place to place.
 
 The project itself allows users to filter and download the raw data, which is a great place to start for people who know how to program or can handle detailed and complicated datsets.
 
@@ -24,7 +24,7 @@ Another site by Relevant Research is its ongoing [analysis of detention faciliti
 
 ### Vera Institute Detention trends
 
-The Vera Institute provides [analysis of each detention facility](https://www.vera.org/ice-detention-trends) owned, operated or contracted by ICE. It has put together data going back to 2008 on detention by location, which it lets you [download from its Github site](https://github.com/vera-institute/ice-detention-trends/tree/main/facilities/by_state) by state.
+The Vera Institute provides [analysis of each detention facility](https://www.vera.org/ice-detention-trends) owned, operated or contracted by ICE. It has put together data going back to 2008 on detention by location, which it lets you [download from its Github site](https://github.com/vera-institute/ice-detention-trends/tree/main/facilities/by_state) by state. This original data was used as the source for BLN's enhanced detention locations.
 
 ### Stateline.org analysis
 
@@ -35,14 +35,6 @@ Tim Henderson at Stateline.org is often the source of local reporters' arrest an
 ### Transactional Records Access Clearinghouse (TRAC)
 
 TRAC has been collecting, analyzing and posting data from the [immigrations courts](https://tracreports.org/immigration/quickfacts/eoir.html) for almost 20 years. It was the first to acquire the monthly release of detailed individual records from the immigration court dockets, which is released each month on the Justice Department's [Executive Office of Immigration Review website (under EOIR Case Data)](https://www.justice.gov/eoir/foia-library-0). Its website is hard to use -- consider calling them if you have specific questions.^[BLN plans to work on making this data more accessible in the future.]
-
-### [#Detention kills](https://detentionkills.substack.com/)
-
-Andrew Free, an Atlanta immigration attorney and activist, [tracks deaths in DHS custody](https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQNGMQYGmCDrQAs8gHgXo_0mGnQ7IyJrpY6Fv1J4yI3GM_covsBEzFPq1dyUnG7UoBWLgM5wCH_iuis/pubhtml?gid=0&single=true) .
-
-### ICEMap
-
-Two Rice University computer science students created a [live feed of news reported incidents](https://www.icemap.dev/), mapped to general regions
 
 ### Government FOIA sites
 

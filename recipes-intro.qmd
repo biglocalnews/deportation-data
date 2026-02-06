@@ -1,0 +1,16 @@
+# Getting started with story recipes
+
+The following chapters lead you through reproducing some of the most common data-driven stories from around the country.
+
+* [Getting your local arrest data](recipes-arrest-locations.qmd): How to download and isolate the timing of arrests
+
+* [Arrest examples](recipes-arrest-examples.qmd): Replicating stories on criminal histories of people arrested, the increase in street arrests, and demographics.
+
+* Detention facilities: TK
+
+* Detention transfers: TK
+
+
+Full documentation of the data provided by Big Local News is included in the appendix.
+
+

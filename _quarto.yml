@@ -13,13 +13,16 @@ book:
     style: floating
 
 
-  title: "ICE data recipes from Big Local News"
+  title: "Immigration enforcement story recipes"
   subtitle: "Based on data provided by the Deportation Data Project"
   page-navigation: true
   reader-mode: false
 
   date: last-modified
-  author: Sarah Cohen
+  author:
+    - name: Sarah Cohen
+      affiliations:
+        - name: Big Local News, Stanford University
 
   chapters:
   - index.qmd
@@ -32,8 +35,9 @@ book:
 
   - part: "Recipes"
     chapters:
-      - recipes-arrests-intro.qmd
-      - recipes-arrests.qmd
+      - recipes-intro.qmd
+      - recipes-arrest-locations.qmd
+      - recipes-arrest-examples.qmd
   #    - arrests-whereto.qmd
   #    - detention-intro.qmd
   #    - detention-trends.qmd

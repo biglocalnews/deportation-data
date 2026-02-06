@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Deportation Data Project – ICE data recipes from Big Local News</title>
+<title>The Deportation Data Project – Immigration enforcement story recipes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">ICE data recipes from Big Local News</a> 
+      <a href="./">Immigration enforcement story recipes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -149,12 +149,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrests-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Local arrests</span></a>
+  <a href="./recipes-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Getting started with story recipes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrests.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Profiling the arrest data</span></a>
+  <a href="./recipes-arrest-locations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Local arrests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes-arrest-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analyzing arrests</span></a>
   </div>
 </li>
       </ul>
@@ -229,9 +234,9 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Deportation Data Project</figcaption>
 </figure>
 </div>
-<p>The <a href="https://deportationdata.org">Deportation Data Project</a> is the most widely used effort at documenting arrests, detentions and removals in the immigration system. Run by Graeme Blair of UCLA and David Hausman of Berkeley Law, the project and its lawyers began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. It is actively updating information from Immigration and Customs Enforcement, or ICE.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> As of this writing, the project posts original FOIA data for arrests, detentions and detainers through October 2025, and is trying to get the agency to correct its recent releases on removals and encounters.</p>
+<p>The <a href="https://deportationdata.org">Deportation Data Project</a> is the most widely used effort at documenting arrests, detentions and removals in the immigration system. Run by Graeme Blair of UCLA and David Hausman of Berkeley Law, the project and its lawyers began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. It is actively updating information from Immigration and Customs Enforcement, or ICE.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> As of this writing, the project posts some of the original FOIA data through Oct.&nbsp;15, 2025. It is trying to get the agency to correct recent versions of the remaining tables.</p>
 <p>Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have told ICE to produce the files.</p>
-<p>There are more than 300,000 people covering about xxx arrests in the arrest data alone. Detentions – people held in ICE facilities – cover xx million individual detentions, as the federal government moves people from place to place.</p>
+<p>There are nearly than 375,000 apprehensions representing about 300,000 people in the arrest data alone. Detentions – people held in ICE facilities – cover about 2 million (?) individual steps in the system, as the federal government moves people from place to place.</p>
 <p>The project itself allows users to filter and download the raw data, which is a great place to start for people who know how to program or can handle detailed and complicated datsets.</p>
 <p>But before you delve into working on your own, consider whether some other sources might provide what your story needs. All of these sources start with the deportation project’s original files, but provide different views of the data that might need your needs.</p>
 <section id="relevant-research" class="level3">
@@ -248,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="vera-institute-detention-trends" class="level3">
 <h3 class="anchored" data-anchor-id="vera-institute-detention-trends">Vera Institute Detention trends</h3>
-<p>The Vera Institute provides <a href="https://www.vera.org/ice-detention-trends">analysis of each detention facility</a> owned, operated or contracted by ICE. It has put together data going back to 2008 on detention by location, which it lets you <a href="https://github.com/vera-institute/ice-detention-trends/tree/main/facilities/by_state">download from its Github site</a> by state.</p>
+<p>The Vera Institute provides <a href="https://www.vera.org/ice-detention-trends">analysis of each detention facility</a> owned, operated or contracted by ICE. It has put together data going back to 2008 on detention by location, which it lets you <a href="https://github.com/vera-institute/ice-detention-trends/tree/main/facilities/by_state">download from its Github site</a> by state. This original data was used as the source for BLN’s enhanced detention locations.</p>
 </section>
 <section id="stateline.org-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="stateline.org-analysis">Stateline.org analysis</h3>
@@ -262,14 +267,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="transactional-records-access-clearinghouse-trac" class="level3">
 <h3 class="anchored" data-anchor-id="transactional-records-access-clearinghouse-trac">Transactional Records Access Clearinghouse (TRAC)</h3>
 <p>TRAC has been collecting, analyzing and posting data from the <a href="https://tracreports.org/immigration/quickfacts/eoir.html">immigrations courts</a> for almost 20 years. It was the first to acquire the monthly release of detailed individual records from the immigration court dockets, which is released each month on the Justice Department’s <a href="https://www.justice.gov/eoir/foia-library-0">Executive Office of Immigration Review website (under EOIR Case Data)</a>. Its website is hard to use – consider calling them if you have specific questions.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-</section>
-<section id="detention-kills" class="level3">
-<h3 class="anchored" data-anchor-id="detention-kills"><a href="https://detentionkills.substack.com/">#Detention kills</a></h3>
-<p>Andrew Free, an Atlanta immigration attorney and activist, <a href="https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQNGMQYGmCDrQAs8gHgXo_0mGnQ7IyJrpY6Fv1J4yI3GM_covsBEzFPq1dyUnG7UoBWLgM5wCH_iuis/pubhtml?gid=0&amp;single=true">tracks deaths in DHS custody</a> .</p>
-</section>
-<section id="icemap" class="level3">
-<h3 class="anchored" data-anchor-id="icemap">ICEMap</h3>
-<p>Two Rice University computer science students created a <a href="https://www.icemap.dev/">live feed of news reported incidents</a>, mapped to general regions</p>
 </section>
 <section id="government-foia-sites" class="level3">
 <h3 class="anchored" data-anchor-id="government-foia-sites">Government FOIA sites</h3>

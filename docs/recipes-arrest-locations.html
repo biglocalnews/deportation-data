@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Profiling the arrest data – ICE data recipes from Big Local News</title>
+<title>Local arrests – Immigration enforcement story recipes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./app-documentation.html" rel="next">
-<link href="./recipes-arrests-intro.html" rel="prev">
+<link href="./recipes-arrest-examples.html" rel="next">
+<link href="./recipes-intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-arrests-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrests.html"><span class="chapter-title">Profiling the arrest data</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrest-locations.html"><span class="chapter-title">Local arrests</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">ICE data recipes from Big Local News</a> 
+      <a href="./">Immigration enforcement story recipes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -149,12 +149,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrests-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Local arrests</span></a>
+  <a href="./recipes-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Getting started with story recipes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrests.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Profiling the arrest data</span></a>
+  <a href="./recipes-arrest-locations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Local arrests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes-arrest-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analyzing arrests</span></a>
   </div>
 </li>
       </ul>
@@ -202,11 +207,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content page-columns page-full column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-arrests-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrests.html"><span class="chapter-title">Profiling the arrest data</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrest-locations.html"><span class="chapter-title">Local arrests</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Profiling the arrest data</span></h1>
+<h1 class="title"><span id="local-arrests" class="quarto-section-identifier"><span class="chapter-title">Local arrests</span></span></h1>
 </div>
 
 
@@ -223,161 +228,95 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This section reviews particular passages in stories and studies that you can replicate in your own area. It assumes you have taken the first steps, outlined in the previous chapter, to download and organize the records you want to use in your analysis.</p>
-<p>The pieces include:</p>
-<ul>
-<li><p>The Deportation Data Projects analysis, “<a href="https://deportationdata.org/analysis/immigration-enforcement-first-nine-months-trump.html">Immigration Enforcement in the First Nine Months of the Second Trump Administration</a>”, by Graeme Blair and David Hausman</p></li>
-<li><p>The Colorado Sun’s coverage of the criminal records of people arrested and a deep dive into the profile of arrests in their area: “<a href="https://coloradosun.com/2025/12/31/ice-arrests-2025-data-deportation-data-project/">Ice arrested more thatn 3,500 people in Colorado in 2025 - including babies and the elderly</a>,” by Taylor Dolven and Sandra Fish an earlier story on the <a href="https://coloradosun.com/2025/07/18/ice-arrests-colorado-wyoming-no-criminal-history/">criminal histories in Colorado and Wyoming</a>, published with WyomingFile.</p></li>
-</ul>
+<section id="download-your-local-data" class="level2">
+<h2 class="anchored" data-anchor-id="download-your-local-data">Download your local data</h2>
+<p>TK</p>
+<p>There’s no perfect way to isolate arrests in your area alone. You have a few choices:</p>
+<ol type="1">
+<li><p><strong>BLN best guess of the state of arrest</strong>: BLN has backfilled missing states in the original data based on either the location of detainers or the first detention location. It’s possible these are wrong, but it’s better than ignoring the missing states altogether.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p><strong>Location of the first detention</strong>: About 85 percent of people arrested are booked into a detention center within a week of the arrest. This is pretty consistent across the Biden and Trump administrations. There’s one argument that you care more about this subset of people, as they are the ones who may be removed or imprisoned. It’s also more precise than the state – you know just where the detention facility is. This is how the New York Times estimated the county of arrest in its stories.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
+<li><p><strong>Area of Responsbility</strong>: In some cases, the <a href="https://www.ice.gov/contact/field-offices">ICE Enforcement office</a> that is responsible for the arrest is MORE specific than the state, such as Los Angeles, Dallas, and New York City. For these major immigration hubs, you can just search for that area of responsibility. Search for the list of “Enforcement and Removal Operations” offices to find the states and counties included in each one:</p></li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/images/colo-sun-dec31.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="./assets/images/erosearch-page.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>ICE AORs</figcaption>
 </figure>
 </div>
-<ul>
-<li>The Washington Post’s <a href="https://wapo.st/46wte1r">comprehensive view of street arrests</a> (gift link), which go back to 2008. This analysis will be a shortened version of it, but the growth in “at-large” arrests is one of the most visible pieces of the enforcement surges.</li>
-</ul>
-<p>We recommend reviewing each of these pieces when you’re analyzing your own area. Substantial differences in trends could suggest either an error in the data or the analysis, or could suggest newsworthiness. Only you can tell the difference.</p>
-<p>These analyses relies on three elements:</p>
-<ul>
-<li>Recoding data into the exact categories you need, such as the timing categories shown in the last chapter.</li>
-<li>Possibly filtering the data to remove items you don’t want to see. If you find yourself always filtering for the same thing, consider making a copy of just the rows you want to include.</li>
-<li>Creating one- or two-way pivot tables, with percentages.</li>
-</ul>
-<section id="criminal-histories" class="level2">
-<h2 class="anchored" data-anchor-id="criminal-histories">Criminal histories</h2>
-<p>The New York Times, Stateline and the Colorado Sun have gone beyond knowing that most people arrested in 2025 lacked a known criminal conviction. They also looked at the charges and the proportion that were violent. The BLN data slice provides the “charge group”, which is a general categorization for major crime types such as homicide, assault, traffic offenses and drugs.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Here’s what the Colorado Sun and WyomingFile said, based on data through July 2025 :</p>
-<div class="blockquote">
-<p>Most people arrested by U.S. Immigration and Customs Enforcement agents between Jan.&nbsp;20 and June 26 of this year in Colorado and Wyoming did not have any criminal convictions, according to ICE data released over the last few weeks. Among those arrested who had a conviction at the time of their arrest, the most serious crime is most often noted by ICE as drunken driving.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in both Colorado and Wyoming, the data shows.</p>
-</div>
-<p>There are three ways to look at criminal histories, and each depends a little on rejiggering the data to meet your needs. Whether or not a person had a criminal conviction at the time of apprehension is listed in the arrests table, but the details of those charges are only found elsewhere in the ICE data. The BLN data matches the most recent “most serious criminal conviction” from the detention table to arrests.</p>
-<section id="criminality-at-the-time-of-apprehension" class="level3">
-<h3 class="anchored" data-anchor-id="criminality-at-the-time-of-apprehension">Criminality at the time of apprehension:</h3>
-<p>Create a pivot table of the column called <code>arrest_criminality</code>:</p>
-<p><img src="assets/images/arrest-criminality.png" class="img-fluid" style="width:80.0%"></p>
-<p>(“Other immigration violator” is the way that ICE says that someone has no pending charges or convictions – they contend that everyone they arrest is an immigration violator.)</p>
-<p>While not exactly the same, these numbers for the Los Angeles area are in rough agreement with the data from elsewhere, including the Colorado story. It suggests that ICE thinks there are pending criminal charges against many more immigrants in the previous year, but many fewer have actual convictions.</p>
-<p>Breaking out the different administrations (either by looking at monthly trends or comparing like portions of years) can change the interpretation a lot! In this case, a majority of arrests were of people with criminal convictions since 2023, but the 2025 data shows a much different pattern.</p>
+<ol start="4" type="1">
+<li><strong>Site landmark</strong>: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person’s landmark is actually the location of the first detention. But in other cases, you’ll see an abbreviation of a city or metro area in most of the landmark entries. We suggest using these entries as a way to refine your search rather than as a way to start it.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+</ol>
 </section>
-<section id="violent-criminal-history" class="level3">
-<h3 class="anchored" data-anchor-id="violent-criminal-history">Violent criminal history</h3>
-<p>BLN has added a “special” code to the data, referring to special categories of criminal convictions. Here’s what they look like for the Los Angeles area when combined with the criminality code:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrest-crimetype.png" class="img-fluid figure-img" style="width:80.0%" alt="Criminality by type of crime"></p>
-<figcaption>Crime types</figcaption>
-</figure>
+<section id="importing-your-data-into-a-google-sheet" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="importing-your-data-into-a-google-sheet">Importing your data into a Google sheet</h2>
+<p>Here is what your data might look like after you’ve brought it into a Google Sheet.</p>
+<div class="column-body-outset-right">
+<p><img src="assets/images/arrest-import-raw.png" class="img-fluid"></p>
 </div>
-<p>This shows the proportion of arrests with violent criminal histories has fallen, to 11 percent, in the Los Angeles area.</p>
+<p>Make sure to keep the <code>orig_row_number</code> column on the very left. It’s important to have a column that shows you the order that the original file came in – otherwise you can’t un-sort it. (The row number is the location in the original FOIA dataset.)</p>
+<p>Before you go any further, convert the spreadsheet to a “data table”, which will make widen all of your columns and improve the chances that all of your rows and columns will stay together as you work.</p>
+<p><img src="assets/images/arrest-convert-table.png" class="img-fluid" style="width:85.0%"></p>
 </section>
-<section id="most-frequent-charges" class="level3">
-<h3 class="anchored" data-anchor-id="most-frequent-charges">Most frequent charges</h3>
-<p>The Colorado Sun / WyomingFile data through June surprisingly showed that the most frequent charge was drunken driving. Here’s what the charges look like in Los Angeles, through Oct.&nbsp;15. (Note that the Filters section is used instead of comparing the two periods in this chart.)</p>
+<section id="assign-date-categories" class="level2">
+<h2 class="anchored" data-anchor-id="assign-date-categories">Assign date categories</h2>
+<p>You will probably want to look at your data either by year, by month, or by administration. You’ll need to work with the date of the arrest to customize the analysis categories.</p>
+<p>If you want to look at the data by month, you’ll need to convert the date of the arrest to the first of the month. If you want to look at it for comparable periods over 2024 and 2025, as the Colorado Sun did, you’ll need to assign those.</p>
+<section id="assign-the-beginning-of-the-month-and-format-the-date" class="level3">
+<h3 class="anchored" data-anchor-id="assign-the-beginning-of-the-month-and-format-the-date">Assign the beginning of the month and format the date</h3>
+<p>Right-click on the heading row near the arrest data, and choose <code>Insert 1 column to the left</code>. You’ll enter a formula into this column. Every formula starts with an equal sign <code>=</code>, and then the name of a command, or function. The function to use here is <code>eomonth</code>, which gives you the date as of the end of a month.</p>
+<p>The formula is:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/images/arrest-commoncharge-2025.png" class="img-fluid figure-img" style="width:80.0%" alt="Most common crime charge in LA is drug trafficking followed by DUI"></p>
-<figcaption>Arrest charges</figcaption>
+<p><img src="assets/images/arrest-month-formula.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>=eomonth(c2,-1)+1</figcaption>
 </figure>
 </div>
-<p>BLN has also created a column called <code>bln_charge_group</code>, which combines crimes based on their standard FBI codes into more general groupings. For instance, all homicides are grouped together instead of being broken out by a specific type. Here’s a portion of the Los Angeles data showing the different crime categories :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrest-chargegroups-example.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Charge groupings</figcaption>
-</figure>
-</div>
+<p><img src="assets/images/arrest-get-month.png" class="img-fluid" style="width:85.0%"></p>
+<p>Follow the instructions to fill in the formula for the entire column of the table.</p>
 </section>
-</section>
-<section id="custodial-vs.-street-arrests" class="level2">
-<h2 class="anchored" data-anchor-id="custodial-vs.-street-arrests">Custodial vs.&nbsp;street arrests</h2>
-<p>Street arrests are considered any arrest made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/ddp-street-arrests.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-<p>Here’s what a similar chart of the Los Angeles data would look like, based on a pivot table by month<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrest-custodial-monthly.png" class="img-fluid figure-img"></p>
-<figcaption>Street arrests</figcaption>
-</figure>
-</div>
-<p>The overall number of arrests didn’t increase as much, partly because California does not honor the detainers that lead to custodial arrests. But the spike in at-large, or street arrests, is noticeable during the surge over the summer of 2025 in Southern California.</p>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<section id="get-comparable-2024-and-2025-data" class="level3">
+<h3 class="anchored" data-anchor-id="get-comparable-2024-and-2025-data">Get comparable 2024 and 2025 data</h3>
+<p>You could set up a complicated formula to get comparable periods for 2024 and 2025 but you can accomplish the same thing using a series of filters. Just be REALLY careful and check your work when you’re done.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-People vs.&nbsp;arrest counts
+Pitfalls with filters
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>People are duplicated in the arrest data when they appear to have been arrested more than once. You can handle this in several ways. The easiest is to make sure you are careful with your language, and write about “arrests” rather than “people” counts.</p>
-<p>But if you want to make sure you’re not double-counting anyone, you can use the <code>bln_person_id</code> as a way to count “unique” values. This makes sure no one is counted twice in the same sentence, but can lead to confusing totals – the number of “people arrested” will differ between the total, the total for a year, or the total for a month.</p>
-<p>Here’s how you would avoid double-counting people, and how it changes the totals:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrest-unique-people.png" class="img-fluid figure-img"></p>
-<figcaption>count unique people</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="countries-and-ages" class="level2">
-<h2 class="anchored" data-anchor-id="countries-and-ages">Countries and ages</h2>
-<p>Here’s what the Colorado Sun wrote about the youngest person arrested since January 2025:</p>
-<div class="blockquote">
-<p>Among the youngest people arrested in Colorado was a baby girl born in 2024, the data shows, with Mexican citizenship. ICE arrested her July 30 in the Denver area and deported her Aug.&nbsp;8 to Venezuela, according to the data.</p>
-</div>
-<p>Here’s how you might find the same thing for your area:</p>
+<p>There are a lot of ways to mess up filters without realizing it. Follow these guidelines to avoid most of the errors:</p>
 <ol type="1">
-<li>Filter for dates since Jan.&nbsp;20, 2025</li>
-<li>Sort the table by birth year, in descending order</li>
-<li>Look across the table to see what happened to that toddler</li>
+<li><p>Always start at the top row. An easy way to get there is to select the cell in the heading and then press the down arrow once.</p></li>
+<li><p>Be sure that you’ve cleared all of the filter selections before you start. That way you don’t risk filling in things you don’t mean to. (Under the Filter, make sure “Clear” is selected and that no rows will be included to begin with. This is the opposite of Excel’s behavior.)</p></li>
+<li><p>Whenever possible, do your editing on a column TO THE RIGHT of a column that’s always filled out. This will prevent anything you quck-copy down from stopping halfway through your data.</p></li>
+<li><p>ALWAYS check your answers – make sure there are no unexpected missing values and that the values are what you expect.</p></li>
 </ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrests-find-youngest.png" class="img-fluid figure-img"></p>
-<figcaption>Find youngest</figcaption>
-</figure>
+<p><img src="assets/images/arrest-filter-error.png" class="img-fluid" style="width:40.0%"></p>
 </div>
-<p>Here, the youngest is a Mexican boy born in 2023, arrested on January 28 and removed the next day to Honduras, according to the data.</p>
-<p>You can reverse the sorting and filter for “No criminal conviction” to find the oldest person without a criminal conviction - a Mexican man in his late 70s, arrested in public in September, who left voluntarily on the same day.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrest-oldest-noncriminal.png" class="img-fluid figure-img"></p>
-<figcaption>Oldest Non-criminal</figcaption>
-</figure>
 </div>
-<p>Consider filtering by country if you are interested in people from a particular country – say, Venezuela.</p>
-<p>You might consider removing all filters anytime you start a new analysis – it’s easy to get confused about what, exactly, you’re looking at in a large spreadsheet. Choose the menu item Data -&gt; Remove Filter to begin, then re-set your filter for arrests since Jan.&nbsp;20.</p>
-<p>When you filter, the bottom right corner will display how many arrests are included in your current view. Save this view for the future by choosing the menu item Data, Save as Filter View, and give it a name:</p>
-<p><img src="assets/images/arrest-save-filter-view.png" class="img-fluid"></p>
-<p>When you close that view, the filter is turned off and you can start over.</p>
+<p>Insert a new column to the left of the date and choose the dropdown menu on the date column to turn on a filter. Right now, the data runs from around September 2023 through Oct.&nbsp;15, 2025. This example sets the comparable time frames as Jan 1 to Oct 15 in both of the years that we have.</p>
+<p>In the filter, choose the item “Filter by Condition” instead of choosing the individual dates. At the bottom of the list, choose “Is between” as your condition, and type in <code>2024-01-01</code> to <code>2024-10-15</code> in the boxes. This filters all of your rows to just those between those two dates. Once you’re sure you’re at the top of the table, type in two consecutive rows of “2024”, select both of those cells and double-click on the plus sign that appears at the bottom right corner of the selection:</p>
+<p><img src="assets/images/arrest-date-filter.png" class="img-fluid" style="width:70.0%"></p>
+<p>(If you don’t type in two cells, it’s possible Google will think you want it to give you consecutive years, not just repeat the same year over and over.)</p>
+<p>Repeat the process , changing 2024 to 2025 in the boxes. Again, make sure your cursor is in the first row of the table before you try to copy anything.</p>
+<p>Finally, remove the filter on the date column by choosing “None” in the filter by condition box, then filter the new, partially filled out column for blanks. You can fill in “Neither” to fill out the rest of the rows, though it’s not strictly needed.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>Here’s what the left portion of your spreadsheet might look like after a little formatting:</p>
+<p><img src="assets/images/arrest-dates-done.png" class="img-fluid"></p>
+<p>Your table is ready for some analysis.</p>
+
+
 </section>
-<section id="where-to-go-from-here" class="level2">
-<h2 class="anchored" data-anchor-id="where-to-go-from-here">Where to go from here</h2>
-<p>You may have heard of arrests at a specific spot in your area. Consider looking for these in the arrest data, then following up with whatever you can find using your usual reporting methods. That’s what the Colorado Sun did, in order to get this lede:</p>
-<div class="blockquote">
-<p>On just one Sunday in April, immigration officers arrested at least 72 people in Colorado, data from U.S. Immigration and Customs Enforcement shows, the busiest day for immigration enforcement in the state so far since President Donald Trump took office in January.</p>
-<p>That day, federal agents from several agencies raided a Colorado Springs nightclub, arresting dozens of people they suspected of being in the country illegally.</p>
-<p>“Colorado Springs is waking up to a safer community today,” Jonathan Pullen, special agent in charge of the U.S. Drug Enforcement Administration’s Rocky Mountain Division, said after the raid.</p>
-<p>But newly released data shows that just nine of the 72 people ICE agents arrested in Colorado that day were marked by the agency as having any prior criminal convictions. ICE said the convictions were for a traffic offense, obstruction, assault, illegal entry, driving under the influence, heroin smuggling and marijuana possession.</p>
-</div>
-<p>The story went on to provide more details on the people caught in that raid before turning to a statistical analysis of the arrest data.</p>
-
-
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Although there is a difference in the detail coding between drug possession and sale, the actual data usually lumps it all together into “Dangerous Drugs”. We’re not trying to split them out here.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>This analysis will use traffic violations rather than the detailed drunken driving specification<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The DDP uses only data for arrests that resulted in a detention, which is why its headings are a little different<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>If you were to download the original data with about 10 percent of the rows missing a state of arrest before mid-2025, you would overestimate the growth in arrests under President Trump. Don’t do this.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>People who accepted the government’s offer to buy a plane ticket home may not be included in these detentions.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://github.com/crmcglade/north-carolina-ice-arrests/tree/main">Caitlin McGlade’s Github site</a> documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>It’s good practice that, whenever possible, you don’t leave a empty values in your table. It just makes everything else more difficult and error-prone.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -783,13 +722,13 @@ People vs.&nbsp;arrest counts
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./recipes-arrests-intro.html" class="pagination-link" aria-label="Local arrests">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Local arrests</span></span>
+      <a href="./recipes-intro.html" class="pagination-link" aria-label="Getting started with story recipes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Getting started with story recipes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./app-documentation.html" class="pagination-link" aria-label="About the data">
-        <span class="nav-page-text"><span class="chapter-title">About the data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./recipes-arrest-examples.html" class="pagination-link" aria-label="Analyzing arrests">
+        <span class="nav-page-text"><span class="chapter-title">Analyzing arrests</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
