@@ -1,87 +1,85 @@
 # Arrests
 
-Below is full documentation of the arrest data as used by BLN and available on our github site. We have also created simpler subsets of the data to support specific stories, which are documented in those sections.
-
-You should note that the date of arrest isn't exact. They sometimes don't log the arrest until someone is processed at an initial detention center, or when they are sent to immigration court.
-
-About x percent of the rows in this dataset do not contain unique identifiers for the person. This happens when the person has never been part of the immigration enforcement system before (based usually on fingerprint matches). Beginning in April 2025, everyone who has been in the U.S. for at least 30 days must have an A-number. This requirement was always a possibility in the past, based on immigration laws, but wasn't used for everyone until last year.
-
-This happens most frequently with people who crossed the border illegally and have never been caught by immigration officials before.
-
-
 ## BLN Record layout
 
-As of October 2025. I removed fields that were redacted or always blank. I'll only update counts when I change the data substantially,not when it's updated.
+As of October 15, 2025 (Dec. 2 update), there were 372,266 arrests in the BLN arrest table, which has removed duplicates. See the documentation below for details.
 
 ::: {.table-striped .table-sm}
 
-| order | item                       | label                                                                            | class          | Unique values | pct missing |
-|-------|----------------------------|----------------------------------------------------------------------------------|----------------|---------------|-------------|
-|       | Rows in dataset            | 291,722                                                                          |                |               |             |
-|       | Columns in dataset         | 19                                                                               |                |               |             |
-| 1     | orig_row_id                | Row identifier in the order that it was originally received                      | integer        |               | 0.0%        |
-| 2     | apprehension_date          | Range: 2023-09-01 - 2025-07-29                                                   | POSIXct POSIXt |               | 0.0%        |
-| 3     | apprehension_state         |                                                                                  | character      | 62            | 19.4%       |
-| 4     | apprehension_aor           | Area of Reponsibility                                                            | character      | 27            | 2.0%        |
-| 5     | final_program              | Refers to the organizational program within ICE that handled the arrest. This is the original 14 ICE programs, collapsed to four                                                                              | character      | 14            | 0.0%        |
-| 6     | final_program_group        | Always "ICE"                                                                     | character      | 1             | 0.0%        |
-| 7     | apprehension_method        |                                                                                  | character      | 27            | 0.0%        |
-| 8     | apprehension_criminality   | "Convicted Criminal", "Pending Criminal Charges"; "Other Immigration Violator"   | character      | 3             | 0.0%        |
-| 9     | case_status                | TBD                                                                              | character      | 14            | 1.5%        |
-| 10    | case_category              | TBD                                                                              | character      | 30            | 1.5%        |
-| 11    | departed_date              | Range: Other than 20 rows possibly in error, 2023-02-12 to 2025-07-28. Date only | POSIXct POSIXt |               | 42.3%       |
-| 12    | departure_country          |                                                                                  | character      | 193           | 42.3%       |
-| 13    | final_order_yes_no         |                                                                                  | character      | 3             | 1.5%        |
-| 14    | final_order_date           | 1967-01-06 to 2025-07-29                                                         | POSIXct POSIXt |               | 39.0%       |
-| 15    | birth_year                 | 1934 to 2025                                                                     | numeric        |               | 0.1%        |
-| 16    | citizenship_country        |                                                                                  | character      | 195           | 0.0%        |
-| 17    | gender                     | Male, Female, Unknown                                                            | character      | 3             | 0.0%        |
-| 18    | apprehension_site_landmark | Descriptive entry of the place the arrest took place                             | character      | 5107          | 2.1%        |
-| 19    | unique_identifier          | Person ID                                                                        | character      | 274017        | 0.8%        |
+```{r}
+#| label: record-layout
+#| echo: false
+#| eval: true
+#| include: true
 
-:::
+library(here)
+i_am("app-arrests.qmd")
+readr::read_csv(here("data/arrest_record_layout.csv") ) |>
+  dplyr::mutate ( description = tidyr::replace_na (description, "")) |>
+  knitr::kable(format="markdown")
 
-::: callout-tip
 
-I converted some items to factors in order to have them sort properly in charts and graphs. Consider using the .Rds version of the file if you're using R to keep these. They will be plain character variables in other data processing sofware.
+```
 
 :::
 
 
-## Definitions
+## Person identifiers
 
-### ERO administrative arrests
+About 99 percent of the rows in the original FOIA data contained a `unique_identifier`, which is a 32-character anonymized hash of an immigrant's A-number (sort of like a Social Security number for people going through the immigration system).
 
-The Deportation Data project is acquired from ICE, and refers to "ERO administrative arrests".
+The remainder either had no A-number yet -- for example, they've never come into contact with immigration officials before -- or the person couldn't be properly identified at the point of arrest.
 
-In his series "[A close look at ICE arrest data..](https://austinkocher.substack.com/p/live-new-immigration-enforcement)", Austin Kocher says that the Deportation Data Project's arrest data is actually administrative arrests reported by ICE's Enforcement and Removal Operations. *This excludes CBP, HSI, and non-administrative arrests*, he says. It suggests it excludes people caught up in protests or arrested without immigration orders.
+BLN has shortened this 32-character hash to its first 10 characters.^[There is a very small chance that this could result in improper duplicates. The data has been checked to make sure that never happened across all of the tables in the collection.] It just makes the ID easier to read in tables. These are lower-case letters and numbers that look random. An example is `002184ec34`. We don't know if this hash changes each time the data is released.
 
-Generally, ICE's ERO arrests people with civil immigration law violations - they're based on administrative arrest warrents.
-A [CRS report](https://www.congress.gov/crs-product/LSB10362) says they can make arrests in two instances when they don't have a warrant: 1) The alien is attempting to enter the country, 2) the officer has "reason to believe" the immigrant is here unlawfully and will escape if not arrested.
+That left about 5,500 rows with no unique identifier for a person. There was no way to guess whether or not these people were arrested more than once because the only identifying information is year of birth, gender, and nationality. Those rows were assigned a unique ID beginning with the year of birth and followed by the original row number.   An example is `1990_376607` (We may have to change this in the future if there are more than 999,999 arrests in the table.) This ID will change each time the data is released.
 
-This second exception suggests that ICE just has to say, "I think you're here unlawfully" and they can arrest without a warrant. These are the brief stops now called "Kavanaugh stops" because he said that using a broad definition here, even racial profiling, can fall under that exception.
+Each row has a column called `is_last_arrest`, which shows whether or not that was the latest recorded arrest for that person. These duplicates weren't removed because you may want to know how many people were arrested in a given month or year, and you'd want to include unique people in those counts.
+
+## Duplicates
+
+There were about 5,500 apprent true duplicated rows in the original arrest data. These are a combination of exact matches on every column; matches on the person ID and the date-time of arrest, and on the person ID and an arrest within the following 24 hours. We retained the most recent of these, even though it sometimes meant we didn't have quite as much information on the arrest.
+
+## BLN state of arrest
+
+About 60,000 of the original 377,000 rows in the FOIA data lacked the state in which the arrest occurred. BLN has made every effort to find the best possible guess for the correct state.
+
+We felt it crucial to fill in this missing data to avoid over-estimating the increase in arrests in a given area. From July 2025 forward, the omission is extremely rare ; it's much more common before 2025. This means that if you used the original state as a first step toward filtering the data to your area, you would risk seriously overstating the increase in arrests in late 2025 -- you just wouldn't have any rows for the missing data.
+
+We were able to estimate a state for almost all of the missing information by taking the first of the following four possible s
+
+1. Use the assigned state from the original data.
+
+2. If the Area of Responsibility was entirely within one state, use that state. This filled in a lot of the rows from Texas, California and New York City.
+
+3. Match a detention to an arrest based on the person ID and the date, and use the state of the first detention location.   There is some error in this in areas that cross state lines, such as St. Louis or Kansas City or Washington D.C. , where the major detention location is just across a state border.
+
+4. Match a detainer to an arrest based on the person ID and the date. A detainer can be anytime before an arrest and this data only goes back to 2023, so we used the most recent detainer state before the arrest.
+
+5. The landmark site is often unclear, such as in Atlanta, where they seem to code anything in that area of responsibility as an Atlanta landmark. But elsewhere it's a lot clearer, such as general metro areas around Minneapolis or Dallas. We counted the number of arrests for each landmark by state in the original data. If one state accounted for at least 90 percent of the arrests at that landmark, we used that state. Otherwise, we left it blank.
+
+This left fewer than 1,000 rows without an assigned state.
+
+## BLN crime codes
+
+The original FOIA data only contained an indicator for whether or not the person 1) had a criminal conviction, 2) faced criminal charges without a conviction, or 3) was an "other immigration violator".^[ICE contends that everyone they arrest is an immigration violator]. Importantly, there was no detail on what crime was associated with the conviction.
+
+In other tables, such as the detentions, ICE assigns what it calls the "Most serious criminal conviction" for each person. Previous reporting on this coding and a review of forms used by ICE, suggest that this conviction is the one in a person's history that carried the longest sentence. Generally, violent crimes , drugs and weapon charges are considered more serious than traffic, which in turn can be more serious than entering the country illegally.
+
+We matched the detention and detainer data to the arrests in the process outlined above, and chose the most serious criminal conviction. We used the most recent if there were more than one, under the idea that we wanted to overestimate more serious crimes rather than underestimate them.
+
+Each row in the BLN data has a code and description for detailed and more general crimes. We only assigned a crime code to those that were recorded in the original data as "1 Convicted Criminal"; the other two categories were assigned a code that would indicate there was no criminal conviction in the arrest record. Similarly, if the arrest record indicated a conviction but we couldn't find one, we assigned it a code to indicate it was unknown.
+
+More detail on the meaning of the individual codes is shown in the "[Common data elements](app-common-defs.qmd)" chapter
+
+## Simplified categories
+
+At the risk of losing some detail, BLN has simplified some of the categories used in the original data to make for more straightforward analysis.
+
 
 ### Apprehension method
 
-Generally, people have tried to distinguish arrests that came from some kind of detention from those that happened in the wild. Different groups have done it differently:
-
-#### [Cato Institute](https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order)
-
-The  defined street arrests as:
-
-::: blockquote
-any arrest not in state or local custody, a jail, prison, police department, office, court, detention center, or other facility.) had a piece on street vs. custody arrests, and they broke each of the 27 different kinds of apprehensions into those two categories. See the lookup tables for the exact translation.  Almost all of the "From detention" are from state, local or federal jails and prisons.
-:::
-
-It wasn't clear how they translated the categories, and they haven't responded to my outreach.
-
-#### Other stories
-
-LAT, the City and others have distinguished between "street arrests" and others, but they've used different definitions.
-
-#### ICE itself
-
-I am using the categorization suggested by the [2024 ICE annual report](https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf), page 15:
+The apprehension method refers to the circumstances under which the person has been arrested. We have used ICE's own categorization suggested by the [2024 ICE annual report](https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf), page 15:
 
 ::: blockquote
 
@@ -90,50 +88,17 @@ I am using the categorization suggested by the [2024 ICE annual report](https://
 
 :::
 
-Here are the categorizations:
+The following 7 categories in the original data were combined to create the "Custodial" grouping: 287(g) Program , CAP Federal Incarceration , CAP Local Incarceration , CAP State Incarceration , Criminal Alien Program , Custodial Arrest , Other Agency (turned over to INS). The remaining 20 categories were combined to create the "At-large" arrests. (Most of these weren't very descriptive, such as "non-custodial arrest", or "ERO Reporcessed Arrest". )
 
+This breakout doesn't exactly match what some news organizations have done, which is to distinguish "street" arrests from other at-large arrests. A street arrest might not include, for example, worksite raids. We decided to simplify the categories and you can  use the term "street arrest" and "at-large" arrest interchangeably.
 
-Original | Recode
-------- | ------
-287(g) Program | Custodial
-Anti-Smuggling | At-large
-Boat Patrol | At-large
-CAP Federal Incarceration | Custodial
-CAP Local Incarceration | Custodial
-CAP State Incarceration | Custodial
-Crewman/Stowaway | At-large
-Criminal Alien Program | Custodial
-Custodial Arrest | Custodial
-ERO Reprocessed Arrest | At-large
-Inspections | At-large
-Law Enforcement Agency Response Unit | At-large
-Located | At-large
-Non-Custodial Arrest | At-large
-Organized Crime Drug Enforcement Task Force | At-large
-Other Agency (turned over to INS) | Custodial
-Other Task Force | At-large
-Other efforts | At-large
-Patrol Border | At-large
-Patrol Interior | At-large
-Presented During Inspection | At-large
-Probation and Parole | At-large
-Traffic Check | At-large
-Transportation Check Aircraft | At-large
-Transportation Check Bus | At-large
-Transportation Check Passenger Train | At-large
-Worksite Enforcement | At-large
+## Detention details
 
+About 85 percent of the arrests could be matched to a detention. We used the Data Deportation Project's criteria for determining whether a detention stay matched up with an arrest: If the arrest was less than **CHECK THIS! I FORGET WHAT I LANDED ON**  7 days before, or less than 3 days after the detention, we considered it a match. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention.
 
-## Handling duplicates
+## Detainer details
 
-There are several types of duplicates, and I'm handling them in different ways. Generally,
-
-1. If there is no id code for the person, I NEVER count it as a duplicate. There's no way to tell if two people from the same country of the same age were arrested at the same time, or if it's the same person twice.
-2. If the same person is arrested more than once within 24 hours, I count the earlier one as a duplicate. This could concievably happen, but it would be weird.
-3. If the same person is arrested twice at the same time, I count the one that comes first in the dataset as the duplicate. This could be wrong, and it can end up losing some data in a small number of rows.
-
-There are other arrests, detentions and removals that are of the same person, but not duplicates -- they appear to actually have been arrested or removed twice, for example. I'm keeping those, but noting which one is the last one logged.
-
+Less than half of the detainers could be matched to an arrest record. One reason is that detainers are much less likely to have a person identifier. We used the most recent detainer recorded for a person as a match, even if it was several years ago. The reason is that the detainers don't expire, and the person could have been incarcerated locally or at the state level the entire time. We did not include as a match any detainer after the arrest.
 
 
 ## Progress
@@ -145,39 +110,9 @@ There are other arrests, detentions and removals that are of the same person, bu
 * [x] Collapse case status
 * [x] Collapse case category: Decided not to keep this
 * [x] Collapse program categories
-* [ ] Add information on where arrested from detainer and first place of detention to the arrest table
-* [ ] Add most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.
+* [x] Add information on where arrested from detainer and first place of detention to the arrest table
+* [x] Add most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.
 * [ ] Run the recodes by an expert or two
 
 :::
 
-
-::: question
-
-## Data questions
-<!-- this can't have any blank rows for the checkboxes to come out right -->
-
-- [ ] Clarify how much and what is missing from the ICE administrative arrest data. Kocher says it's "likely" that it does not additional arrests. Is that true? (Hint: there are no U.S. citizens in the arrest data.)
-- [ ] Is it at all possible that the large number of missing final order dates refer to people who don't have final orders of removal? If so, why are they arrested? (Possible answer: they were never documented entry, so they can be removed without a hearing?)
-- [ ] How are children handled in practice? I know the data here excludes OSS (HHS) detentions, but what happens in the arrest data? It's been suggested that the ones in our data are most likely families, but there are also some in juvenile detention facilities. I think we'll have to figure this out as people do more reporting. I think the Marshall project may have figured some of this out: <https://www.themarshallproject.org/2025/12/17/children-immigration-detention-dilley-ice>
-
-:::
-
-
-::: question
-
-## Story questions
-
-- [ ] Based on what is and is not an ERO administrative arrest, can we find "Kavanaugh stops" by looking at detentions that were not based on a) detainers, b) warrants, or c) CBP operations?
-- [ ] Is there anything interesting about people who are arrested but there is no final order? This would presumably be people who have evaded the immigration system entirely, or who have run away from detention? I guess it could include people who overstayed their visas as well.
-
-:::
-
-
-
-## Detention
-
-* Los Angeles Times, "How ICE detainees are moved miles away from families and attorneys", Sep. 26, 2025 and "'It's dystopian': 1 in 3 ICE detainees held in overcrowded facilities", Los Angeles Times, Aug. 29, 2025
-* <https://www.themarshallproject.org/2025/12/18/ice-chicago-immigration-blitz-data>
-* Look for Will Craft's story on keeping people in holding areas too long.
-* Look at others for how they are moving around.

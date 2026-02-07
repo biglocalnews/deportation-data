@@ -1,0 +1,7 @@
+# Google Sheets how-to's
+
+## Pivot table
+
+A pivot table is probably the most powerful thing that a spreadsheet does. Although Google Sheet's version is less useful than Excel's, the key element -- summarizing large datasets into meaningful categories -- is quite possible.
+
+Here's a quick video to get you started on pivot tables. If you want to know more about how they work,

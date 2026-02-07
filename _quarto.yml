@@ -45,12 +45,12 @@ book:
   #    - detention-holds.qmd
 
   appendices:
-    - app-documentation.qmd
+    - app-intro.qmd
+    - app-common-defs.qmd
     - app-arrests.qmd
   # - app-detentions.qmd
   # - app-detainers.qmd
-    - app-common-defs.qmd
-    - app-enhancements.qmd
+  #  - app-enhancements.qmd
     - app-ice-overview.qmd
 
 

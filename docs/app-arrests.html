@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix B — Arrests – Immigration enforcement story recipes</title>
+<title>Appendix C — Arrests – Immigration enforcement story recipes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./app-common-defs.html" rel="next">
-<link href="./app-documentation.html" rel="prev">
+<link href="./app-ice-overview.html" rel="next">
+<link href="./app-common-defs.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-documentation.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-arrests.html"><span class="chapter-title">Arrests</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-intro.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-arrests.html"><span class="chapter-title">Arrests</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -175,7 +175,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./app-documentation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">About the data</span></a>
+  <a href="./app-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Appendices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./app-common-defs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Common data elements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -185,17 +190,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./app-common-defs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Common elements used across tables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./app-enhancements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data enhancements</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./app-ice-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Understanding the immigration enforcement system</span></a>
+  <a href="./app-ice-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Immigration backgrounder</span></a>
   </div>
 </li>
       </ul>
@@ -209,9 +204,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-documentation.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-arrests.html"><span class="chapter-title">Arrests</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./app-intro.html">Appendices</a></li><li class="breadcrumb-item"><a href="./app-arrests.html"><span class="chapter-title">Arrests</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Appendix B — Arrests</h1>
+<h1 class="title">Appendix C — Arrests</h1>
 </div>
 
 
@@ -228,383 +223,310 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Below is full documentation of the arrest data as used by BLN and available on our github site. We have also created simpler subsets of the data to support specific stories, which are documented in those sections.</p>
-<p>You should note that the date of arrest isn’t exact. They sometimes don’t log the arrest until someone is processed at an initial detention center, or when they are sent to immigration court.</p>
-<p>About x percent of the rows in this dataset do not contain unique identifiers for the person. This happens when the person has never been part of the immigration enforcement system before (based usually on fingerprint matches). Beginning in April 2025, everyone who has been in the U.S. for at least 30 days must have an A-number. This requirement was always a possibility in the past, based on immigration laws, but wasn’t used for everyone until last year.</p>
-<p>This happens most frequently with people who crossed the border illegally and have never been caught by immigration officials before.</p>
 <section id="bln-record-layout" class="level2">
 <h2 class="anchored" data-anchor-id="bln-record-layout">BLN Record layout</h2>
-<p>As of October 2025. I removed fields that were redacted or always blank. I’ll only update counts when I change the data substantially,not when it’s updated.</p>
+<p>As of October 15, 2025 (Dec.&nbsp;2 update), there were 372,266 arrests in the BLN arrest table, which has removed duplicates. See the documentation below for details.</p>
 <div class="table-striped table-sm">
-<table class="caption-top table">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
 <colgroup>
+<col style="width: 3%">
+<col style="width: 11%">
 <col style="width: 4%">
-<col style="width: 17%">
-<col style="width: 50%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 8%">
+<col style="width: 3%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>order</th>
-<th>item</th>
-<th>label</th>
-<th>class</th>
-<th>Unique values</th>
-<th>pct missing</th>
+<th style="text-align: right;">position</th>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: right;">missing</th>
+<th style="text-align: left;">description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td>Rows in dataset</td>
-<td>291,722</td>
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">arrest_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Original row number from the FOIA spreadsheet</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>Columns in dataset</td>
-<td>19</td>
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">bln_person_id</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">BLN’s person identifier for arrests, the first 10 characters of the original unique identifier if it exists, or a combination of birth year and row number for cases where it doesn’t</td>
 </tr>
 <tr class="odd">
-<td>1</td>
-<td>orig_row_id</td>
-<td>Row identifier in the order that it was originally received</td>
-<td>integer</td>
-<td></td>
-<td>0.0%</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">apprehension_date</td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">orignal recorded date of arrest</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>apprehension_date</td>
-<td>Range: 2023-09-01 - 2025-07-29</td>
-<td>POSIXct POSIXt</td>
-<td></td>
-<td>0.0%</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">is_last_arrest</td>
+<td style="text-align: left;">logical</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">TRUE if it is the most recent arrest for the person ID</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>apprehension_state</td>
-<td></td>
-<td>character</td>
-<td>62</td>
-<td>19.4%</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">apprehension_aor</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">5752</td>
+<td style="text-align: left;">ICE Enforcement and Removal Operations area of responsibility</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>apprehension_aor</td>
-<td>Area of Reponsibility</td>
-<td>character</td>
-<td>27</td>
-<td>2.0%</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">bln_arrest_state</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">3828</td>
+<td style="text-align: left;">BLN’s best estimate of state. See methodology for more detail</td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td>final_program</td>
-<td>Refers to the organizational program within ICE that handled the arrest. This is the original 14 ICE programs, collapsed to four</td>
-<td>character</td>
-<td>14</td>
-<td>0.0%</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">apprehension_site_landmark</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">8605</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td>6</td>
-<td>final_program_group</td>
-<td>Always “ICE”</td>
-<td>character</td>
-<td>1</td>
-<td>0.0%</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">apprehension_method_recoded</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">At-large or Custodial</td>
 </tr>
 <tr class="odd">
-<td>7</td>
-<td>apprehension_method</td>
-<td></td>
-<td>character</td>
-<td>27</td>
-<td>0.0%</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">apprehension_criminality</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Original criminality recorded in the arrest table, either no conviction, pending charges or other immigration violator</td>
 </tr>
 <tr class="even">
-<td>8</td>
-<td>apprehension_criminality</td>
-<td>“Convicted Criminal”, “Pending Criminal Charges”; “Other Immigration Violator”</td>
-<td>character</td>
-<td>3</td>
-<td>0.0%</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">bln_arrest_charge_code</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">FBI 4-digit code for the crime recorded in detentions that best matches the arrest</td>
 </tr>
 <tr class="odd">
-<td>9</td>
-<td>case_status</td>
-<td>TBD</td>
-<td>character</td>
-<td>14</td>
-<td>1.5%</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">bln_charge</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">BLN charge description</td>
 </tr>
 <tr class="even">
-<td>10</td>
-<td>case_category</td>
-<td>TBD</td>
-<td>character</td>
-<td>30</td>
-<td>1.5%</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">bln_charge_group_code</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">2-digit crime code, to make for fewer categories</td>
 </tr>
 <tr class="odd">
-<td>11</td>
-<td>departed_date</td>
-<td>Range: Other than 20 rows possibly in error, 2023-02-12 to 2025-07-28. Date only</td>
-<td>POSIXct POSIXt</td>
-<td></td>
-<td>42.3%</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">bln_charge_group</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Description of the 2-digit crime code</td>
 </tr>
 <tr class="even">
-<td>12</td>
-<td>departure_country</td>
-<td></td>
-<td>character</td>
-<td>193</td>
-<td>42.3%</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">bln_charge_special</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">53153</td>
+<td style="text-align: left;">Special types of charges: No criminal conviction; Violent; Traffic; Immigration; or Drug. Blank if none of those apply</td>
 </tr>
 <tr class="odd">
-<td>13</td>
-<td>final_order_yes_no</td>
-<td></td>
-<td>character</td>
-<td>3</td>
-<td>1.5%</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">birth_year</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td>14</td>
-<td>final_order_date</td>
-<td>1967-01-06 to 2025-07-29</td>
-<td>POSIXct POSIXt</td>
-<td></td>
-<td>39.0%</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">citizenship_country</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td>15</td>
-<td>birth_year</td>
-<td>1934 to 2025</td>
-<td>numeric</td>
-<td></td>
-<td>0.1%</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">gender</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td>16</td>
-<td>citizenship_country</td>
-<td></td>
-<td>character</td>
-<td>195</td>
-<td>0.0%</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">case_status_recoded</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">8931</td>
+<td style="text-align: left;">Removed; Voluntarily returned, Active case , Released, or Other. See methdology for details</td>
 </tr>
 <tr class="odd">
-<td>17</td>
-<td>gender</td>
-<td>Male, Female, Unknown</td>
-<td>character</td>
-<td>3</td>
-<td>0.0%</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">departed_date</td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: right;">137519</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td>18</td>
-<td>apprehension_site_landmark</td>
-<td>Descriptive entry of the place the arrest took place</td>
-<td>character</td>
-<td>5107</td>
-<td>2.1%</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">departure_country</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">137573</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td>19</td>
-<td>unique_identifier</td>
-<td>Person ID</td>
-<td>character</td>
-<td>274017</td>
-<td>0.8%</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">final_order_date</td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: right;">144622</td>
+<td style="text-align: left;">Date of the removal order from immigration court</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">detention_facility</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">52399</td>
+<td style="text-align: left;">Name of the detention facility matching this arrest</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">detention_state</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">52567</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">detention_city</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">52469</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">detention_county</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">52567</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">detention_days_after</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">52399</td>
+<td style="text-align: left;"># of days after the arrest that the detention began. Negative numbers reflect detentions that are recorded as starting a day or two after the arrest</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27</td>
+<td style="text-align: left;">detainer_state</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">207066</td>
+<td style="text-align: left;">State of the most recent detainer</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">detainer_facility</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">206910</td>
+<td style="text-align: left;">Name of the most recent detainer facility</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">detainer_city</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">207066</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">detainer_county</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">207117</td>
+<td style="text-align: left;">Detainer county based on geocoding of the facility name and city – approximate</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">detainer_days_before</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">206906</td>
+<td style="text-align: left;"># of days before the arrest that the detainer was sent. Negative numbers reflect detainers apparently entered up to several days after the arrest</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I converted some items to factors in order to have them sort properly in charts and graphs. Consider using the .Rds version of the file if you’re using R to keep these. They will be plain character variables in other data processing sofware.</p>
 </div>
 </div>
 </section>
-<section id="definitions" class="level2">
-<h2 class="anchored" data-anchor-id="definitions">Definitions</h2>
-<section id="ero-administrative-arrests" class="level3">
-<h3 class="anchored" data-anchor-id="ero-administrative-arrests">ERO administrative arrests</h3>
-<p>The Deportation Data project is acquired from ICE, and refers to “ERO administrative arrests”.</p>
-<p>In his series “<a href="https://austinkocher.substack.com/p/live-new-immigration-enforcement">A close look at ICE arrest data..</a>”, Austin Kocher says that the Deportation Data Project’s arrest data is actually administrative arrests reported by ICE’s Enforcement and Removal Operations. <em>This excludes CBP, HSI, and non-administrative arrests</em>, he says. It suggests it excludes people caught up in protests or arrested without immigration orders.</p>
-<p>Generally, ICE’s ERO arrests people with civil immigration law violations - they’re based on administrative arrest warrents. A <a href="https://www.congress.gov/crs-product/LSB10362">CRS report</a> says they can make arrests in two instances when they don’t have a warrant: 1) The alien is attempting to enter the country, 2) the officer has “reason to believe” the immigrant is here unlawfully and will escape if not arrested.</p>
-<p>This second exception suggests that ICE just has to say, “I think you’re here unlawfully” and they can arrest without a warrant. These are the brief stops now called “Kavanaugh stops” because he said that using a broad definition here, even racial profiling, can fall under that exception.</p>
+<section id="person-identifiers" class="level2">
+<h2 class="anchored" data-anchor-id="person-identifiers">Person identifiers</h2>
+<p>About 99 percent of the rows in the original FOIA data contained a <code>unique_identifier</code>, which is a 32-character anonymized hash of an immigrant’s A-number (sort of like a Social Security number for people going through the immigration system).</p>
+<p>The remainder either had no A-number yet – for example, they’ve never come into contact with immigration officials before – or the person couldn’t be properly identified at the point of arrest.</p>
+<p>BLN has shortened this 32-character hash to its first 10 characters.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> It just makes the ID easier to read in tables. These are lower-case letters and numbers that look random. An example is <code>002184ec34</code>. We don’t know if this hash changes each time the data is released.</p>
+<p>That left about 5,500 rows with no unique identifier for a person. There was no way to guess whether or not these people were arrested more than once because the only identifying information is year of birth, gender, and nationality. Those rows were assigned a unique ID beginning with the year of birth and followed by the original row number. An example is <code>1990_376607</code> (We may have to change this in the future if there are more than 999,999 arrests in the table.) This ID will change each time the data is released.</p>
+<p>Each row has a column called <code>is_last_arrest</code>, which shows whether or not that was the latest recorded arrest for that person. These duplicates weren’t removed because you may want to know how many people were arrested in a given month or year, and you’d want to include unique people in those counts.</p>
 </section>
+<section id="duplicates" class="level2">
+<h2 class="anchored" data-anchor-id="duplicates">Duplicates</h2>
+<p>There were about 5,500 apprent true duplicated rows in the original arrest data. These are a combination of exact matches on every column; matches on the person ID and the date-time of arrest, and on the person ID and an arrest within the following 24 hours. We retained the most recent of these, even though it sometimes meant we didn’t have quite as much information on the arrest.</p>
+</section>
+<section id="bln-state-of-arrest" class="level2">
+<h2 class="anchored" data-anchor-id="bln-state-of-arrest">BLN state of arrest</h2>
+<p>About 60,000 of the original 377,000 rows in the FOIA data lacked the state in which the arrest occurred. BLN has made every effort to find the best possible guess for the correct state.</p>
+<p>We felt it crucial to fill in this missing data to avoid over-estimating the increase in arrests in a given area. From July 2025 forward, the omission is extremely rare ; it’s much more common before 2025. This means that if you used the original state as a first step toward filtering the data to your area, you would risk seriously overstating the increase in arrests in late 2025 – you just wouldn’t have any rows for the missing data.</p>
+<p>We were able to estimate a state for almost all of the missing information by taking the first of the following four possible s</p>
+<ol type="1">
+<li><p>Use the assigned state from the original data.</p></li>
+<li><p>If the Area of Responsibility was entirely within one state, use that state. This filled in a lot of the rows from Texas, California and New York City.</p></li>
+<li><p>Match a detention to an arrest based on the person ID and the date, and use the state of the first detention location. There is some error in this in areas that cross state lines, such as St.&nbsp;Louis or Kansas City or Washington D.C. , where the major detention location is just across a state border.</p></li>
+<li><p>Match a detainer to an arrest based on the person ID and the date. A detainer can be anytime before an arrest and this data only goes back to 2023, so we used the most recent detainer state before the arrest.</p></li>
+<li><p>The landmark site is often unclear, such as in Atlanta, where they seem to code anything in that area of responsibility as an Atlanta landmark. But elsewhere it’s a lot clearer, such as general metro areas around Minneapolis or Dallas. We counted the number of arrests for each landmark by state in the original data. If one state accounted for at least 90 percent of the arrests at that landmark, we used that state. Otherwise, we left it blank.</p></li>
+</ol>
+<p>This left fewer than 1,000 rows without an assigned state.</p>
+</section>
+<section id="bln-crime-codes" class="level2">
+<h2 class="anchored" data-anchor-id="bln-crime-codes">BLN crime codes</h2>
+<p>The original FOIA data only contained an indicator for whether or not the person 1) had a criminal conviction, 2) faced criminal charges without a conviction, or 3) was an “other immigration violator”.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Importantly, there was no detail on what crime was associated with the conviction.</p>
+<p>In other tables, such as the detentions, ICE assigns what it calls the “Most serious criminal conviction” for each person. Previous reporting on this coding and a review of forms used by ICE, suggest that this conviction is the one in a person’s history that carried the longest sentence. Generally, violent crimes , drugs and weapon charges are considered more serious than traffic, which in turn can be more serious than entering the country illegally.</p>
+<p>We matched the detention and detainer data to the arrests in the process outlined above, and chose the most serious criminal conviction. We used the most recent if there were more than one, under the idea that we wanted to overestimate more serious crimes rather than underestimate them.</p>
+<p>Each row in the BLN data has a code and description for detailed and more general crimes. We only assigned a crime code to those that were recorded in the original data as “1 Convicted Criminal”; the other two categories were assigned a code that would indicate there was no criminal conviction in the arrest record. Similarly, if the arrest record indicated a conviction but we couldn’t find one, we assigned it a code to indicate it was unknown.</p>
+<p>More detail on the meaning of the individual codes is shown in the “<a href="./app-common-defs.html">Common data elements</a>” chapter</p>
+</section>
+<section id="simplified-categories" class="level2">
+<h2 class="anchored" data-anchor-id="simplified-categories">Simplified categories</h2>
+<p>At the risk of losing some detail, BLN has simplified some of the categories used in the original data to make for more straightforward analysis.</p>
 <section id="apprehension-method" class="level3">
 <h3 class="anchored" data-anchor-id="apprehension-method">Apprehension method</h3>
-<p>Generally, people have tried to distinguish arrests that came from some kind of detention from those that happened in the wild. Different groups have done it differently:</p>
-<section id="cato-institute" class="level4">
-<h4 class="anchored" data-anchor-id="cato-institute"><a href="https://www.cato.org/blog/1/5-ice-arrests-are-latinos-streets-no-criminal-past-or-removal-order">Cato Institute</a></h4>
-<p>The defined street arrests as:</p>
-<div class="blockquote">
-<p>any arrest not in state or local custody, a jail, prison, police department, office, court, detention center, or other facility.) had a piece on street vs.&nbsp;custody arrests, and they broke each of the 27 different kinds of apprehensions into those two categories. See the lookup tables for the exact translation. Almost all of the “From detention” are from state, local or federal jails and prisons.</p>
-</div>
-<p>It wasn’t clear how they translated the categories, and they haven’t responded to my outreach.</p>
-</section>
-<section id="other-stories" class="level4">
-<h4 class="anchored" data-anchor-id="other-stories">Other stories</h4>
-<p>LAT, the City and others have distinguished between “street arrests” and others, but they’ve used different definitions.</p>
-</section>
-<section id="ice-itself" class="level4">
-<h4 class="anchored" data-anchor-id="ice-itself">ICE itself</h4>
-<p>I am using the categorization suggested by the <a href="https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf">2024 ICE annual report</a>, page 15:</p>
+<p>The apprehension method refers to the circumstances under which the person has been arrested. We have used ICE’s own categorization suggested by the <a href="https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf">2024 ICE annual report</a>, page 15:</p>
 <div class="blockquote">
 <ul>
 <li>At-large arrests, which take place within the community (i.e., outside of jails or prisons).</li>
 <li>Custodial arrests, which take place in the confines of a jail or prison, as CAP works with federal, state and local law enforcement partners to take custody of removable noncitizens who have already been arrested by another law enforcement agency for criminal activity</li>
 </ul>
 </div>
-<p>Here are the categorizations:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Original</th>
-<th>Recode</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>287(g) Program</td>
-<td>Custodial</td>
-</tr>
-<tr class="even">
-<td>Anti-Smuggling</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Boat Patrol</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>CAP Federal Incarceration</td>
-<td>Custodial</td>
-</tr>
-<tr class="odd">
-<td>CAP Local Incarceration</td>
-<td>Custodial</td>
-</tr>
-<tr class="even">
-<td>CAP State Incarceration</td>
-<td>Custodial</td>
-</tr>
-<tr class="odd">
-<td>Crewman/Stowaway</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Criminal Alien Program</td>
-<td>Custodial</td>
-</tr>
-<tr class="odd">
-<td>Custodial Arrest</td>
-<td>Custodial</td>
-</tr>
-<tr class="even">
-<td>ERO Reprocessed Arrest</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Inspections</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Law Enforcement Agency Response Unit</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Located</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Non-Custodial Arrest</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Organized Crime Drug Enforcement Task Force</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Other Agency (turned over to INS)</td>
-<td>Custodial</td>
-</tr>
-<tr class="odd">
-<td>Other Task Force</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Other efforts</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Patrol Border</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Patrol Interior</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Presented During Inspection</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Probation and Parole</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Traffic Check</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Transportation Check Aircraft</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Transportation Check Bus</td>
-<td>At-large</td>
-</tr>
-<tr class="even">
-<td>Transportation Check Passenger Train</td>
-<td>At-large</td>
-</tr>
-<tr class="odd">
-<td>Worksite Enforcement</td>
-<td>At-large</td>
-</tr>
-</tbody>
-</table>
+<p>The following 7 categories in the original data were combined to create the “Custodial” grouping: 287(g) Program , CAP Federal Incarceration , CAP Local Incarceration , CAP State Incarceration , Criminal Alien Program , Custodial Arrest , Other Agency (turned over to INS). The remaining 20 categories were combined to create the “At-large” arrests. (Most of these weren’t very descriptive, such as “non-custodial arrest”, or “ERO Reporcessed Arrest”. )</p>
+<p>This breakout doesn’t exactly match what some news organizations have done, which is to distinguish “street” arrests from other at-large arrests. A street arrest might not include, for example, worksite raids. We decided to simplify the categories and you can use the term “street arrest” and “at-large” arrest interchangeably.</p>
 </section>
 </section>
+<section id="detention-details" class="level2">
+<h2 class="anchored" data-anchor-id="detention-details">Detention details</h2>
+<p>About 85 percent of the arrests could be matched to a detention. We used the Data Deportation Project’s criteria for determining whether a detention stay matched up with an arrest: If the arrest was less than <strong>CHECK THIS! I FORGET WHAT I LANDED ON</strong> 7 days before, or less than 3 days after the detention, we considered it a match. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention.</p>
 </section>
-<section id="handling-duplicates" class="level2">
-<h2 class="anchored" data-anchor-id="handling-duplicates">Handling duplicates</h2>
-<p>There are several types of duplicates, and I’m handling them in different ways. Generally,</p>
-<ol type="1">
-<li>If there is no id code for the person, I NEVER count it as a duplicate. There’s no way to tell if two people from the same country of the same age were arrested at the same time, or if it’s the same person twice.</li>
-<li>If the same person is arrested more than once within 24 hours, I count the earlier one as a duplicate. This could concievably happen, but it would be weird.</li>
-<li>If the same person is arrested twice at the same time, I count the one that comes first in the dataset as the duplicate. This could be wrong, and it can end up losing some data in a small number of rows.</li>
-</ol>
-<p>There are other arrests, detentions and removals that are of the same person, but not duplicates – they appear to actually have been arrested or removed twice, for example. I’m keeping those, but noting which one is the last one logged.</p>
+<section id="detainer-details" class="level2">
+<h2 class="anchored" data-anchor-id="detainer-details">Detainer details</h2>
+<p>Less than half of the detainers could be matched to an arrest record. One reason is that detainers are much less likely to have a person identifier. We used the most recent detainer recorded for a person as a match, even if it was several years ago. The reason is that the detainers don’t expire, and the person could have been incarcerated locally or at the state level the entire time. We did not include as a match any detainer after the arrest.</p>
 </section>
 <section id="progress" class="level2">
 <h2 class="anchored" data-anchor-id="progress">Progress</h2>
@@ -615,38 +537,20 @@ Tip
 <li><label><input type="checkbox" checked="">Collapse case status</label></li>
 <li><label><input type="checkbox" checked="">Collapse case category: Decided not to keep this</label></li>
 <li><label><input type="checkbox" checked="">Collapse program categories</label></li>
-<li><label><input type="checkbox">Add information on where arrested from detainer and first place of detention to the arrest table</label></li>
-<li><label><input type="checkbox">Add most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.</label></li>
+<li><label><input type="checkbox" checked="">Add information on where arrested from detainer and first place of detention to the arrest table</label></li>
+<li><label><input type="checkbox" checked="">Add most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.</label></li>
 <li><label><input type="checkbox">Run the recodes by an expert or two</label></li>
 </ul>
 </div>
-</section>
-<section id="data-questions" class="level2 question">
-<h2 class="anchored" data-anchor-id="data-questions">Data questions</h2>
-<!-- this can't have any blank rows for the checkboxes to come out right -->
-<ul class="task-list">
-<li><label><input type="checkbox">Clarify how much and what is missing from the ICE administrative arrest data. Kocher says it’s “likely” that it does not additional arrests. Is that true? (Hint: there are no U.S. citizens in the arrest data.)</label></li>
-<li><label><input type="checkbox">Is it at all possible that the large number of missing final order dates refer to people who don’t have final orders of removal? If so, why are they arrested? (Possible answer: they were never documented entry, so they can be removed without a hearing?)</label></li>
-<li><label><input type="checkbox">How are children handled in practice? I know the data here excludes OSS (HHS) detentions, but what happens in the arrest data? It’s been suggested that the ones in our data are most likely families, but there are also some in juvenile detention facilities. I think we’ll have to figure this out as people do more reporting. I think the Marshall project may have figured some of this out: <a href="https://www.themarshallproject.org/2025/12/17/children-immigration-detention-dilley-ice" class="uri">https://www.themarshallproject.org/2025/12/17/children-immigration-detention-dilley-ice</a></label></li>
-</ul>
-</section>
-<section id="story-questions" class="level2 question">
-<h2 class="anchored" data-anchor-id="story-questions">Story questions</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Based on what is and is not an ERO administrative arrest, can we find “Kavanaugh stops” by looking at detentions that were not based on a) detainers, b) warrants, or c) CBP operations?</label></li>
-<li><label><input type="checkbox">Is there anything interesting about people who are arrested but there is no final order? This would presumably be people who have evaded the immigration system entirely, or who have run away from detention? I guess it could include people who overstayed their visas as well.</label></li>
-</ul>
-</section>
-<section id="detention" class="level2">
-<h2 class="anchored" data-anchor-id="detention">Detention</h2>
-<ul>
-<li>Los Angeles Times, “How ICE detainees are moved miles away from families and attorneys”, Sep.&nbsp;26, 2025 and “‘It’s dystopian’: 1 in 3 ICE detainees held in overcrowded facilities”, Los Angeles Times, Aug.&nbsp;29, 2025</li>
-<li><a href="https://www.themarshallproject.org/2025/12/18/ice-chicago-immigration-blitz-data" class="uri">https://www.themarshallproject.org/2025/12/18/ice-chicago-immigration-blitz-data</a></li>
-<li>Look for Will Craft’s story on keeping people in holding areas too long.</li>
-<li>Look at others for how they are moving around.</li>
-</ul>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>There is a very small chance that this could result in improper duplicates. The data has been checked to make sure that never happened across all of the tables in the collection.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>ICE contends that everyone they arrest is an immigration violator<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -1051,13 +955,13 @@ Tip
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./app-documentation.html" class="pagination-link" aria-label="About the data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">About the data</span></span>
+      <a href="./app-common-defs.html" class="pagination-link" aria-label="Common data elements">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Common data elements</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./app-common-defs.html" class="pagination-link" aria-label="Common elements used across tables">
-        <span class="nav-page-text"><span class="chapter-title">Common elements used across tables</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./app-ice-overview.html" class="pagination-link" aria-label="Immigration backgrounder">
+        <span class="nav-page-text"><span class="chapter-title">Immigration backgrounder</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,21 @@
+# Appendices
+
+The appendices are in three sections:
+
+## Documentation
+
+* Common data elements: Definitions and recodes for data elements that are consistent across the collection of data produced by BLN. This includes items like the categorization of crimes, the status of coses, or the
+
+* Arrests
+
+* Detentions
+
+
+## How-to
+
+Beginner how-to resources for Google Sheets using deportation data examples
+
+## Immigration backgrounder
+
+A very short, very simplified explanation of the most common processes in immigration enforcement and resources to learn more.
+

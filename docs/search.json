@@ -197,256 +197,278 @@
     ]
   },
   {
-    "objectID": "app-documentation.html",
-    "href": "app-documentation.html",
-    "title": "Appendix A — About the data",
+    "objectID": "app-intro.html",
+    "href": "app-intro.html",
+    "title": "Appendix A — Appendices",
     "section": "",
-    "text": "Follow up from symposium of reporters\nThe Deportation Data Project has a detailed codebook explaining the project’s understanding of each element of the data. But the government has refused to answer questions about how it is collected, compiled and extracted. Many of its internal forms are unavailable publicly.\nWe have to rely, instead, on our understanding based on previous iterations of the data, former employees and the experience of journalilsts and researchers. We encourage you to let us know if your ground reporting can clarify or correct any of the questions or misunderstandings inherent in undocumented data.\nAdditionally, ICE seems to have randomly decided which columns to include in each table, even though all of the common elements should be available. For example, one obvious story would be the number of local people who have been in the country for decades are being arrested, versus relative newcomers; whether people arrested have legal permanent residence status, or whether they have temporary protected status. But those columns are only available in the removals table – they’re missing in the arrests, detentions and detainer data. 1\nWe have added insights from others’ reporting where we could in this book.\nIn June, Berkeley Journalism and a few other places hosted a symposium of reporters, experts, etc. to discuss immigration reporting. Our contact there is Andrés Cediel, a documentarian with a lot of interest in immigration issues. We spoke with him on Oct 10. They want to make the data more transparent, and are focused on visualizations that could be embedded. Others who are still involved include Mark Lima of CBS and (I think) Lourdes Duarte from Chicago WGN.\nTheir inspiration was the COVID tracking project from the Atlantic.\nHis story ideas were pretty straightforward: US citizens getting caught up in raids, looking at children , those without criminal records. They are working with the Berkeley-based California News Fellowship (the group that is funded by the Calif. government to fill holes in local reporting.)\nRyan explained our model of working with a national outlet to do a story that we can help get localized by partners that we’ve worked with before, then have training materials, cleaned data, etc. to provide to anyone once we know what we’re doing. In a followup note, Andrès still seemed focused on dashboard / visualizations, but Ryan clarified that.\nHe mentioned that LAT did a good job using the data after their protests.\nWe had a followup conversation with them about where the FOIAs are in DDP, and also an introduction to what we are doing, and an invitation to talk with us about it.",
+    "text": "Documentation\nThe appendices are in three sections:",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About the data</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "app-documentation.html#progress-notes",
-    "href": "app-documentation.html#progress-notes",
-    "title": "Appendix A — About the data",
-    "section": "Progress notes",
-    "text": "Progress notes\n\n\nGet a list of famous cases that should be followed through the system\n\nMoving around detention\nArrest at courthouse\nUS citizens\nDeaths\nChildren\n\n\n\n\n\nIs the unique identifier the same over time? ANSWER : NO\nWhat is the impact of this coming from ICE’s Integrated Enforcement Database? Is any CBP data included? (NO) Should it be? The DDP’s lawyer didn’t seem to think this was a huge deal. CBP hasn’t updated its apprehension data since July, but for detentions, it may be unnecessary . ICE manages the detention locations, not CBP. For arrests, I’m not sure what happens.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About the data</span>"
-    ]
-  },
-  {
-    "objectID": "app-documentation.html#folder-structure",
-    "href": "app-documentation.html#folder-structure",
-    "title": "Appendix A — About the data",
-    "section": "Folder structure",
-    "text": "Folder structure\nI have not put the /data/ files into the github repo, but everything needed to get there is in the programs. (I don’t want to make copies of the Deportation Data Project’s work, so I am referring anyone who wants the originals to their site. )\nIn my project, the folder structure is:\n\n\n+-- documentation (most name are self-explanatory\n|   `-- master_data_dictionary_lookups.xlsx\n|   `-- documenatation.html is currently the root of the website, though other pages are public\n+-- programs (names are self-explanatory)\n+-- data\n|   +-- raw\n|   |  +-- ddp : Data exactly as provided by deportation data project with the original names.\n|   |-- processed: this is data that has already been through processing, but isn't yet cleaned up at all.\n|   +-- clean: datasets we'll eventually want to split up / share\n|   +-- interim: Datasets we won't share but are conveniences when we're getting to clean\n+-- share\n|   +-- data: shared datasets in any form\n|   +-- code: any SQL , R, Python code we want to share with people",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About the data</span>"
-    ]
-  },
-  {
-    "objectID": "app-documentation.html#footnotes",
-    "href": "app-documentation.html#footnotes",
-    "title": "Appendix A — About the data",
+    "objectID": "app-intro.html#documentation",
+    "href": "app-intro.html#documentation",
+    "title": "Appendix A — Appendices",
     "section": "",
-    "text": "When the federal government finally produces usable removal data, we will add the information on legal status and year of entry into the U.S. in our enhanced data, but it will only exist for people who have left the country.↩︎\nThese are usually grant management divisions of schools, and there is nothing about it in the Newhouse School’s website. So it’s really unclear whether he works there or not. He’s associated with Margaret Talev’s group as well. Although he says he has a lot of research and media outlet work, it seems really out of date – CSpan last year, and then nothing after 2022. He worked at TRAC while getting his PhD in geography.↩︎\nHe starts with the facilities report published by ICE bi-monthly, then calculates an “Interval” value. He takes a whole paper to say that he estimates the most recent two weeks’ values by backing out the number of days. (ADP is calculated as total pop / total # days for the fiscal year. Taking two time periods, can back out an ADP for the two weeks by taking ADPDays period 1 - ADP Days period 2 to get Days for Period 2, and then divide by the number of days.)↩︎",
+    "text": "Common data elements: Definitions and recodes for data elements that are consistent across the collection of data produced by BLN. This includes items like the categorization of crimes, the status of coses, or the\nArrests\nDetentions",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About the data</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "app-arrests.html",
-    "href": "app-arrests.html",
-    "title": "Appendix B — Arrests",
-    "section": "",
-    "text": "BLN Record layout\nBelow is full documentation of the arrest data as used by BLN and available on our github site. We have also created simpler subsets of the data to support specific stories, which are documented in those sections.\nYou should note that the date of arrest isn’t exact. They sometimes don’t log the arrest until someone is processed at an initial detention center, or when they are sent to immigration court.\nAbout x percent of the rows in this dataset do not contain unique identifiers for the person. This happens when the person has never been part of the immigration enforcement system before (based usually on fingerprint matches). Beginning in April 2025, everyone who has been in the U.S. for at least 30 days must have an A-number. This requirement was always a possibility in the past, based on immigration laws, but wasn’t used for everyone until last year.\nThis happens most frequently with people who crossed the border illegally and have never been caught by immigration officials before.\nAs of October 2025. I removed fields that were redacted or always blank. I’ll only update counts when I change the data substantially,not when it’s updated.",
+    "objectID": "app-intro.html#how-to",
+    "href": "app-intro.html#how-to",
+    "title": "Appendix A — Appendices",
+    "section": "How-to",
+    "text": "How-to\nBeginner how-to resources for Google Sheets using deportation data examples",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
-    "objectID": "app-arrests.html#bln-record-layout",
-    "href": "app-arrests.html#bln-record-layout",
-    "title": "Appendix B — Arrests",
-    "section": "",
-    "text": "order\nitem\nlabel\nclass\nUnique values\npct missing\n\n\n\n\n\nRows in dataset\n291,722\n\n\n\n\n\n\nColumns in dataset\n19\n\n\n\n\n\n1\norig_row_id\nRow identifier in the order that it was originally received\ninteger\n\n0.0%\n\n\n2\napprehension_date\nRange: 2023-09-01 - 2025-07-29\nPOSIXct POSIXt\n\n0.0%\n\n\n3\napprehension_state\n\ncharacter\n62\n19.4%\n\n\n4\napprehension_aor\nArea of Reponsibility\ncharacter\n27\n2.0%\n\n\n5\nfinal_program\nRefers to the organizational program within ICE that handled the arrest. This is the original 14 ICE programs, collapsed to four\ncharacter\n14\n0.0%\n\n\n6\nfinal_program_group\nAlways “ICE”\ncharacter\n1\n0.0%\n\n\n7\napprehension_method\n\ncharacter\n27\n0.0%\n\n\n8\napprehension_criminality\n“Convicted Criminal”, “Pending Criminal Charges”; “Other Immigration Violator”\ncharacter\n3\n0.0%\n\n\n9\ncase_status\nTBD\ncharacter\n14\n1.5%\n\n\n10\ncase_category\nTBD\ncharacter\n30\n1.5%\n\n\n11\ndeparted_date\nRange: Other than 20 rows possibly in error, 2023-02-12 to 2025-07-28. Date only\nPOSIXct POSIXt\n\n42.3%\n\n\n12\ndeparture_country\n\ncharacter\n193\n42.3%\n\n\n13\nfinal_order_yes_no\n\ncharacter\n3\n1.5%\n\n\n14\nfinal_order_date\n1967-01-06 to 2025-07-29\nPOSIXct POSIXt\n\n39.0%\n\n\n15\nbirth_year\n1934 to 2025\nnumeric\n\n0.1%\n\n\n16\ncitizenship_country\n\ncharacter\n195\n0.0%\n\n\n17\ngender\nMale, Female, Unknown\ncharacter\n3\n0.0%\n\n\n18\napprehension_site_landmark\nDescriptive entry of the place the arrest took place\ncharacter\n5107\n2.1%\n\n\n19\nunique_identifier\nPerson ID\ncharacter\n274017\n0.8%\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nI converted some items to factors in order to have them sort properly in charts and graphs. Consider using the .Rds version of the file if you’re using R to keep these. They will be plain character variables in other data processing sofware.",
+    "objectID": "app-intro.html#immigration-backgrounder",
+    "href": "app-intro.html#immigration-backgrounder",
+    "title": "Appendix A — Appendices",
+    "section": "Immigration backgrounder",
+    "text": "Immigration backgrounder\nA very short, very simplified explanation of the most common processes in immigration enforcement and resources to learn more.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
-    ]
-  },
-  {
-    "objectID": "app-arrests.html#definitions",
-    "href": "app-arrests.html#definitions",
-    "title": "Appendix B — Arrests",
-    "section": "Definitions",
-    "text": "Definitions\n\nERO administrative arrests\nThe Deportation Data project is acquired from ICE, and refers to “ERO administrative arrests”.\nIn his series “A close look at ICE arrest data..”, Austin Kocher says that the Deportation Data Project’s arrest data is actually administrative arrests reported by ICE’s Enforcement and Removal Operations. This excludes CBP, HSI, and non-administrative arrests, he says. It suggests it excludes people caught up in protests or arrested without immigration orders.\nGenerally, ICE’s ERO arrests people with civil immigration law violations - they’re based on administrative arrest warrents. A CRS report says they can make arrests in two instances when they don’t have a warrant: 1) The alien is attempting to enter the country, 2) the officer has “reason to believe” the immigrant is here unlawfully and will escape if not arrested.\nThis second exception suggests that ICE just has to say, “I think you’re here unlawfully” and they can arrest without a warrant. These are the brief stops now called “Kavanaugh stops” because he said that using a broad definition here, even racial profiling, can fall under that exception.\n\n\nApprehension method\nGenerally, people have tried to distinguish arrests that came from some kind of detention from those that happened in the wild. Different groups have done it differently:\n\nCato Institute\nThe defined street arrests as:\n\nany arrest not in state or local custody, a jail, prison, police department, office, court, detention center, or other facility.) had a piece on street vs. custody arrests, and they broke each of the 27 different kinds of apprehensions into those two categories. See the lookup tables for the exact translation. Almost all of the “From detention” are from state, local or federal jails and prisons.\n\nIt wasn’t clear how they translated the categories, and they haven’t responded to my outreach.\n\n\nOther stories\nLAT, the City and others have distinguished between “street arrests” and others, but they’ve used different definitions.\n\n\nICE itself\nI am using the categorization suggested by the 2024 ICE annual report, page 15:\n\n\nAt-large arrests, which take place within the community (i.e., outside of jails or prisons).\nCustodial arrests, which take place in the confines of a jail or prison, as CAP works with federal, state and local law enforcement partners to take custody of removable noncitizens who have already been arrested by another law enforcement agency for criminal activity\n\n\nHere are the categorizations:\n\n\n\nOriginal\nRecode\n\n\n\n\n287(g) Program\nCustodial\n\n\nAnti-Smuggling\nAt-large\n\n\nBoat Patrol\nAt-large\n\n\nCAP Federal Incarceration\nCustodial\n\n\nCAP Local Incarceration\nCustodial\n\n\nCAP State Incarceration\nCustodial\n\n\nCrewman/Stowaway\nAt-large\n\n\nCriminal Alien Program\nCustodial\n\n\nCustodial Arrest\nCustodial\n\n\nERO Reprocessed Arrest\nAt-large\n\n\nInspections\nAt-large\n\n\nLaw Enforcement Agency Response Unit\nAt-large\n\n\nLocated\nAt-large\n\n\nNon-Custodial Arrest\nAt-large\n\n\nOrganized Crime Drug Enforcement Task Force\nAt-large\n\n\nOther Agency (turned over to INS)\nCustodial\n\n\nOther Task Force\nAt-large\n\n\nOther efforts\nAt-large\n\n\nPatrol Border\nAt-large\n\n\nPatrol Interior\nAt-large\n\n\nPresented During Inspection\nAt-large\n\n\nProbation and Parole\nAt-large\n\n\nTraffic Check\nAt-large\n\n\nTransportation Check Aircraft\nAt-large\n\n\nTransportation Check Bus\nAt-large\n\n\nTransportation Check Passenger Train\nAt-large\n\n\nWorksite Enforcement\nAt-large",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
-    ]
-  },
-  {
-    "objectID": "app-arrests.html#handling-duplicates",
-    "href": "app-arrests.html#handling-duplicates",
-    "title": "Appendix B — Arrests",
-    "section": "Handling duplicates",
-    "text": "Handling duplicates\nThere are several types of duplicates, and I’m handling them in different ways. Generally,\n\nIf there is no id code for the person, I NEVER count it as a duplicate. There’s no way to tell if two people from the same country of the same age were arrested at the same time, or if it’s the same person twice.\nIf the same person is arrested more than once within 24 hours, I count the earlier one as a duplicate. This could concievably happen, but it would be weird.\nIf the same person is arrested twice at the same time, I count the one that comes first in the dataset as the duplicate. This could be wrong, and it can end up losing some data in a small number of rows.\n\nThere are other arrests, detentions and removals that are of the same person, but not duplicates – they appear to actually have been arrested or removed twice, for example. I’m keeping those, but noting which one is the last one logged.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
-    ]
-  },
-  {
-    "objectID": "app-arrests.html#progress",
-    "href": "app-arrests.html#progress",
-    "title": "Appendix B — Arrests",
-    "section": "Progress",
-    "text": "Progress\n\n\nConvert date-time to date only where no time is recorded\nDecide on how to deal with partial duplicates\nCollapse case status\nCollapse case category: Decided not to keep this\nCollapse program categories\nAdd information on where arrested from detainer and first place of detention to the arrest table\nAdd most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.\nRun the recodes by an expert or two",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
-    ]
-  },
-  {
-    "objectID": "app-arrests.html#data-questions",
-    "href": "app-arrests.html#data-questions",
-    "title": "Appendix B — Arrests",
-    "section": "Data questions",
-    "text": "Data questions\n\n\nClarify how much and what is missing from the ICE administrative arrest data. Kocher says it’s “likely” that it does not additional arrests. Is that true? (Hint: there are no U.S. citizens in the arrest data.)\nIs it at all possible that the large number of missing final order dates refer to people who don’t have final orders of removal? If so, why are they arrested? (Possible answer: they were never documented entry, so they can be removed without a hearing?)\nHow are children handled in practice? I know the data here excludes OSS (HHS) detentions, but what happens in the arrest data? It’s been suggested that the ones in our data are most likely families, but there are also some in juvenile detention facilities. I think we’ll have to figure this out as people do more reporting. I think the Marshall project may have figured some of this out: https://www.themarshallproject.org/2025/12/17/children-immigration-detention-dilley-ice",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
-    ]
-  },
-  {
-    "objectID": "app-arrests.html#story-questions",
-    "href": "app-arrests.html#story-questions",
-    "title": "Appendix B — Arrests",
-    "section": "Story questions",
-    "text": "Story questions\n\nBased on what is and is not an ERO administrative arrest, can we find “Kavanaugh stops” by looking at detentions that were not based on a) detainers, b) warrants, or c) CBP operations?\nIs there anything interesting about people who are arrested but there is no final order? This would presumably be people who have evaded the immigration system entirely, or who have run away from detention? I guess it could include people who overstayed their visas as well.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
-    ]
-  },
-  {
-    "objectID": "app-arrests.html#detention",
-    "href": "app-arrests.html#detention",
-    "title": "Appendix B — Arrests",
-    "section": "Detention",
-    "text": "Detention\n\nLos Angeles Times, “How ICE detainees are moved miles away from families and attorneys”, Sep. 26, 2025 and “‘It’s dystopian’: 1 in 3 ICE detainees held in overcrowded facilities”, Los Angeles Times, Aug. 29, 2025\nhttps://www.themarshallproject.org/2025/12/18/ice-chicago-immigration-blitz-data\nLook for Will Craft’s story on keeping people in holding areas too long.\nLook at others for how they are moving around.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Arrests</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendices</span>"
     ]
   },
   {
     "objectID": "app-common-defs.html",
     "href": "app-common-defs.html",
-    "title": "Appendix C — Common elements used across tables",
+    "title": "Appendix B — Common data elements",
     "section": "",
-    "text": "Other documentation\nThe deportation data project posts five datasets: encounters, arrests, detainers, detentions, and removals. They also have a list of offices scraped from the sub-office website of ICE.\nIn the data/raw folder, I’ve made an exact copy of the data that the project posts. (Most recent in most cases.) There is also a copy that I can use for hand-editing, with more descriptive data names. That’s in the data/processed folder, even though it’s raw.\nThe project is pretty good about doing basic vetting of the datasets when they arrive. For example, it immediately post the removals data from July, when they found a serious flaw. They also post when each dataset is usable as history.\nThe data originally is extracted from DHS’s Enforcement Integrated Database, or EID, which is the back end to the department’s ENFORCE application. It’s supposed to hold details on the entire enforcement infrastructure, and is supposed to contain information from all of the enforcement agencies (I think).\nThe original data was downloaded from the Deportation Data Project, as of Oct. 13, 2025 (the date of this documentation). I’ll update it when they get a new batch. I downloaded the original, not cleaned, data.\nThere are some things to remember about all of the datasets, and some specific to individual ones.",
+    "text": "BLN crime codes\nThe four-digit crime codes in the data generally refer to the FBI’s National Criminal Information Center’s classification of criminal offenses. An example is “0904: Homicide-Willful Kill-Non-family-Weapon”. There are some made-up codes in the ICE data. They refer to more general or specific versions of existing codes. For example, ICE has two codes for illegal entry in the US that are more specific than the ones used by the FBI.\nWe have also assigned a 2-digit code (“09: Homicide”) matching those NCIC categories.\nIn addition, there are five BLN-created codes (bln_special_code) created to facilitate common stories:\n(Violent and drug crime codes were assigned based on the Social Security Administration’s listing, which refers to FBI categorizations.)",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Common elements used across tables</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common data elements</span>"
     ]
   },
   {
-    "objectID": "app-common-defs.html#data-cleaning-checks",
-    "href": "app-common-defs.html#data-cleaning-checks",
-    "title": "Appendix C — Common elements used across tables",
-    "section": "Data cleaning checks",
-    "text": "Data cleaning checks\n\nDuplicates\nTrue duplicates (every column exactly the same) are removed. But there are other types of duplication that are handled table-by-table. In some cases, they actually aren’t duplicates – they refer to more than one thing happening to a person or a case. In others, they’re artifacts of a relational system and how they’re handled depends on what the substantive question is. In still other cases, they may be duplicates, but we’re not sure.\nGenerally:\n\nDuplicates across all fields, including missing values. Just save one – it doesn’t matter which.\nDupes created by the relational nature of the data. For example, a person could be arrested twice, or they will show up over and over in the detention data. In each dataset, we can decide how to handle them for the purpose of local reporting. Using the same example in detention, for example, might mean that we want to create a snapshot for each detention location that has anyone who was ever in that area. For arrests, we may only want to keep the most recent OR we may want to create some summaries of arrests, and summaries of people, separately.\nDupes that appear to be the same, but have different information. An example is an arrest record that differs in most cells, but has the same unique person ID and the same date and time as others. One answer is to look at the order that the file came in, and choose the one that appears to be the most recent (top or bottom of list in their original order), or see whether one of the values suggests it is a record that SHOULD be deleted (entered in error).\n\n\n\nMissing unique identifiers\nICE is supposed to provide a scrambled unique identifier for each person but there are quite a few missing.\n\n\nDates and times\nIn each table, I checked to see if there is a meaningful time element to the date. If not, I converted the original column from date-time to just date. How this gets handled by others depends on the data processing software they use. If there is a meaningful time, then I added a column with the original name and the suffix _part",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Common elements used across tables</span>"
-    ]
-  },
-  {
-    "objectID": "app-common-defs.html#progress-notes",
-    "href": "app-common-defs.html#progress-notes",
-    "title": "Appendix C — Common elements used across tables",
-    "section": "Progress notes",
-    "text": "Progress notes\n\n\nIs there any meaning to the original order of the file? This would affect what we do with duplicates. (Arrests: By UID, then date/time of arrest)\nAre there any indicators of mistakes made in the data? (This might be a program code or something, or might be in the way they’re ordred. In LIONS, for example, they’re not allowed to just delete something, so they have to mark something for deletion instead when they make a mistake.)",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Common elements used across tables</span>"
-    ]
-  },
-  {
-    "objectID": "app-common-defs.html#geography-questions",
-    "href": "app-common-defs.html#geography-questions",
-    "title": "Appendix C — Common elements used across tables",
-    "section": "Geography questions",
-    "text": "Geography questions\n\nIs there a way to estimate the closest place by looking at the first detention location after the arrest for an individual?\nIs there a problem in joining the most serious criminal conviction to to the arrest data?\nAll of this depends on the unique identifier being there for the vast majority of cases. In detentions, as of October 2025, only 2826/1607 649 are missing (less than 2 percent). In arrests, only 2473 of 289249. so these are pretty good in terms of being able to match the arrests with detention data.\nUsing Vera Institute locations - this should work for the vast majority. Check to see when last updated. https://raw.githubusercontent.com/vera-institute/ice-detention-trends/refs/heads/main/metadata/facilities.csv (last updated a while back)",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Common elements used across tables</span>"
-    ]
-  },
-  {
-    "objectID": "app-enhancements.html",
-    "href": "app-enhancements.html",
-    "title": "Appendix D — Data enhancements",
+    "objectID": "app-common-defs.html#bln-crime-codes",
+    "href": "app-common-defs.html#bln-crime-codes",
+    "title": "Appendix B — Common data elements",
     "section": "",
-    "text": "Final program\nMany of the categories used in the ICE data exist across more than one table. Definitions that only exist on one table are included in the documentation for that area. You can see which variables are in which tables on the Deportation Data Project site’s documentation.\nUse the apprehension method field instead of final program to find the way that someone was actually arrested.\nThe final program refers to the program that ICE officers are assigned to. They may be imprecise because the officer is temporarily detailed. The Migration Policy Institute says that many of the categories can’t be easily earmarked as either at-large or from the criminal justice system. The Migration Policy Instituted categorized the final program as follows: 1\nConsider dropping this column .",
+    "text": "Violent: FBI-defined violent crime codes\nDrugs: FBI-defined “Dangerous Drug” codes\nTraffic: Anything in the general code for traffic offenses\nImmigration: Codes that refer only to the illegal entry, re-entry or use of false documents to gain entry. We did not include the immigration offenses that refer to trafficking.\nNo criminal conviction: Anything that did not have a conviction in the table’s corresponding criminality indicator.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Data enhancements</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common data elements</span>"
     ]
   },
   {
-    "objectID": "app-enhancements.html#case-status-and-category-codes",
-    "href": "app-enhancements.html#case-status-and-category-codes",
-    "title": "Appendix D — Data enhancements",
-    "section": "Case status and category codes",
-    "text": "Case status and category codes\nThe case status and category codes contain remnants of the law as it existed before 1996, and have been constantly updated piecemeal. That makes them really difficult to understand. I’ve tried to combine and rename these codes into meaningful groups.\nAlthough they mean different things, the case status and category tend to go together. In arrests, for example, they have the exact same number of missing values.\n\n\n\n\n\n\nWarning\n\n\n\nI still need to run these by an expert – use with care.\n\n\n\nCase status\nAt the highest level, refers to whether it is in ICE’s purview. Anything that is ACTIVE is still on their books. Everything else is a reason that they’re not. I’ve grouped ACTIVE with the missing values to create “Active case”, and then grouped the 13 more detailed reasons into more general categories. The recodes are called case_status_bln in the tables.\n\n\n\n\n\n\n\nNew category\nOriginal categories\n\n\n\n\nActive case\nACTIVE\n\n\nLeft voluntarily\n0-Withdrawal Permitted - I-275 Issued ; 3-Voluntary Departure Confirmed ; 9-VR Witnessed\n\n\nAlien Enemies Act expulsion\n5-Title 50 Expulsion\n\n\nExcluded / removed\n6-Deported/Removed - Deportability ; 8-Excluded/Removed - Inadmissibility;\n\n\nNo further action\n7-Died ; A-Proceedings Terminated ; E-Charging Document Canceled by ICE;\n\n\nAllowed to stay\nL-Legalization - Permanent Residence Granted ; Z-SAW - Permanent Residence Granted;\n\n\nUnknown\nMissing values\n\n\n\n\n\nCase category\nCase category is the detailed legal reason that they are seeking removal – it doesn’t refer to what has happened in the case. I’m leaving this out of our analysis – it’s pretty complicated, and I don’t think most people care about the detailed legal reason.\n\n\nMost serious criminal codes\n\n\nMost serious crime categories\n\n\nDecide how to deal with crime codes so they’re collapsed into meaningful categories that would be able to be used in a sentence.\n\n\n\n\nCan we say that someone was only convicted of immigration offenses if that is the most serious crime? How can we characterize that?\n\n\nIt’s really unclear what is considered the “most serious” crime. In particular, it’s unclear whether any immigration offense, such as illegal entry, is considered more serious than, say, a DUI.\n\nTRAC, at some point, got a list of offense codes from DHS that lists the ‘level’ of each crime, as 1, 2, or 3. We can see there that illegal entry to the US is the lowest crime category. But it doesn’t really help within the levels. (These were based on the old Morton memo, and haven’t been in use for a long time, I don’t think.)\nThe American Immigration Council examined the “Most serious charge” in the Criminal Alien Program that gives some detail on what they consider more and less serious.\nUSCIS has a list of aggravated felonies on its website, but I’m not sure how up to date it is.) (You can also be deported for crimes of “moral turpitude”.)\nThe ICE custody worksheet suggests that the most serious crime conviction is based on the sentence, and nothing else: https://www.ice.gov/doclib/detention-standards/2011/2-2.pdf\n\nAlso from the American Immigration Council, a description of what “aggravated felony” means:\n\n“Aggravated felony” is a term of art used to describe a category of offenses carrying particularly harsh immigration consequences for noncitizens convicted of such crimes. Regardless of their immigration status, noncitizens who have been convicted of an “aggravated felony” are prohibited from receiving most forms of relief that would spare them from deportation, including asylum, and from being readmitted to the United States at any time in the future.\nDespite what the ominous-sounding name may suggest, an “aggravated felony” does not require the crime to be “aggravated” or a “felony” to qualify. Instead, an “aggravated felony” is simply an offense that Congress sees fit to label as such, and today includes many nonviolent and seemingly minor offenses.\n…\nAs initially enacted in 1988, the term “aggravated felony” referred only to murder, federal drug trafficking, and illicit trafficking of certain firearms and destructive devices. Congress has since expanded the definition of “aggravated felony” on numerous occasions, but has never removed a crime from the list. Today, the definition of “aggravated felony” covers more than thirty types of offenses, including simple battery, theft, filing a false tax return, and failing to appear in court.\n\nThe most serious conviction code is shown in detention, removal and detainer; the most serious charge code is in detainers.\nThese refer to sections of the NCIC2 , with one major omission: The NCIC codes are supposed to be suffixed with “general applicability” codes, such as “Attempt” or “conspiracy” so that the person looking at the charge would know it isn’t the substantive charge. But these are not shown in the ICE data – they are treating all of them the same way.\nThere are worksheets in state courts to determine the “most serious” charge codes (they differ depending on the state code), but they are generally created using the longest possible sentence. They aren’t supposed to be just any charge within a case or a person. In practice, I’ve found a couple of things: First, simple immigration crimes such as re-entry are usually only shown when there is nothing substantively more serious. Second, drug offenses are problematic: many don’t distinguish between possession and distribution (it just doesn’t say either way), so there’s no real way to know if it’s someone caught with some marijuana for personal use, or if it’s a cocaine trafficker.\nWe don’t have a good way to check whether or not there are other, more serious, crimes that the person was involved in. But these have historically been used to show that the government was targeting really serious criminals and it’s in their interest to have them conform to what the public thinks of as “serious”.\nThe “aggravated felon” categorization is a legal one: Congress decides which crimes to include in aggravated felonies for the purpose of deportation, and some of them don’t seem that bad (such as prostitution). Crimes of moral turpitude can be aggravated felonies even if they’re neither aggravated nor felonies. Most of the lesser offenses that are included in the list are limited to something with at least a one-year sentence as punishment, and often exclude crimes committed solely for a child or spouse.",
+    "objectID": "app-common-defs.html#simplified-categories",
+    "href": "app-common-defs.html#simplified-categories",
+    "title": "Appendix B — Common data elements",
+    "section": "Simplified categories",
+    "text": "Simplified categories\nAt the risk of losing some detail, BLN has simplified some of the categories used in the original data to make for more straightforward analysis.\n\nCase status\nWe’re unsure when the case status is assigned. The original categories have their genesis in immigration law pre- and post-1996. We have recoded them into easier-to-understand categories:\n\n\n\nOriginal\nRecode\n\n\n\n\n0-Withdrawal Permitted - I-275 Issued\nVoluntary return\n\n\n3-Voluntary Departure Confirmed\nVoluntary return\n\n\n5-Title 50 Expulsion\nAlien Enemies Act expulsion\n\n\n6-Deported/Removed - Deportability\nRemoved\n\n\n7-Died\nDied\n\n\n8-Excluded/Removed - Inadmissibility\nRemoved\n\n\n9-VR Witnessed\nVoluntary return\n\n\nA-Proceedings Terminated\nReleased\n\n\nACTIVE\nActive case\n\n\nB-Relief Granted\nReleased\n\n\nE-Charging Document Canceled by ICE\nReleased\n\n\nL-Legalization - Permanent Residence Granted\nReleased\n\n\nZ-SAW - Permanent Residence Granted\nReleased\n\n\n(Missing)\nActive case",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Data enhancements</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common data elements</span>"
     ]
   },
   {
-    "objectID": "app-enhancements.html#footnotes",
-    "href": "app-enhancements.html#footnotes",
-    "title": "Appendix D — Data enhancements",
+    "objectID": "app-common-defs.html#city-county-and-state-assignments",
+    "href": "app-common-defs.html#city-county-and-state-assignments",
+    "title": "Appendix B — Common data elements",
+    "section": "City, County and State assignments",
+    "text": "City, County and State assignments\n\nDetention locations\nThe original data had no state, city or county – just the name of the detention center and the code used by ICE. We used the Vera Institute’s Detention Trends dataset availble on its Github repo to assign the locations.\n\n\nDetainer locations\nThe detainer table contained a name and city for each detainer facility. These were geocoded using Google’s Geocoding API. In some cases, the API returned a specific rooftop address for the location based on the name, but in most cases it contained only a general location. These coordinates were coded into counties using Census TIGER data, through R’s tigris package. Each county and state was checked and corrected where necessary.1",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common data elements</span>"
+    ]
+  },
+  {
+    "objectID": "app-common-defs.html#other-documentation",
+    "href": "app-common-defs.html#other-documentation",
+    "title": "Appendix B — Common data elements",
+    "section": "Other documentation",
+    "text": "Other documentation\n\nDeportation data project’s original documentation for ICE data. In particular, the full “codebook” is the source for a lot of our understanding.\nThere are some definitions that are still meaningful in the paper “Piecing together the US Immigration Detention Puzzle One Night at a Time, Donald Kerwin and Daniela Alulema (Center for Migration Studies), Journal on Migration and Human Security, 2012.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common data elements</span>"
+    ]
+  },
+  {
+    "objectID": "app-common-defs.html#footnotes",
+    "href": "app-common-defs.html#footnotes",
+    "title": "Appendix B — Common data elements",
     "section": "",
-    "text": "footnote on Page 25 of the Migration Policy Institute’s 2018 paper, “Revving up the Deportation Machinery”↩︎\nhttps://wilenet.widoj.gov/sites/default/files/public_files-2025-04/NCICCodeManualTransformed%20%285%29.pdf as of March 2025 beginning page 422↩︎",
+    "text": "The only serious mistakes were in New Jersey, where Google coded them in New York City.↩︎",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Data enhancements</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common data elements</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html",
+    "href": "app-arrests.html",
+    "title": "Appendix C — Arrests",
+    "section": "",
+    "text": "BLN Record layout\nAs of October 15, 2025 (Dec. 2 update), there were 372,266 arrests in the BLN arrest table, which has removed duplicates. See the documentation below for details.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#bln-record-layout",
+    "href": "app-arrests.html#bln-record-layout",
+    "title": "Appendix C — Arrests",
+    "section": "",
+    "text": "position\nname\ntype\nmissing\ndescription\n\n\n\n\n1\narrest_id\ninteger\n0\nOriginal row number from the FOIA spreadsheet\n\n\n2\nbln_person_id\ncharacter\n0\nBLN’s person identifier for arrests, the first 10 characters of the original unique identifier if it exists, or a combination of birth year and row number for cases where it doesn’t\n\n\n3\napprehension_date\nDate\n0\norignal recorded date of arrest\n\n\n4\nis_last_arrest\nlogical\n0\nTRUE if it is the most recent arrest for the person ID\n\n\n5\napprehension_aor\ncharacter\n5752\nICE Enforcement and Removal Operations area of responsibility\n\n\n6\nbln_arrest_state\ncharacter\n3828\nBLN’s best estimate of state. See methodology for more detail\n\n\n7\napprehension_site_landmark\ncharacter\n8605\n\n\n\n8\napprehension_method_recoded\ncharacter\n0\nAt-large or Custodial\n\n\n9\napprehension_criminality\ncharacter\n0\nOriginal criminality recorded in the arrest table, either no conviction, pending charges or other immigration violator\n\n\n10\nbln_arrest_charge_code\ncharacter\n0\nFBI 4-digit code for the crime recorded in detentions that best matches the arrest\n\n\n11\nbln_charge\ncharacter\n0\nBLN charge description\n\n\n12\nbln_charge_group_code\ncharacter\n0\n2-digit crime code, to make for fewer categories\n\n\n13\nbln_charge_group\ncharacter\n0\nDescription of the 2-digit crime code\n\n\n14\nbln_charge_special\ncharacter\n53153\nSpecial types of charges: No criminal conviction; Violent; Traffic; Immigration; or Drug. Blank if none of those apply\n\n\n15\nbirth_year\nnumeric\n1\n\n\n\n16\ncitizenship_country\ncharacter\n0\n\n\n\n17\ngender\ncharacter\n0\n\n\n\n18\ncase_status_recoded\ncharacter\n8931\nRemoved; Voluntarily returned, Active case , Released, or Other. See methdology for details\n\n\n19\ndeparted_date\nDate\n137519\n\n\n\n20\ndeparture_country\ncharacter\n137573\n\n\n\n21\nfinal_order_date\nDate\n144622\nDate of the removal order from immigration court\n\n\n22\ndetention_facility\ncharacter\n52399\nName of the detention facility matching this arrest\n\n\n23\ndetention_state\ncharacter\n52567\n\n\n\n24\ndetention_city\ncharacter\n52469\n\n\n\n25\ndetention_county\ncharacter\n52567\n\n\n\n26\ndetention_days_after\ninteger\n52399\n# of days after the arrest that the detention began. Negative numbers reflect detentions that are recorded as starting a day or two after the arrest\n\n\n27\ndetainer_state\ncharacter\n207066\nState of the most recent detainer\n\n\n28\ndetainer_facility\ncharacter\n206910\nName of the most recent detainer facility\n\n\n29\ndetainer_city\ncharacter\n207066\n\n\n\n30\ndetainer_county\ncharacter\n207117\nDetainer county based on geocoding of the facility name and city – approximate\n\n\n31\ndetainer_days_before\ninteger\n206906\n# of days before the arrest that the detainer was sent. Negative numbers reflect detainers apparently entered up to several days after the arrest",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#person-identifiers",
+    "href": "app-arrests.html#person-identifiers",
+    "title": "Appendix C — Arrests",
+    "section": "Person identifiers",
+    "text": "Person identifiers\nAbout 99 percent of the rows in the original FOIA data contained a unique_identifier, which is a 32-character anonymized hash of an immigrant’s A-number (sort of like a Social Security number for people going through the immigration system).\nThe remainder either had no A-number yet – for example, they’ve never come into contact with immigration officials before – or the person couldn’t be properly identified at the point of arrest.\nBLN has shortened this 32-character hash to its first 10 characters.1 It just makes the ID easier to read in tables. These are lower-case letters and numbers that look random. An example is 002184ec34. We don’t know if this hash changes each time the data is released.\nThat left about 5,500 rows with no unique identifier for a person. There was no way to guess whether or not these people were arrested more than once because the only identifying information is year of birth, gender, and nationality. Those rows were assigned a unique ID beginning with the year of birth and followed by the original row number. An example is 1990_376607 (We may have to change this in the future if there are more than 999,999 arrests in the table.) This ID will change each time the data is released.\nEach row has a column called is_last_arrest, which shows whether or not that was the latest recorded arrest for that person. These duplicates weren’t removed because you may want to know how many people were arrested in a given month or year, and you’d want to include unique people in those counts.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#duplicates",
+    "href": "app-arrests.html#duplicates",
+    "title": "Appendix C — Arrests",
+    "section": "Duplicates",
+    "text": "Duplicates\nThere were about 5,500 apprent true duplicated rows in the original arrest data. These are a combination of exact matches on every column; matches on the person ID and the date-time of arrest, and on the person ID and an arrest within the following 24 hours. We retained the most recent of these, even though it sometimes meant we didn’t have quite as much information on the arrest.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#bln-state-of-arrest",
+    "href": "app-arrests.html#bln-state-of-arrest",
+    "title": "Appendix C — Arrests",
+    "section": "BLN state of arrest",
+    "text": "BLN state of arrest\nAbout 60,000 of the original 377,000 rows in the FOIA data lacked the state in which the arrest occurred. BLN has made every effort to find the best possible guess for the correct state.\nWe felt it crucial to fill in this missing data to avoid over-estimating the increase in arrests in a given area. From July 2025 forward, the omission is extremely rare ; it’s much more common before 2025. This means that if you used the original state as a first step toward filtering the data to your area, you would risk seriously overstating the increase in arrests in late 2025 – you just wouldn’t have any rows for the missing data.\nWe were able to estimate a state for almost all of the missing information by taking the first of the following four possible s\n\nUse the assigned state from the original data.\nIf the Area of Responsibility was entirely within one state, use that state. This filled in a lot of the rows from Texas, California and New York City.\nMatch a detention to an arrest based on the person ID and the date, and use the state of the first detention location. There is some error in this in areas that cross state lines, such as St. Louis or Kansas City or Washington D.C. , where the major detention location is just across a state border.\nMatch a detainer to an arrest based on the person ID and the date. A detainer can be anytime before an arrest and this data only goes back to 2023, so we used the most recent detainer state before the arrest.\nThe landmark site is often unclear, such as in Atlanta, where they seem to code anything in that area of responsibility as an Atlanta landmark. But elsewhere it’s a lot clearer, such as general metro areas around Minneapolis or Dallas. We counted the number of arrests for each landmark by state in the original data. If one state accounted for at least 90 percent of the arrests at that landmark, we used that state. Otherwise, we left it blank.\n\nThis left fewer than 1,000 rows without an assigned state.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#bln-crime-codes",
+    "href": "app-arrests.html#bln-crime-codes",
+    "title": "Appendix C — Arrests",
+    "section": "BLN crime codes",
+    "text": "BLN crime codes\nThe original FOIA data only contained an indicator for whether or not the person 1) had a criminal conviction, 2) faced criminal charges without a conviction, or 3) was an “other immigration violator”.2. Importantly, there was no detail on what crime was associated with the conviction.\nIn other tables, such as the detentions, ICE assigns what it calls the “Most serious criminal conviction” for each person. Previous reporting on this coding and a review of forms used by ICE, suggest that this conviction is the one in a person’s history that carried the longest sentence. Generally, violent crimes , drugs and weapon charges are considered more serious than traffic, which in turn can be more serious than entering the country illegally.\nWe matched the detention and detainer data to the arrests in the process outlined above, and chose the most serious criminal conviction. We used the most recent if there were more than one, under the idea that we wanted to overestimate more serious crimes rather than underestimate them.\nEach row in the BLN data has a code and description for detailed and more general crimes. We only assigned a crime code to those that were recorded in the original data as “1 Convicted Criminal”; the other two categories were assigned a code that would indicate there was no criminal conviction in the arrest record. Similarly, if the arrest record indicated a conviction but we couldn’t find one, we assigned it a code to indicate it was unknown.\nMore detail on the meaning of the individual codes is shown in the “Common data elements” chapter",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#simplified-categories",
+    "href": "app-arrests.html#simplified-categories",
+    "title": "Appendix C — Arrests",
+    "section": "Simplified categories",
+    "text": "Simplified categories\nAt the risk of losing some detail, BLN has simplified some of the categories used in the original data to make for more straightforward analysis.\n\nApprehension method\nThe apprehension method refers to the circumstances under which the person has been arrested. We have used ICE’s own categorization suggested by the 2024 ICE annual report, page 15:\n\n\nAt-large arrests, which take place within the community (i.e., outside of jails or prisons).\nCustodial arrests, which take place in the confines of a jail or prison, as CAP works with federal, state and local law enforcement partners to take custody of removable noncitizens who have already been arrested by another law enforcement agency for criminal activity\n\n\nThe following 7 categories in the original data were combined to create the “Custodial” grouping: 287(g) Program , CAP Federal Incarceration , CAP Local Incarceration , CAP State Incarceration , Criminal Alien Program , Custodial Arrest , Other Agency (turned over to INS). The remaining 20 categories were combined to create the “At-large” arrests. (Most of these weren’t very descriptive, such as “non-custodial arrest”, or “ERO Reporcessed Arrest”. )\nThis breakout doesn’t exactly match what some news organizations have done, which is to distinguish “street” arrests from other at-large arrests. A street arrest might not include, for example, worksite raids. We decided to simplify the categories and you can use the term “street arrest” and “at-large” arrest interchangeably.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#detention-details",
+    "href": "app-arrests.html#detention-details",
+    "title": "Appendix C — Arrests",
+    "section": "Detention details",
+    "text": "Detention details\nAbout 85 percent of the arrests could be matched to a detention. We used the Data Deportation Project’s criteria for determining whether a detention stay matched up with an arrest: If the arrest was less than CHECK THIS! I FORGET WHAT I LANDED ON 7 days before, or less than 3 days after the detention, we considered it a match. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#detainer-details",
+    "href": "app-arrests.html#detainer-details",
+    "title": "Appendix C — Arrests",
+    "section": "Detainer details",
+    "text": "Detainer details\nLess than half of the detainers could be matched to an arrest record. One reason is that detainers are much less likely to have a person identifier. We used the most recent detainer recorded for a person as a match, even if it was several years ago. The reason is that the detainers don’t expire, and the person could have been incarcerated locally or at the state level the entire time. We did not include as a match any detainer after the arrest.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#progress",
+    "href": "app-arrests.html#progress",
+    "title": "Appendix C — Arrests",
+    "section": "Progress",
+    "text": "Progress\n\n\nConvert date-time to date only where no time is recorded\nDecide on how to deal with partial duplicates\nCollapse case status\nCollapse case category: Decided not to keep this\nCollapse program categories\nAdd information on where arrested from detainer and first place of detention to the arrest table\nAdd most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.\nRun the recodes by an expert or two",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
+    ]
+  },
+  {
+    "objectID": "app-arrests.html#footnotes",
+    "href": "app-arrests.html#footnotes",
+    "title": "Appendix C — Arrests",
+    "section": "",
+    "text": "There is a very small chance that this could result in improper duplicates. The data has been checked to make sure that never happened across all of the tables in the collection.↩︎\nICE contends that everyone they arrest is an immigration violator↩︎",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Arrests</span>"
     ]
   },
   {
     "objectID": "app-ice-overview.html",
     "href": "app-ice-overview.html",
-    "title": "Appendix E — Understanding the immigration enforcement system",
+    "title": "Appendix D — Immigration backgrounder",
     "section": "",
-    "text": "History of some of the fields\nI’m not going to go into much detail here, but it’s worth understanding a few key things about how the immigration removal system works.\nThere are two main agencies within the Department of Homeland Security that deal with illegal immigration. Customs and Border Patrol, or CBP, only operates within 50 miles of an international border, including the coastline. The people they deal with are usually those who have crossed the border illegally, not those who have presented themselves at the border and requested asylum.\nThe other agency is Immigration and ? Enforcement, or ICE. They operate in the interior of the country and are responsible for cases that have already been heard by an immigration court judge. Immigration court is completely separate from the U.S district court or a state criminal court – it is staffed by Justice Department employees, not people who work for an independent judiciary. Its only job is to determine whether or not someone should be “removed”, or sent back to their home countries or, in rare cases, some other country.\nBoth ICE and CBP can arrest people, but they are brought to immigration, not criminal, courts and are detained by ICE, not the US Bureau of Prisons. (The people arrested may also face charge in criminal court brought by a US attorney, but that is not really part of the immigration system).\nPeople come to the removal system in several different ways:\nIf an immigration judge has decided that someone should be removed, they become part of the immigration docket.\nEach of these situations is obviously a little different, but the data compiled by the Deportation Data Project generally only refers to people ICE has had some contact with , and usually only who that appear on the docket. The officers can go out looking for people who should be on their docket. They can also request cooperation from state and local authorities, or raid an area and place people on the docket who don’t have the proper authority to be here.\nHere are a few resources to learn more about how the system works:\nThis paper from Donald Kerwin of the Center for Migration Studies explains that some of the fields are remnants of historical immigration laws. I’ll try so summarize it here as it relates to the data.",
+    "text": "Where to learn about the immigration enforcement system\nThe immigration system and its laws are complex and any attempt to simplify them will necessarily leave out important details. But it’s important to understand the basics before you try to use the deportation data sets.\nThere are two main agencies inside the Department of Homeland Security that deal with immigration enforcement.\nImmigration and Customs Enforcement, or ICE, are usually responsible for enforcing the rulings of an immigration judge. They can, however, arrest people who are suspected of breaking immigration laws. ICE traditionally operates only in the interior of the country, or on cases for people who have been in the country at least a year.\nThe other agency, Customs and Border Patrol, traditionally operated within 50 miles of an international border, including the coastline. The people they dealt with were usually those who crossed the border illegally, not those who have presented themselves at the border and requested asylum or those who have been in the country for more than a year. But the agency has recently been working inside the country and has the authority to arrest anyone who it says is in the country illegally.\nImmigration court is completely separate from both DHS and from the U.S district court or a state criminal court. It is staffed by Justice Department employees, not people who work for an independent judiciary. Its only job is to determine whether or not someone should be allowed to remain in the U.S., and what their legal status is. They also grant or deny applications for legal permanent residency, or green cards.\nWhen ICE and CBP arrest people, they do so under administrative warrants, not warrants signed by a judge. An official in Homeland Security can sign the warrant without oversight. The people arrested are brought to a detention center operated or leased by the agencies. (These could be local jails or federal prisons.) These people may also face criminal charges in federal court.\nPeople come to the removal system in several different ways, such as:\nEach of these situations is obviously a little different, but the data compiled by the Deportation Data Project generally only refers to people ICE has had some contact with , and usually only who that appear on the docket as out of compliance with the orders of an immigration judge or are being monitored during their ongoing case. The officers can go out looking for people who should be on their docket. They can also request cooperation from state and local authorities, or raid an area and place people on the docket who don’t have the proper authority to be here.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Understanding the immigration enforcement system</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Immigration backgrounder</span>"
+    ]
+  },
+  {
+    "objectID": "app-ice-overview.html#where-to-learn-about-the-immigration-enforcement-system",
+    "href": "app-ice-overview.html#where-to-learn-about-the-immigration-enforcement-system",
+    "title": "Appendix D — Immigration backgrounder",
+    "section": "",
+    "text": "Explainer: Immigration Removal Proceedings and Expanded Mandatory Detention in the US, from The National Immigration Forum\nExplainer: How immigrants end up on ICE’s non-detained docket, from Border Report. This is broader than it seems, and requires reading all the way through because there’s a lot of “yes, but” items in it. In particular, it takes apart the claim that ICE has released tens of thousands of violent criminals because they’re not in “detention”. (Answer: They may well be in prison somewhere – they’re just not in ICE custody.)\nThe immigration court system, explained, Brennan Center for Justice",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Immigration backgrounder</span>"
     ]
   },
   {
     "objectID": "app-ice-overview.html#history-of-some-of-the-fields",
     "href": "app-ice-overview.html#history-of-some-of-the-fields",
-    "title": "Appendix E — Understanding the immigration enforcement system",
-    "section": "",
-    "text": "Case categories\nBefore 1996, “removable non-citizens” fell into two broad categories: deportable and excludable. Deportable generally means they came into the country legally – they have been lawfully admitted by going through the immigration officer at the border. Excludable means they can be sent back without the protections of going through a deportation process. Even though the law changed substantially in 1996, the data from ICE retains this language.1\nFor people seeking legal status, the difference is crucial: People who are excludable, or inadmissable, have to prove they have a legal right to stay. In contrast, the government has to prove that someone is deportable.\nof entry, they’ve crossed the border without being seen by an immigration officer (they snuck in), they apply to become a legal permanaent resident (green card holder), or they have been convicted of a crime and seek to be admitted sometime in the future.\nAt the time, immigrants who had entered the country before the 1996 law had greater rights, and were sent through deportation. But those stopped at the border became “excludable” based on the idea that they had no “entered” the country.\nAll of this language can be important, since it maps to the data columns provided by ICE.\n\nSource: “Immigration Consequences of a Criminal Conviction in North Carlina”, chapter 3\n\n\n\nEffects of criminal convictions on deportation and admission status\nMost states have some sort of chart that maps the federal policy to their own criminal code, such as this one from the University of Maryland: https://www.law.umaryland.edu/media/sol/sol-2022-images-and-files/academics/programs-and-centers/chacon-center-for-immigrant-justice-program/pdfs-docs-and-files/Md-Imm-Conseq-Chart-6-15-2021-revision-FINAL.pdf",
+    "title": "Appendix D — Immigration backgrounder",
+    "section": "History of some of the fields",
+    "text": "History of some of the fields\nThis paper from Donald Kerwin of the Center for Migration Studies explains that some of the fields are remnants of historical immigration laws. I’ll try so summarize it here as it relates to the data.\n\nCase categories\nBefore 1996, “removable non-citizens” fell into two broad categories: deportable and excludable. Deportable generally means they came into the country legally – they have been lawfully admitted by going through the immigration officer at the border. Excludable means they can be sent back without the protections of going through a deportation process. Even though the law changed substantially in 1996, the data from ICE retains this language.1\nFor people seeking legal status, the difference is crucial: People who are excludable, or inadmissable, have to prove they have a legal right to stay. In contrast, the government has to prove that someone is deportable.\nof entry, they’ve crossed the border without being seen by an immigration officer (they snuck in), they apply to become a legal permanaent resident (green card holder), or they have been convicted of a crime and seek to be admitted sometime in the future.\nAt the time, immigrants who had entered the country before the 1996 law had greater rights, and were sent through deportation. But those stopped at the border became “excludable” based on the idea that they had no “entered” the country.\nAll of this language can be important, since it maps to the data columns provided by ICE.\n\nSource: “Immigration Consequences of a Criminal Conviction in North Carlina”, chapter 3\n\n\n\nEffects of criminal convictions on deportation and admission status\nMost states have some sort of chart that maps the federal policy to their own criminal code, such as this one from the University of Maryland: https://www.law.umaryland.edu/media/sol/sol-2022-images-and-files/academics/programs-and-centers/chacon-center-for-immigrant-justice-program/pdfs-docs-and-files/Md-Imm-Conseq-Chart-6-15-2021-revision-FINAL.pdf",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Understanding the immigration enforcement system</span>"
-    ]
-  },
-  {
-    "objectID": "app-ice-overview.html#glossary",
-    "href": "app-ice-overview.html#glossary",
-    "title": "Appendix E — Understanding the immigration enforcement system",
-    "section": "Glossary",
-    "text": "Glossary\n\nAdmission and deportation status\n\nAdmission\n\nLawful entry into the U.S. after inspection and authorization by an immigration officer. INA § 101(a)(13)(A), 8 U.S.C. § 1101(a)(13)(A). People become “excludable” if they are in the country without proper admission.\n\nDeportability\n\napplies to noncitizens who have been lawfully admitted to the U.S. (even if their lawful status has expired).\n\nInadmissibility\n\napplies to people who are seeking admission into the U.S. Green card holders convicted of certain crimes may not be able to return falling after traveling abroad on the grounds of inadmissibility\n\nExcludable\n\nSame as inadmissable, people who have not gone through the proper immigration or entry checks, including people caught within 100 miles of the border soon after arriving.\n\n\n\n\nLegal proceedings\nIn most cases, immigration officials have to go before an immigration judge to get an order of removal. But there are several categories that avoid this step, and can result in immediate removal.\nExamples include:\n\nExpedited removal\n\nRemoving people caught within 100 miles of the border after entering illegally, and have been in the country less than 2 years. This may sound like a narrow group, but it’s huge. Every coastline is a border, making people in the largest population centers subject to expedited removal. Expedited removal traditionally was used by the Customs and Border Patrol and applied to people who just arrived. The Trump administration is using it through ICE in large cities around the country. These are sometimes called “returns”.\n\nReinstatement of removal\n\nApplies to people who left either voluntarily or by being removed and re-enter illegally.\n\nAdministrative removal\n\nRemoval of people who have been convicted of an “aggravated felony”, as defined by Congress2. Aggravated felonies are not what they seem. They include crimes as serious as murder but also some people convicted of prostitution.\n\n\nPacific Enforcement Response Center (PERC) Tue, 06/12/2018 - 15:45 ICE established the PERC in January 2015 to serve as a tactical force multiplier for the Law Enforcement Support Center (LESC) and ERO field offices nationwide. Located in Laguna Niguel, California, the PERC operates round-the-clock 365 days per year and takes appropriate law enforcement action upon aliens suspected, arrested, or convicted of criminal activity across the United States. After initial alienage determination is made at the LESC, trained law enforcement officers at the PERC manage the high volume of actionable criminal leads requiring immediate enforcement action.\nThe PERC protects and defends the United States by sharing timely and relevant ICE information with ERO field offices and law enforcement partners nationwide, issuing immigration detainers/request for notification on high-priority and high-risk criminal aliens. The primary users of the PERC are ERO and ICE field offices that benefit from real-time enforcement decisions and actions made by the PERC. Officers at the PERC support DHS’s overarching mission to enhance national security and public safety by furthering the removal process of priority criminal aliens from the United States.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Understanding the immigration enforcement system</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Immigration backgrounder</span>"
     ]
   },
   {
     "objectID": "app-ice-overview.html#footnotes",
     "href": "app-ice-overview.html#footnotes",
-    "title": "Appendix E — Understanding the immigration enforcement system",
+    "title": "Appendix D — Immigration backgrounder",
     "section": "",
-    "text": "People who entered the country prior to 1996 had greater rights and were placed in deportation proceedings↩︎\n8 USC § 1101(a)(43)↩︎",
+    "text": "People who entered the country prior to 1996 had greater rights and were placed in deportation proceedings↩︎",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Understanding the immigration enforcement system</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Immigration backgrounder</span>"
     ]
   }
 ]

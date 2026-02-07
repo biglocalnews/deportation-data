@@ -5,3 +5,5 @@
 *_cache/
 /.quarto/
 /_freeze/
+*.csv
+*.zip

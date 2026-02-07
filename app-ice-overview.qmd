@@ -1,25 +1,27 @@
-# Understanding the immigration enforcement system {#ice-backgrounder}
+# Immigration backgrounder {#ice-backgrounder}
 
-I'm not going to go into much detail here, but it's worth understanding a few key things about how the immigration removal system works.
+The immigration system and its laws are complex and any attempt to simplify them will necessarily leave out important details. But it's important to understand the basics before you try to use the deportation data sets.
 
-There are two main agencies within the Department of Homeland Security that deal with illegal immigration. Customs and Border Patrol, or CBP, only operates within 50 miles of an international border, including the coastline. The people they deal with are usually those who have crossed the border illegally, not those who have presented themselves at the border and requested asylum.
+There are two main agencies inside the Department of Homeland Security that deal with immigration enforcement.
 
-The other agency is Immigration and ? Enforcement, or ICE. They operate in the interior of the country and are responsible for cases that have already been heard by an immigration court judge. Immigration court is completely separate from the U.S district court or a state criminal court -- it is staffed by Justice Department employees, not people who work for an independent judiciary. Its only job is to determine whether or not someone should be "removed", or sent back to their home countries or, in rare cases, some other country.
+Immigration and Customs Enforcement, or ICE,  are usually responsible for enforcing the rulings of an immigration judge. They can, however, arrest people who are suspected of breaking immigration laws. ICE traditionally operates only in the interior of the country, or on cases for people who have been in the country at least a year.
 
-Both ICE and CBP can arrest people, but they are brought to immigration, not criminal, courts and are detained by ICE, not the US Bureau of Prisons. (The people arrested may also face charge in criminal court brought by a US attorney, but that is not really part of the immigration system).
+The other agency, Customs and Border Patrol, traditionally operated within 50 miles of an international border, including the coastline. The people they dealt with were usually those who crossed the border illegally, not those who have presented themselves at the border and requested asylum or those who have been in the country for more than a year. But the agency has recently been working inside the country and has the authority to arrest anyone who it says is in the country illegally.
 
-People come to the removal system in several different ways:
+Immigration court is completely separate from both DHS and from the U.S district court or a state criminal court. It is staffed by Justice Department employees, not people who work for an independent judiciary. Its only job is to determine whether or not someone should be allowed to remain in the U.S., and what their legal status is. They also grant or deny applications for legal permanent residency, or green cards.
+
+When ICE and CBP arrest people, they do so under administrative warrants, not warrants signed by a judge. An official in Homeland Security can sign the warrant without oversight. The people arrested are brought to a detention center operated or leased by the agencies. (These could be local jails or federal prisons.)  These people may also face criminal charges in federal court.
+
+People come to the removal system in several different ways, such as:
 
 * CBP transfers the person to ICE custody to face removal proceedings.
 * ICE gets a fingerprint match from a criminal arrest anywhere in the country by any police department, even if they entered the country legally.
 * An asylum seeker presents themselves to immigration court to ask for protection from political violence at home.
 * ICE conducts raids on workplaces and checks each employee's visa status.
 
-If an immigration judge has decided that someone should be removed, they become part of the immigration docket.
+Each of these situations is obviously a little different, but the data compiled by the Deportation Data Project generally only refers to people ICE has had some contact with , and usually only who that appear on the docket as out of compliance with the orders of an immigration judge or are being monitored during their ongoing case. The officers can go out looking for people who should be on their docket. They can also request cooperation from state and local authorities, or raid an area and place people on the docket who don't have the proper authority to be here.
 
-Each of these situations is obviously a little different, but the data compiled by the Deportation Data Project generally only refers to people ICE has had some contact with , and usually only who that appear on the docket. The officers can go out looking for people who should be on their docket. They can also request cooperation from state and local authorities, or raid an area and place people on the docket who don't have the proper authority to be here.
-
-Here are a few resources to learn more about how the system works:
+## Where to learn about the immigration enforcement system
 
 * [Explainer: Immigration Removal Proceedings and Expanded Mandatory Detention in the US]((https://forumtogether.org/article/explainer-immigration-removal-proceedings-and-expanded-mandatory-detention-in-the-u-s/)
 ), from The National Immigration Forum
@@ -58,47 +60,3 @@ Source:  "[Immigration Consequences of a Criminal Conviction in North Carlina](h
 
 Most states have some sort of chart that maps the federal policy to their own criminal code, such as this one from the University of Maryland: <https://www.law.umaryland.edu/media/sol/sol-2022-images-and-files/academics/programs-and-centers/chacon-center-for-immigrant-justice-program/pdfs-docs-and-files/Md-Imm-Conseq-Chart-6-15-2021-revision-FINAL.pdf>
 
-
-## Glossary
-
-### Admission and deportation status
-
- *Admission*
-  : Lawful entry into the U.S. after inspection and authorization by an immigration officer. INA § 101(a)(13)(A), 8 U.S.C. § 1101(a)(13)(A). People become "*excludable*" if they are in the country without proper admission.
-
-*Deportability*
-  :  applies to noncitizens who have been lawfully admitted to the U.S. (even if their lawful status has expired).
-
-*Inadmissibility*
-  : applies to people who are seeking admission into the U.S.  Green card holders convicted of certain crimes may not be able to return falling after traveling abroad on the grounds of inadmissibility
-
-*Excludable*
-  : Same as inadmissable, people who have not gone through the proper immigration or entry checks, including people caught within 100 miles of the border soon after arriving.
-
-
-
-### Legal proceedings
-
-In most cases, immigration officials have to go before an immigration judge to get an order of removal. But there are several categories that avoid this step, and can result in immediate removal.
-
-Examples include:
-
-*Expedited removal*
-  : Removing people caught within 100 miles of the border after entering illegally, and have been in the country less than 2 years. This may sound like a narrow group, but it's huge. Every coastline is a border, making people in the largest population centers subject to expedited removal. Expedited removal traditionally was used by the Customs and Border Patrol and applied to people who just arrived. The Trump administration is using it through ICE in large cities around the country. These are sometimes called "returns".
-
-*Reinstatement of removal*
-  : Applies to people who left either voluntarily or by being removed and re-enter illegally.
-
-*Administrative removal*
-  : Removal of people who have been convicted of an "aggravated felony", as defined by Congress^[8 USC § 1101(a)(43)]. Aggravated felonies are not what they seem. They include crimes as serious as murder but also some people convicted of prostitution.
-
-
-
-
-
-
-[Pacific Enforcement Response Center (PERC)](https://www.ice.gov/video/pacific-enforcement-response-center-perc)
-Tue, 06/12/2018 - 15:45
-ICE established the PERC in January 2015 to serve as a tactical force multiplier for the Law Enforcement Support Center (LESC) and ERO field offices nationwide. Located in Laguna Niguel, California, the PERC operates round-the-clock 365 days per year and takes appropriate law enforcement action upon aliens suspected, arrested, or convicted of criminal activity across the United States. After initial alienage determination is made at the LESC, trained law enforcement officers at the PERC manage the high volume of actionable criminal leads requiring immediate enforcement action.
-
-The PERC protects and defends the United States by sharing timely and relevant ICE information with ERO field offices and law enforcement partners nationwide, issuing immigration detainers/request for notification on high-priority and high-risk criminal aliens.  The primary users of the PERC are ERO and ICE field offices that benefit from real-time enforcement decisions and actions made by the PERC.  Officers at the PERC support DHS’s overarching mission to enhance national security and public safety by furthering the removal process of priority criminal aliens from the United States.
