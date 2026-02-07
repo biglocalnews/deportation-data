@@ -12,6 +12,8 @@ The project itself allows users to filter and download the raw data, which is a 
 
 But before you delve into working on your own, consider whether some other sources might provide what your story needs. All of these sources start with the deportation project's original files, but provide different views of the data that might need your needs.
 
+## Other sources
+
 ### Relevant Research
 
 [Relevant Research](https://relevant-research.com/work) aims to help academics analyze data for their work. The company is led by Austin Kocher, a Syracuse University researcher, and Adam Sawyer, formerly of the Transaction Records Access Clearinghouse, or TRAC.^[TRAC filed the original lawsuit against DHS in the early 2000's, and has continued to fight for more transparency. It also provides some analysis of immigration court and ICE statistics, most of which is for paid clients.]  Kocher [often provides additional datasets on his Substack](https://austinkocher.substack.com/p/live-breakdown-of-new-immigration), such as his state-by-state arrest trends produced during his his initial review of the December 2 release of ICE data by DDP.

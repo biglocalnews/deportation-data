@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Local arrests – Immigration enforcement story recipes</title>
+<title>Downloading your local data from BLN – Immigration enforcement story recipes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./recipes-arrest-examples.html" rel="next">
+<link href="./recipes-arrest-import.html" rel="next">
 <link href="./recipes-intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -69,6 +69,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
 </head>
@@ -82,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrest-locations.html"><span class="chapter-title">Local arrests</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrests-download.html"><span class="chapter-title">Downloading your local data from BLN</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -154,7 +162,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrest-locations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Local arrests</span></a>
+  <a href="./recipes-arrests-download.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Downloading your local data from BLN</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes-arrest-import.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Local arrests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -202,11 +215,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full column-page-right" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrest-locations.html"><span class="chapter-title">Local arrests</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./recipes-intro.html">Recipes</a></li><li class="breadcrumb-item"><a href="./recipes-arrests-download.html"><span class="chapter-title">Downloading your local data from BLN</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="local-arrests" class="quarto-section-identifier"><span class="chapter-title">Local arrests</span></span></h1>
+<h1 class="title"><span class="chapter-title">Downloading your local data from BLN</span></h1>
 </div>
 
 
@@ -223,96 +236,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="download-your-local-data" class="level2">
-<h2 class="anchored" data-anchor-id="download-your-local-data">Download your local data</h2>
-<p>TK</p>
-<p>There’s no perfect way to isolate arrests in your area alone. You have a few choices:</p>
-<ol type="1">
-<li><p><strong>BLN best guess of the state of arrest</strong>: BLN has backfilled missing states in the original data based on either the location of detainers or the first detention location. It’s possible these are wrong, but it’s better than ignoring the missing states altogether.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
-<li><p><strong>Location of the first detention</strong>: About 85 percent of people arrested are booked into a detention center within a week of the arrest. This is pretty consistent across the Biden and Trump administrations. There’s one argument that you care more about this subset of people, as they are the ones who may be removed or imprisoned. It’s also more precise than the state – you know just where the detention facility is. This is how the New York Times estimated the county of arrest in its stories.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
-<li><p><strong>Area of Responsbility</strong>: In some cases, the <a href="https://www.ice.gov/contact/field-offices">ICE Enforcement office</a> that is responsible for the arrest is MORE specific than the state, such as Los Angeles, Dallas, and New York City. For these major immigration hubs, you can just search for that area of responsibility. Search for the list of “Enforcement and Removal Operations” offices to find the states and counties included in each one:</p></li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/images/erosearch-page.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>ICE AORs</figcaption>
-</figure>
+<p>BLN is providing data files for ICE arrests in two ways: By state and by ICE’s Area of Responsibility. In some areas, this AOR is a portion of a state. In others, it covers many states.</p>
+<p>Google sheets has a technical limit of 10 million individual cells, but in practice it starts crashing with more than about 15,000 rows of this dataset, which has 31 columns. If your area has more rows than this, consider switching to Microsoft Excel, with its larger capacity.</p>
+<p>Two areas will be particularly difficult to handle in Google Sheets: Florida and the Dallas Area of Responsibility.</p>
+<p>If you are working with a very large area, look for ways to reduce the size right after you import it into Google Sheets. For example, the list of arrests for Texas is too large for the program, but even the Dallas Area of Resposibility is quite large – about 30,000 rows. You can reduce this size a little by deleting any rows not in Texas. (Note that my Google Sheet crashed a couple of times trying to delete these rows. )</p>
+<p>Contact BLN to help you reduce the size of your spreadsheet if you need help – we may be able to find a strategy that will work for your story.</p>
+<section id="state-files" class="level2">
+<h2 class="anchored" data-anchor-id="state-files">State files</h2>
+<p>We expect most reporters will work with files for their state or a few neighboring states. There are two exceptions:</p>
+<p>Some states have too many rows for you to handle efficiently – it may be easier to work with the Area of Responsibility files below. In other cases, the area of responsibility gets you closer to your local area, such as the Washington DC and Virginia area, or the area in and around New York City or Los Angeles.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-83de244c2c68f7f0dba9" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-83de244c2c68f7f0dba9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"state_name":["ALABAMA","ALASKA","ARIZONA","ARKANSAS","CALIFORNIA","COLORADO","CONNECTICUT","DELAWARE","DISTRICT OF COLUMBIA","FLORIDA","GEORGIA","HAWAII","IDAHO","ILLINOIS","INDIANA","IOWA","KANSAS","KENTUCKY","LOUISIANA","MAINE","MARYLAND","MASSACHUSETTS","MICHIGAN","MINNESOTA","MISSISSIPPI","MISSOURI","MONTANA","NEBRASKA","NEVADA","NEW HAMPSHIRE","NEW JERSEY","NEW MEXICO","NEW YORK","NORTH CAROLINA","NORTH DAKOTA","OHIO","OKLAHOMA","OREGON","PENNSYLVANIA","RHODE ISLAND","SOUTH CAROLINA","SOUTH DAKOTA","TENNESSEE","TEXAS","UTAH","VERMONT","VIRGINIA","WASHINGTON","WEST VIRGINIA","WISCONSIN","WYOMING"],"row_count":[6565,91,13177,4391,30451,5849,1168,814,1234,35518,12798,292,1420,5597,5906,1930,2557,4568,7305,456,5228,6956,3754,3517,3861,3550,142,1771,3517,400,11392,2490,14173,5740,379,4180,6318,1263,7479,847,4933,504,8902,100578,5091,72,9977,3998,923,2146,672],"file_name":["al_ice_arrests.csv","ak_ice_arrests.csv","az_ice_arrests.csv","ar_ice_arrests.csv","ca_ice_arrests.csv","co_ice_arrests.csv","ct_ice_arrests.csv","de_ice_arrests.csv","dc_ice_arrests.csv","fl_ice_arrests.csv","ga_ice_arrests.csv","hi_ice_arrests.csv","id_ice_arrests.csv","il_ice_arrests.csv","in_ice_arrests.csv","ia_ice_arrests.csv","ks_ice_arrests.csv","ky_ice_arrests.csv","la_ice_arrests.csv","me_ice_arrests.csv","md_ice_arrests.csv","ma_ice_arrests.csv","mi_ice_arrests.csv","mn_ice_arrests.csv","ms_ice_arrests.csv","mo_ice_arrests.csv","mt_ice_arrests.csv","ne_ice_arrests.csv","nv_ice_arrests.csv","nh_ice_arrests.csv","nj_ice_arrests.csv","nm_ice_arrests.csv","ny_ice_arrests.csv","nc_ice_arrests.csv","nd_ice_arrests.csv","oh_ice_arrests.csv","ok_ice_arrests.csv","or_ice_arrests.csv","pa_ice_arrests.csv","ri_ice_arrests.csv","sc_ice_arrests.csv","sd_ice_arrests.csv","tn_ice_arrests.csv","tx_ice_arrests.csv","ut_ice_arrests.csv","vt_ice_arrests.csv","va_ice_arrests.csv","wa_ice_arrests.csv","wv_ice_arrests.csv","wi_ice_arrests.csv","wy_ice_arrests.csv"]},"columns":[{"id":"state_name","name":"State","type":"character","cell":[{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/al_ice_arrests.csv"},"children":["ALABAMA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ak_ice_arrests.csv"},"children":["ALASKA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/az_ice_arrests.csv"},"children":["ARIZONA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ar_ice_arrests.csv"},"children":["ARKANSAS"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ca_ice_arrests.csv"},"children":["CALIFORNIA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/co_ice_arrests.csv"},"children":["COLORADO"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ct_ice_arrests.csv"},"children":["CONNECTICUT"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/de_ice_arrests.csv"},"children":["DELAWARE"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/dc_ice_arrests.csv"},"children":["DISTRICT OF COLUMBIA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/fl_ice_arrests.csv"},"children":["FLORIDA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ga_ice_arrests.csv"},"children":["GEORGIA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/hi_ice_arrests.csv"},"children":["HAWAII"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/id_ice_arrests.csv"},"children":["IDAHO"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/il_ice_arrests.csv"},"children":["ILLINOIS"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/in_ice_arrests.csv"},"children":["INDIANA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ia_ice_arrests.csv"},"children":["IOWA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ks_ice_arrests.csv"},"children":["KANSAS"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ky_ice_arrests.csv"},"children":["KENTUCKY"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/la_ice_arrests.csv"},"children":["LOUISIANA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/me_ice_arrests.csv"},"children":["MAINE"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/md_ice_arrests.csv"},"children":["MARYLAND"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ma_ice_arrests.csv"},"children":["MASSACHUSETTS"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/mi_ice_arrests.csv"},"children":["MICHIGAN"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/mn_ice_arrests.csv"},"children":["MINNESOTA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ms_ice_arrests.csv"},"children":["MISSISSIPPI"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/mo_ice_arrests.csv"},"children":["MISSOURI"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/mt_ice_arrests.csv"},"children":["MONTANA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ne_ice_arrests.csv"},"children":["NEBRASKA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nv_ice_arrests.csv"},"children":["NEVADA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nh_ice_arrests.csv"},"children":["NEW HAMPSHIRE"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nj_ice_arrests.csv"},"children":["NEW JERSEY"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nm_ice_arrests.csv"},"children":["NEW MEXICO"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ny_ice_arrests.csv"},"children":["NEW YORK"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nc_ice_arrests.csv"},"children":["NORTH CAROLINA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nd_ice_arrests.csv"},"children":["NORTH DAKOTA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/oh_ice_arrests.csv"},"children":["OHIO"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ok_ice_arrests.csv"},"children":["OKLAHOMA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/or_ice_arrests.csv"},"children":["OREGON"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/pa_ice_arrests.csv"},"children":["PENNSYLVANIA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ri_ice_arrests.csv"},"children":["RHODE ISLAND"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/sc_ice_arrests.csv"},"children":["SOUTH CAROLINA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/sd_ice_arrests.csv"},"children":["SOUTH DAKOTA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/tn_ice_arrests.csv"},"children":["TENNESSEE"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/tx_ice_arrests.csv"},"children":["TEXAS"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ut_ice_arrests.csv"},"children":["UTAH"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/vt_ice_arrests.csv"},"children":["VERMONT"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/va_ice_arrests.csv"},"children":["VIRGINIA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/wa_ice_arrests.csv"},"children":["WASHINGTON"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/wv_ice_arrests.csv"},"children":["WEST VIRGINIA"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/wi_ice_arrests.csv"},"children":["WISCONSIN"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/wy_ice_arrests.csv"},"children":["WYOMING"]}]},{"id":"row_count","name":"# rows","type":"numeric","format":{"cell":{"digits":0,"separators":true},"aggregated":{"digits":0,"separators":true}}},{"id":"file_name","name":"file_name","type":"character","show":false}],"filterable":true,"searchable":true,"defaultPageSize":10,"striped":true,"dataKey":"0b61147f9bf6232fe6ab090422b102fb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
-<ol start="4" type="1">
-<li><strong>Site landmark</strong>: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person’s landmark is actually the location of the first detention. But in other cases, you’ll see an abbreviation of a city or metro area in most of the landmark entries. We suggest using these entries as a way to refine your search rather than as a way to start it.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
-</ol>
+</div>
 </section>
-<section id="importing-your-data-into-a-google-sheet" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="importing-your-data-into-a-google-sheet">Importing your data into a Google sheet</h2>
-<p>Here is what your data might look like after you’ve brought it into a Google Sheet.</p>
-<div class="column-body-outset-right">
-<p><img src="assets/images/arrest-import-raw.png" class="img-fluid"></p>
-</div>
-<p>Make sure to keep the <code>orig_row_number</code> column on the very left. It’s important to have a column that shows you the order that the original file came in – otherwise you can’t un-sort it. (The row number is the location in the original FOIA dataset.)</p>
-<p>Before you go any further, convert the spreadsheet to a “data table”, which will make widen all of your columns and improve the chances that all of your rows and columns will stay together as you work.</p>
-<p><img src="assets/images/arrest-convert-table.png" class="img-fluid" style="width:85.0%"></p>
-</section>
-<section id="assign-date-categories" class="level2">
-<h2 class="anchored" data-anchor-id="assign-date-categories">Assign date categories</h2>
-<p>You will probably want to look at your data either by year, by month, or by administration. You’ll need to work with the date of the arrest to customize the analysis categories.</p>
-<p>If you want to look at the data by month, you’ll need to convert the date of the arrest to the first of the month. If you want to look at it for comparable periods over 2024 and 2025, as the Colorado Sun did, you’ll need to assign those.</p>
-<section id="assign-the-beginning-of-the-month-and-format-the-date" class="level3">
-<h3 class="anchored" data-anchor-id="assign-the-beginning-of-the-month-and-format-the-date">Assign the beginning of the month and format the date</h3>
-<p>Right-click on the heading row near the arrest data, and choose <code>Insert 1 column to the left</code>. You’ll enter a formula into this column. Every formula starts with an equal sign <code>=</code>, and then the name of a command, or function. The function to use here is <code>eomonth</code>, which gives you the date as of the end of a month.</p>
-<p>The formula is:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/arrest-month-formula.png" class="img-fluid figure-img" style="width:40.0%"></p>
-<figcaption>=eomonth(c2,-1)+1</figcaption>
-</figure>
-</div>
-<p><img src="assets/images/arrest-get-month.png" class="img-fluid" style="width:85.0%"></p>
-<p>Follow the instructions to fill in the formula for the entire column of the table.</p>
-</section>
-<section id="get-comparable-2024-and-2025-data" class="level3">
-<h3 class="anchored" data-anchor-id="get-comparable-2024-and-2025-data">Get comparable 2024 and 2025 data</h3>
-<p>You could set up a complicated formula to get comparable periods for 2024 and 2025 but you can accomplish the same thing using a series of filters. Just be REALLY careful and check your work when you’re done.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Pitfalls with filters
+<section id="area-of-responsibility-files" class="level2">
+<h2 class="anchored" data-anchor-id="area-of-responsibility-files">Area of Responsibility files</h2>
+<p>There is some inconsistency in the data included for ICE’s area of responsibility: There are some arrests that are shown as taking place in states that are outside their areas. We think this can happen when an ICE agent works in one area and arrests in another, but we’re not quite sure.</p>
+<p>Consider deleting any rows that aren’t in the states you care about if you choose to work with these AORs.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-9870d6ef6700a03a4bd9" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9870d6ef6700a03a4bd9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"aor_name":["Atlanta Area of Responsibility","Baltimore Area of Responsibility","Boston Area of Responsibility","Buffalo Area of Responsibility","Chicago Area of Responsibility","Dallas Area of Responsibility","Denver Area of Responsibility","Detroit Area of Responsibility","El Paso Area of Responsibility","Harlingen Area of Responsibility","Houston Area of Responsibility","Los Angeles Area of Responsibility","Miami Area of Responsibility","New Orleans Area of Responsibility","New York City Area of Responsibility","Newark Area of Responsibility","Philadelphia Area of Responsibility","Phoenix Area of Responsibility","Salt Lake City Area of Responsibility","San Antonio Area of Responsibility","San Diego Area of Responsibility","San Francisco Area of Responsibility","Seattle Area of Responsibility","St. Paul Area of Responsibility","Washington Area of Responsibility"],"states":["GEORGIA, NORTH CAROLINA, SOUTH CAROLINA","MARYLAND","CONNECTICUT, MAINE, MASSACHUSETTS, NEW HAMPSHIRE, RHODE ISLAND, VERMONT","NEW YORK","ILLINOIS, INDIANA, KANSAS, KENTUCKY, MISSOURI, WISCONSIN","OKLAHOMA, TEXAS","COLORADO, WYOMING","MICHIGAN, OHIO","NEW MEXICO, TEXAS","TEXAS","TEXAS","CALIFORNIA","FLORIDA, PUERTO RICO, VIRGIN ISLANDS","ALABAMA, ARKANSAS, LOUISIANA, MISSISSIPPI, TENNESSEE","NEW YORK","NEW JERSEY","DELAWARE, PENNSYLVANIA, WEST VIRGINIA","ARIZONA","IDAHO, MONTANA, NEVADA, UTAH","TEXAS","CALIFORNIA","CALIFORNIA, GUAM, HAWAII, NORTHERN MARIANA ISLANDS","ALASKA, OREGON, WASHINGTON","IOWA, MINNESOTA, NEBRASKA, NORTH DAKOTA, SOUTH DAKOTA","DISTRICT OF COLUMBIA, VIRGINIA"],"row_count":[23326,5116,10300,3365,24715,31096,6364,7973,8548,16811,30612,16683,36974,31030,10747,11362,9155,11738,10344,21064,6069,7546,5592,8384,11498],"file_name":["atlanta_aor_ice_arrests.csv","baltimore_aor_ice_arrests.csv","boston_aor_ice_arrests.csv","buffalo_aor_ice_arrests.csv","chicago_aor_ice_arrests.csv","dallas_aor_ice_arrests.csv","denver_aor_ice_arrests.csv","detroit_aor_ice_arrests.csv","elpaso_aor_ice_arrests.csv","harlingen_aor_ice_arrests.csv","houston_aor_ice_arrests.csv","losangeles_aor_ice_arrests.csv","miami_aor_ice_arrests.csv","neworleans_aor_ice_arrests.csv","nyc_aor_ice_arrests.csv","newark_aor_ice_arrests.csv","philadelphia_aor_ice_arrests.csv","phoenix_aor_ice_arrests.csv","slc_aor_ice_arrests.csv","sanantonio_aor_ice_arrests.csv","sandiego_aor_ice_arrests.csv","sanfrancisco_aor_ice_arrests.csv","seattle_aor_ice_arrests.csv","stpaul_aor_ice_arrests.csv","washington_aor_ice_arrests.csv"]},"columns":[{"id":"aor_name","name":"Area of Responsibility","type":"character","cell":[{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/atlanta_aor_ice_arrests.csv"},"children":["Atlanta Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/baltimore_aor_ice_arrests.csv"},"children":["Baltimore Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/boston_aor_ice_arrests.csv"},"children":["Boston Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/buffalo_aor_ice_arrests.csv"},"children":["Buffalo Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/chicago_aor_ice_arrests.csv"},"children":["Chicago Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/dallas_aor_ice_arrests.csv"},"children":["Dallas Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/denver_aor_ice_arrests.csv"},"children":["Denver Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/detroit_aor_ice_arrests.csv"},"children":["Detroit Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/elpaso_aor_ice_arrests.csv"},"children":["El Paso Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/harlingen_aor_ice_arrests.csv"},"children":["Harlingen Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/houston_aor_ice_arrests.csv"},"children":["Houston Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/losangeles_aor_ice_arrests.csv"},"children":["Los Angeles Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/miami_aor_ice_arrests.csv"},"children":["Miami Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/neworleans_aor_ice_arrests.csv"},"children":["New Orleans Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/nyc_aor_ice_arrests.csv"},"children":["New York City Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/newark_aor_ice_arrests.csv"},"children":["Newark Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/philadelphia_aor_ice_arrests.csv"},"children":["Philadelphia Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/phoenix_aor_ice_arrests.csv"},"children":["Phoenix Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/slc_aor_ice_arrests.csv"},"children":["Salt Lake City Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/sanantonio_aor_ice_arrests.csv"},"children":["San Antonio Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/sandiego_aor_ice_arrests.csv"},"children":["San Diego Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/sanfrancisco_aor_ice_arrests.csv"},"children":["San Francisco Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/seattle_aor_ice_arrests.csv"},"children":["Seattle Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/stpaul_aor_ice_arrests.csv"},"children":["St. Paul Area of Responsibility"]},{"name":"a","attribs":{"href":"https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/washington_aor_ice_arrests.csv"},"children":["Washington Area of Responsibility"]}]},{"id":"states","name":"States","type":"character"},{"id":"row_count","name":"# rows","type":"numeric","format":{"cell":{"digits":0,"separators":true},"aggregated":{"digits":0,"separators":true}}},{"id":"file_name","name":"file_name","type":"character","show":false}],"filterable":true,"searchable":true,"defaultPageSize":10,"striped":true,"dataKey":"92931a230c14bc4e56c0c5842d8c3c91"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>There are a lot of ways to mess up filters without realizing it. Follow these guidelines to avoid most of the errors:</p>
-<ol type="1">
-<li><p>Always start at the top row. An easy way to get there is to select the cell in the heading and then press the down arrow once.</p></li>
-<li><p>Be sure that you’ve cleared all of the filter selections before you start. That way you don’t risk filling in things you don’t mean to. (Under the Filter, make sure “Clear” is selected and that no rows will be included to begin with. This is the opposite of Excel’s behavior.)</p></li>
-<li><p>Whenever possible, do your editing on a column TO THE RIGHT of a column that’s always filled out. This will prevent anything you quck-copy down from stopping halfway through your data.</p></li>
-<li><p>ALWAYS check your answers – make sure there are no unexpected missing values and that the values are what you expect.</p></li>
-</ol>
-<p><img src="assets/images/arrest-filter-error.png" class="img-fluid" style="width:40.0%"></p>
-</div>
-</div>
-<p>Insert a new column to the left of the date and choose the dropdown menu on the date column to turn on a filter. Right now, the data runs from around September 2023 through Oct.&nbsp;15, 2025. This example sets the comparable time frames as Jan 1 to Oct 15 in both of the years that we have.</p>
-<p>In the filter, choose the item “Filter by Condition” instead of choosing the individual dates. At the bottom of the list, choose “Is between” as your condition, and type in <code>2024-01-01</code> to <code>2024-10-15</code> in the boxes. This filters all of your rows to just those between those two dates. Once you’re sure you’re at the top of the table, type in two consecutive rows of “2024”, select both of those cells and double-click on the plus sign that appears at the bottom right corner of the selection:</p>
-<p><img src="assets/images/arrest-date-filter.png" class="img-fluid" style="width:70.0%"></p>
-<p>(If you don’t type in two cells, it’s possible Google will think you want it to give you consecutive years, not just repeat the same year over and over.)</p>
-<p>Repeat the process , changing 2024 to 2025 in the boxes. Again, make sure your cursor is in the first row of the table before you try to copy anything.</p>
-<p>Finally, remove the filter on the date column by choosing “None” in the filter by condition box, then filter the new, partially filled out column for blanks. You can fill in “Neither” to fill out the rest of the rows, though it’s not strictly needed.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<p>Here’s what the left portion of your spreadsheet might look like after a little formatting:</p>
-<p><img src="assets/images/arrest-dates-done.png" class="img-fluid"></p>
-<p>Your table is ready for some analysis.</p>
 
 
-</section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>If you were to download the original data with about 10 percent of the rows missing a state of arrest before mid-2025, you would overestimate the growth in arrests under President Trump. Don’t do this.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>People who accepted the government’s offer to buy a plane ticket home may not be included in these detentions.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://github.com/crmcglade/north-carolina-ice-arrests/tree/main">Caitlin McGlade’s Github site</a> documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>It’s good practice that, whenever possible, you don’t leave a empty values in your table. It just makes everything else more difficult and error-prone.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
@@ -722,8 +673,8 @@ Pitfalls with filters
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./recipes-arrest-examples.html" class="pagination-link" aria-label="Analyzing arrests">
-        <span class="nav-page-text"><span class="chapter-title">Analyzing arrests</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./recipes-arrest-import.html" class="pagination-link" aria-label="Local arrests">
+        <span class="nav-page-text"><span class="chapter-title">Local arrests</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

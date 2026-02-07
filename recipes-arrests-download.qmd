@@ -1,0 +1,130 @@
+# Downloading your local data from BLN
+
+```{r}
+#| label: get-aor-state-lists
+#| include: true
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: true
+
+library(tidyverse)
+library(here)
+library(reactable)
+library(reactablefmtr)
+i_am("recipes-arrests-download.qmd")
+
+aor_index <- read_csv("data/aor_csv_summary.csv")
+state_index <- read_csv("data/state_csv_summary.csv")
+
+
+
+```
+
+
+BLN is providing data files for ICE arrests in two ways: By state and by ICE's Area of Responsibility. In some areas, this AOR is a portion of a state. In others, it covers many states.
+
+Google sheets has a technical limit of 10 million individual cells, but in practice it starts crashing with more than about 15,000 rows of this dataset, which has 31 columns. If your area has more rows than this, consider switching to Microsoft Excel, with its larger capacity.
+
+Two areas will be particularly difficult to handle in Google Sheets: Florida and the Dallas Area of Responsibility.
+
+If you are working with a very large area, look for ways to reduce the size right after you import it into Google Sheets. For example, the list of arrests for Texas is too large for the program, but even the Dallas Area of Resposibility is quite large -- about 30,000 rows. You can reduce this size a little by deleting any rows not in Texas. (Note that my Google Sheet crashed a couple of times trying to delete these rows. )
+
+Contact BLN to help you reduce the size of your spreadsheet if you need help -- we may be able to find a strategy that will work for your story.
+
+
+## State files
+
+We expect most reporters will work with files for their state or a few neighboring states. There are two exceptions:
+
+Some states have too many rows for you to handle efficiently -- it may be easier to work with the Area of Responsibility files below. In other cases, the area of responsibility gets you closer to your local area, such as the Washington DC and Virginia area, or the area in and around New York City or Los Angeles.
+
+```{r}
+#| label: state-table
+#| include: true
+#| echo: false
+#| warning: false
+#| message: false
+#| eval: true
+
+google_bucket <- "https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/"
+
+# example url
+#https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ak_ice_arrests.csv
+
+state_index |>
+  select ( state_name, row_count, file_name) |>
+  reactable (
+    searchable=TRUE,
+    wrap = TRUE,
+    striped=TRUE,
+    sortable=TRUE,
+    filterable=TRUE,
+    defaultPageSize = 10,
+    columns = list (
+      state_name = colDef(name="State",
+                        cell=function (value, index) {
+                          # FIX THIS TO THE ACTUAL DATA SOURCE
+                          url <- paste0(google_bucket, state_index[index, "file_name"])
+                          htmltools::tags$a(href=url, value)
+                          }
+                        ),
+      file_name  = colDef( show=FALSE) ,
+      row_count = colDef(name = "# rows", format=colFormat(separators = TRUE, digits=0) )
+    )
+  )
+
+
+
+```
+
+
+
+## Area of Responsibility files
+
+There is some inconsistency in the data included for ICE's area of responsibility: There are some arrests that are shown as taking place in states that are outside their areas. We think this can happen when an ICE agent works in one area and arrests in another, but we're not quite sure.
+
+Consider deleting any rows that aren't in the states you care about if you choose to work with these AORs.
+
+```{r}
+#| label: aor-table
+#| include: true
+#| echo: false
+#| warning: false
+#| message: false
+#| eval: true
+
+google_bucket <- "https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/"
+
+# example url
+#https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ak_ice_arrests.csv
+
+aor_index |>
+  select ( aor_name, states, row_count, file_name) |>
+  reactable (
+    searchable=TRUE,
+    wrap = TRUE,
+    striped=TRUE,
+    sortable=TRUE,
+    filterable=TRUE,
+    defaultPageSize = 10,
+    columns = list (
+      aor_name = colDef(name="Area of Responsibility",
+                        cell=function (value, index) {
+                          # FIX THIS TO THE ACTUAL DATA SOURCE
+                          url <- paste0(google_bucket, aor_index[index, "file_name"])
+                          htmltools::tags$a(href=url, value)
+                          }
+                        ),
+      states = colDef(name = "States"),
+      file_name  = colDef( show=FALSE) ,
+      row_count = colDef(name = "# rows", format=colFormat(separators = TRUE, digits=0) )
+    )
+  )
+
+
+
+```
+
+
+
