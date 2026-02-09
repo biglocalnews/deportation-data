@@ -36,7 +36,7 @@ book:
   - part: "Recipes"
     chapters:
       - recipes-intro.qmd
-      - recipes-arrests-download.qmd
+      - recipes-arrest-download.qmd
       - recipes-arrest-import.qmd
       - recipes-arrest-examples.qmd
   #    - arrests-whereto.qmd

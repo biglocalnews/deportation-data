@@ -6,7 +6,7 @@ The [Deportation Data Project](https://deportationdata.org) is the most widely u
 
 Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have told ICE to produce the files.
 
-There are nearly than 375,000 apprehensions representing about 300,000 people in the arrest data alone. Detentions -- people held in ICE facilities -- cover about 2 million (?) individual steps in the system, as the federal government moves people from place to place.
+There are nearly than 375,000 apprehensions representing about 300,000 people in the arrest data alone. Detentions -- people held in ICE facilities -- cover about 1.6 individual steps in the system, as the federal government moves people from place to place.
 
 The project itself allows users to filter and download the raw data, which is a great place to start for people who know how to program or can handle detailed and complicated datsets.
 

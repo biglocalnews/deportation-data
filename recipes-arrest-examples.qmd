@@ -13,7 +13,9 @@ This section reviews particular passages in stories and studies that you can rep
 You can replicate these analyses using these three methods:
 
 * Recoding data into the exact categories you need, such as the timing categories shown in the last chapter.
+
 * Filtering the data to remove items you don't want to see. If you want to limit your work to just arrests since Inauguration Day 2025, consider filtering for those dates and copying the results to a new sheet before you get started.
+
 * Creating one- or two-way pivot tables, with percentages. This guide assumes you know how to start making a pivot table. If you don't, review the process in the Appendix in this guide.
 
 Whenever you do your analysis, consider comparing your answers to those found in other stories and studies. Big differences could reflect your area's uniqueness, but they could also signal major errors.
@@ -36,7 +38,9 @@ All of the examples shown here are for the Los Angeles area of responsibility th
 
 ### Criminality at the time of apprehension:
 
-The original data includes a single indicator for "criminality" at the time of arrest. It includes no detail on what those crimes are.  Look at this very general categorization as a first step by creating a pivot table of the column called `arrest_criminality`:
+The original data includes a single indicator for "criminality" at the time of arrest. It includes no detail on what those crimes were.
+
+Look at this very general categorization as a first step by creating a simple pivot table of the column called `arrest_criminality`:
 
 ![](assets/images/arrest-criminality.png){width=80%}
 
@@ -65,9 +69,13 @@ You can see that you probably want to combine similar types of crimes rather tha
 
 ![Charge groupings](assets/images/arrest-chargegroups-example.png){width=90%}
 
-## Custodial vs. street arrests
+Here is the pivot table that shows these more general charge groups:
 
-Street arrests, called `at-large` arrests in the data, are considered any  arrest made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.
+
+
+## Custodial vs. at-large arrests
+
+BLN has used Homeland Security's definitions of the apprehension method, distinguishing between what they call "custodial" and "at-large" arrests. You can think of at-large arrests the same way some people have written about street arrests, or arrests that happen in the community. These are any arrests made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.
 
 ![](assets/images/ddp-street-arrests.png){width=80% fig-align="center"}
 
@@ -75,13 +83,13 @@ Here's what a similar chart of the Los Angeles data would look like, based on a 
 
 ![Street arrests](assets/images/arrest-street-custodial.png)
 
-The overall number of arrests didn't increase as much, partly because California does not honor the detainers that lead to custodial arrests. But the spike in at-large, or street arrests, is noticeable during the surge over the summer of 2025 in Southern California.
+The overall number of arrests didn't increase as much in Los Angeles, partly because California does not honor the detainers that lead to custodial arrests. But the spike in at-large, or street arrests, is noticeable during the surge over the summer of 2025 in Southern California.
 
 ::: callout-warning
 
 ## People vs. arrest counts
 
-People are duplicated in the arrest data when they appear to have been arrested more than once. You can handle this in several ways. The easiest is to make sure you are careful with your language, and write about "arrests" rather than "people" counts.
+People are duplicated in the arrest data when they have been arrested more than once. You can handle this in several ways. The easiest is to ignore it, and use careful language to distinguish between people and arrests.
 
 But if you want to make sure you're not double-counting anyone, you can use the `bln_person_id` as a way to count "unique" values. This makes sure no one is counted twice in the same sentence, but can lead to confusing totals -- the number of "people arrested" will differ between the total, the total for a year, or the total for a month.
 
@@ -137,9 +145,9 @@ When you close that view, the filter is turned off and you can start over.
 
 :::
 
-## ICE raids
+## Enforcement raids
 
-You may have heard of arrests at a specific spot or time in your area. Consider looking for these in the arrest data, then following up with whatever you can find using your usual reporting methods. That's what the Colorado Sun did, in order to get this lede:
+You may have heard of a raid or a group of arrests at one time in your area -- a workplace raid like the one at the Hyundai plant in Georgia, or a group of soccer fans arrested as they exited an arena. Consider looking for these in the arrest data, then following up with whatever you can find using your usual reporting methods. That's what the Colorado Sun did, in order to get this lede:
 
 ::: blockquote
 
@@ -155,9 +163,17 @@ But newly released data shows that just nine of the 72 people ICE agents arreste
 
 The story went on to provide more details on the people caught in that raid before turning to a statistical analysis of the arrest data.
 
-In practice, the arrest dates, and locations, can be considered approximate.
+#### The most common day
 
-Here, for example, is how Wikipedia describes the southeastern Georgia Hyundai auto plant raid that occured on Sept. 4, 2025:
+To get the most common day in your area, simply make a pivot table, sorted by the frequency by date:
+
+![](assets/images/arrest-biggest-day.png){fig-alt="Biggest day is July 11" width=80%}
+
+You've probably heard of the big raids in your area, but simply Googling the date and the region with "ICE raid" will get you pretty far: "[ICE, CBP Arrest at Least 361 Illegal Aliens During Marijuana Grow Site Operation, Rescue at Least 14 Children](https://www.dhs.gov/news/2025/07/13/ice-cbp-arrest-least-361-illegal-aliens-during-marijuana-grow-site-operation-rescue)". It gives you a place to start reporting on what happened that day if you haven't yet heard of it.  You can go back to your original data table and isolate the arrests recorded in those few days to get a better sense of what happened, and what happened to the people arrested.
+
+#### Finding a specific event
+
+Here is how Wikipedia describes the southeastern Georgia Hyundai auto plant last fall:
 
 ::: blockquote
 
@@ -172,6 +188,7 @@ Using filters, you can get pretty close to this:
 3. About 300 were detained at the Folkston D. Ray ICE processing center. Many of these are showing a detention date BEFORE the arrest by a day or two. The "landmark" arrest site is the Folkson general area, and the dates are often a day or two after the actual raid.
 4. Of those, 198 were Korean or South Korean citizens, according to the data. One area of confusion is that many of them are listed as "custodial" arrests in the original data, even though we believe this was a workplace raid.
 4. The vast majority of those were returned to South Korea the following week, but there were people from other nationalities included.
+
 
 Looking up important events in your area will probably highlight errors in the original data as well as inaccuracies in the original news reports and press releases. Do as much street reporting as you can before quoting these data as fact.
 

@@ -149,17 +149,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Getting started with story recipes</span></a>
+  <a href="./recipes-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Story recipes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrests-download.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Downloading your local data from BLN</span></a>
+  <a href="./recipes-arrest-download.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Downloading your local data from BLN</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recipes-arrest-import.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Local arrests</span></a>
+  <a href="./recipes-arrest-import.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Refining your list of arrests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -243,9 +243,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>You can replicate these analyses using these three methods:</p>
 <ul>
-<li>Recoding data into the exact categories you need, such as the timing categories shown in the last chapter.</li>
-<li>Filtering the data to remove items you don’t want to see. If you want to limit your work to just arrests since Inauguration Day 2025, consider filtering for those dates and copying the results to a new sheet before you get started.</li>
-<li>Creating one- or two-way pivot tables, with percentages. This guide assumes you know how to start making a pivot table. If you don’t, review the process in the Appendix in this guide.</li>
+<li><p>Recoding data into the exact categories you need, such as the timing categories shown in the last chapter.</p></li>
+<li><p>Filtering the data to remove items you don’t want to see. If you want to limit your work to just arrests since Inauguration Day 2025, consider filtering for those dates and copying the results to a new sheet before you get started.</p></li>
+<li><p>Creating one- or two-way pivot tables, with percentages. This guide assumes you know how to start making a pivot table. If you don’t, review the process in the Appendix in this guide.</p></li>
 </ul>
 <p>Whenever you do your analysis, consider comparing your answers to those found in other stories and studies. Big differences could reflect your area’s uniqueness, but they could also signal major errors.</p>
 <section id="criminal-histories" class="level2">
@@ -259,7 +259,8 @@ ul.task-list li input[type="checkbox"] {
 <p>All of the examples shown here are for the Los Angeles area of responsibility through October 15, 2025.</p>
 <section id="criminality-at-the-time-of-apprehension" class="level3">
 <h3 class="anchored" data-anchor-id="criminality-at-the-time-of-apprehension">Criminality at the time of apprehension:</h3>
-<p>The original data includes a single indicator for “criminality” at the time of arrest. It includes no detail on what those crimes are. Look at this very general categorization as a first step by creating a pivot table of the column called <code>arrest_criminality</code>:</p>
+<p>The original data includes a single indicator for “criminality” at the time of arrest. It includes no detail on what those crimes were.</p>
+<p>Look at this very general categorization as a first step by creating a simple pivot table of the column called <code>arrest_criminality</code>:</p>
 <p><img src="assets/images/arrest-criminality.png" class="img-fluid" style="width:80.0%"></p>
 <p>(“Other immigration violator” is the way that ICE says that someone has no pending charges or convictions – everyone they arrest is accused of violating immigration rules.)</p>
 <p>This analysis shows how important it is for you to distinguish patterns before and after the second Trump inauguration. In the Los Angeles area, most arrests were of people with criminal convictions since 2023, but the 2025 data shows a different pattern.</p>
@@ -292,11 +293,12 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Charge groupings</figcaption>
 </figure>
 </div>
+<p>Here is the pivot table that shows these more general charge groups:</p>
 </section>
 </section>
-<section id="custodial-vs.-street-arrests" class="level2">
-<h2 class="anchored" data-anchor-id="custodial-vs.-street-arrests">Custodial vs.&nbsp;street arrests</h2>
-<p>Street arrests, called <code>at-large</code> arrests in the data, are considered any arrest made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.</p>
+<section id="custodial-vs.-at-large-arrests" class="level2">
+<h2 class="anchored" data-anchor-id="custodial-vs.-at-large-arrests">Custodial vs.&nbsp;at-large arrests</h2>
+<p>BLN has used Homeland Security’s definitions of the apprehension method, distinguishing between what they call “custodial” and “at-large” arrests. You can think of at-large arrests the same way some people have written about street arrests, or arrests that happen in the community. These are any arrests made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/images/ddp-street-arrests.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
@@ -309,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Street arrests</figcaption>
 </figure>
 </div>
-<p>The overall number of arrests didn’t increase as much, partly because California does not honor the detainers that lead to custodial arrests. But the spike in at-large, or street arrests, is noticeable during the surge over the summer of 2025 in Southern California.</p>
+<p>The overall number of arrests didn’t increase as much in Los Angeles, partly because California does not honor the detainers that lead to custodial arrests. But the spike in at-large, or street arrests, is noticeable during the surge over the summer of 2025 in Southern California.</p>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -320,7 +322,7 @@ People vs.&nbsp;arrest counts
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>People are duplicated in the arrest data when they appear to have been arrested more than once. You can handle this in several ways. The easiest is to make sure you are careful with your language, and write about “arrests” rather than “people” counts.</p>
+<p>People are duplicated in the arrest data when they have been arrested more than once. You can handle this in several ways. The easiest is to ignore it, and use careful language to distinguish between people and arrests.</p>
 <p>But if you want to make sure you’re not double-counting anyone, you can use the <code>bln_person_id</code> as a way to count “unique” values. This makes sure no one is counted twice in the same sentence, but can lead to confusing totals – the number of “people arrested” will differ between the total, the total for a year, or the total for a month.</p>
 <p>Here’s how you would avoid double-counting people, and how it changes the totals:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -392,9 +394,9 @@ Pro-tip: Save filter views
 </div>
 </div>
 </section>
-<section id="ice-raids" class="level2">
-<h2 class="anchored" data-anchor-id="ice-raids">ICE raids</h2>
-<p>You may have heard of arrests at a specific spot or time in your area. Consider looking for these in the arrest data, then following up with whatever you can find using your usual reporting methods. That’s what the Colorado Sun did, in order to get this lede:</p>
+<section id="enforcement-raids" class="level2">
+<h2 class="anchored" data-anchor-id="enforcement-raids">Enforcement raids</h2>
+<p>You may have heard of a raid or a group of arrests at one time in your area – a workplace raid like the one at the Hyundai plant in Georgia, or a group of soccer fans arrested as they exited an arena. Consider looking for these in the arrest data, then following up with whatever you can find using your usual reporting methods. That’s what the Colorado Sun did, in order to get this lede:</p>
 <div class="blockquote">
 <p>On just one Sunday in April, immigration officers arrested at least 72 people in Colorado, data from U.S. Immigration and Customs Enforcement shows, the busiest day for immigration enforcement in the state so far since President Donald Trump took office in January.</p>
 <p>That day, federal agents from several agencies raided a Colorado Springs nightclub, arresting dozens of people they suspected of being in the country illegally.</p>
@@ -402,8 +404,15 @@ Pro-tip: Save filter views
 <p>But newly released data shows that just nine of the 72 people ICE agents arrested in Colorado that day were marked by the agency as having any prior criminal convictions. ICE said the convictions were for a traffic offense, obstruction, assault, illegal entry, driving under the influence, heroin smuggling and marijuana possession.</p>
 </div>
 <p>The story went on to provide more details on the people caught in that raid before turning to a statistical analysis of the arrest data.</p>
-<p>In practice, the arrest dates, and locations, can be considered approximate.</p>
-<p>Here, for example, is how Wikipedia describes the southeastern Georgia Hyundai auto plant raid that occured on Sept.&nbsp;4, 2025:</p>
+<section id="the-most-common-day" class="level4">
+<h4 class="anchored" data-anchor-id="the-most-common-day">The most common day</h4>
+<p>To get the most common day in your area, simply make a pivot table, sorted by the frequency by date:</p>
+<p><img src="assets/images/arrest-biggest-day.png" class="img-fluid" style="width:80.0%" alt="Biggest day is July 11"></p>
+<p>You’ve probably heard of the big raids in your area, but simply Googling the date and the region with “ICE raid” will get you pretty far: “<a href="https://www.dhs.gov/news/2025/07/13/ice-cbp-arrest-least-361-illegal-aliens-during-marijuana-grow-site-operation-rescue">ICE, CBP Arrest at Least 361 Illegal Aliens During Marijuana Grow Site Operation, Rescue at Least 14 Children</a>”. It gives you a place to start reporting on what happened that day if you haven’t yet heard of it. You can go back to your original data table and isolate the arrests recorded in those few days to get a better sense of what happened, and what happened to the people arrested.</p>
+</section>
+<section id="finding-a-specific-event" class="level4">
+<h4 class="anchored" data-anchor-id="finding-a-specific-event">Finding a specific event</h4>
+<p>Here is how Wikipedia describes the southeastern Georgia Hyundai auto plant last fall:</p>
 <div class="blockquote">
 <p>On September 4, 2025, American law enforcement conducted an immigration raid at the Hyundai Motor Group Metaplant America, an electric vehicle (EV) production site in Ellabell, Bryan County, Georgia, United States, detaining approximately 475 workers. The raid was described as the largest immigration enforcement operation carried out at a single location by the United States Department of Homeland Security. The raid led to a diplomatic dispute between the United States and South Korea, with over 300 Koreans detained, and increased concerns about foreign companies investing in the United States.[4]</p>
 </div>
@@ -418,6 +427,7 @@ Pro-tip: Save filter views
 <p>Looking up important events in your area will probably highlight errors in the original data as well as inaccuracies in the original news reports and press releases. Do as much street reporting as you can before quoting these data as fact.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -822,8 +832,8 @@ Pro-tip: Save filter views
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./recipes-arrest-import.html" class="pagination-link" aria-label="Local arrests">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Local arrests</span></span>
+      <a href="./recipes-arrest-import.html" class="pagination-link" aria-label="Refining your list of arrests">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Refining your list of arrests</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
