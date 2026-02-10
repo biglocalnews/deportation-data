@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "Immigration enforcement story recipes",
     "section": "",
-    "text": "Preface\nBig Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of people caught in the immigration enforcement system.\nBLN has enhanced some of the data to improve its usefulness for local reporters attempting specific stories, which are documented in this guide. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.\n\nOrganization\nPart I of this guide introduces you to the data sources, alternatives, and stories that have already been done with deportation data. It includes a broad overview of the data system, including what it can and can’t tell us.\nPart II provides recipes for specific stories like the ones highlighted in Part I. For each of the main data tables, it provides an introduction on how to obtain just the information for your area. Each subsequent chapter provides a short recipe for doing the analysis for a single story.\nThe Appendices provide additional resources, including full documentation of the data provide by BLN and some background on ICE and immigration legal terms.\n\n\nCredits\nReporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.\nBig Local News is responsible for any errors or omissions.",
+    "text": "Getting started\nBig Local News has partnered with the Deportation Data Project to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of people caught in the immigration enforcement system.\nBLN has enhanced some of the data to improve its usefulness for local reporters attempting specific stories, which are documented in this guide. But every story idea can’t be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "Immigration enforcement story recipes",
+    "section": "",
+    "text": "Organization\nPart I of this guide introduces you to the data sources, alternatives, and stories that have already been done with deportation data. It includes a broad overview of the data system, including what it can and can’t tell us.\nPart II provides recipes for specific stories like the ones highlighted in Part I. For each of the main data tables, it provides an introduction on how to obtain just the information for your area. Each subsequent chapter provides a short recipe for doing the analysis for a single story.\nThe Appendices provide additional resources, including full documentation of the data provide by BLN and some background on ICE and immigration legal terms.\n\n\nCredits\nReporters are in debt to the staff and law firms associated with the Deportation Data Project, especailly David Hausman and Graeme Blair, for all they have done to acquire, understand and share their data. We also thank all of the reporters who gave us important insights and story ideas, who are credited throughout this document.\nBig Local News is responsible for any errors or omissions.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
@@ -89,56 +99,56 @@
   {
     "objectID": "recipes-intro.html",
     "href": "recipes-intro.html",
-    "title": "Story recipes",
+    "title": "Story recipe index",
     "section": "",
     "text": "Arrests\nThe following chapters lead you through reproducing some of the most common data-driven stories from around the country.\nMost reporeters have focused on arrests, even when the supplement the data with information from further along in the enforcement pipeline.",
     "crumbs": [
       "Recipes",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Story recipes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Story recipe index</span>"
     ]
   },
   {
     "objectID": "recipes-intro.html#arrests",
     "href": "recipes-intro.html#arrests",
-    "title": "Story recipes",
+    "title": "Story recipe index",
     "section": "",
     "text": "Getting your local arrest data: How to download and isolate the timing of arrests\nPreparing the data for analysis: Some suggestions on how to make your analysis easier.\nArrest examples: Replicating stories on criminal histories of people arrested, the increase in street arrests, and demographics.",
     "crumbs": [
       "Recipes",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Story recipes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Story recipe index</span>"
     ]
   },
   {
     "objectID": "recipes-intro.html#detention",
     "href": "recipes-intro.html#detention",
-    "title": "Story recipes",
+    "title": "Story recipe index",
     "section": "Detention",
     "text": "Detention\nDetention facilities are scattered around the United States, and can range from short-term intake offices to local jails and federal prisons. The ICE data is more complete for detentions than for arrests for two reasons: They track people more closely once they’re booked into the ICE system, meaning that following people through the detention journey is easier; and most facilities inside the U.S. (not right at a border) are run by ICE, so its detentions cover people arrested by Border Patrol.\n\nDetention facilities: Look at the number of people held in your local facilities by day, with statistics like the number of days people stayed there and the distance they traveled once they left.\nTK: Detention transfers: One of the most powerful stories done around the country show how quickly immigrants are sent far away from their homes. This recipe shows you how to follow people who have been booked into your local facilities.\n\nFull documentation of the data provided by Big Local News is included in the appendix.",
     "crumbs": [
       "Recipes",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Story recipes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Story recipe index</span>"
     ]
   },
   {
     "objectID": "recipes-arrest-download.html",
     "href": "recipes-arrest-download.html",
-    "title": "Downloading your local data from BLN",
+    "title": "Downloading arrests for your area",
     "section": "",
     "text": "State files\nBLN is providing data files for ICE arrests in two ways: By state and by ICE’s Area of Responsibility. In some areas, this AOR is a portion of a state. In others, it covers many states.\nGoogle sheets has a technical limit of 10 million individual cells, but in practice it starts crashing with more than about 15,000 rows of this dataset, which has 31 columns. If your area has more rows than this, consider switching to Microsoft Excel, with its larger capacity.\nTwo areas will be particularly difficult to handle in Google Sheets: Florida and the Dallas Area of Responsibility.\nIf you are working with a very large area, look for ways to reduce the size right after you import it into Google Sheets. For example, the list of arrests for Texas is too large for the program, but even the Dallas Area of Resposibility is quite large – about 30,000 rows. You can reduce this size a little by deleting any rows not in Texas. (Note that my Google Sheet crashed a couple of times trying to delete these rows. )\nContact BLN to help you reduce the size of your spreadsheet if you need help – we may be able to find a strategy that will work for your story.\nWe expect most reporters will work with files for their state or a few neighboring states. There are two exceptions:\nSome states have too many rows for you to handle efficiently – it may be easier to work with the Area of Responsibility files below. In other cases, the area of responsibility gets you closer to your local area, such as the Washington DC and Virginia area, or the area in and around New York City or Los Angeles.",
     "crumbs": [
       "Recipes",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Downloading your local data from BLN</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Downloading arrests for your area</span>"
     ]
   },
   {
     "objectID": "recipes-arrest-download.html#area-of-responsibility-files",
     "href": "recipes-arrest-download.html#area-of-responsibility-files",
-    "title": "Downloading your local data from BLN",
+    "title": "Downloading arrests for your area",
     "section": "Area of Responsibility files",
     "text": "Area of Responsibility files\nThere is some inconsistency in the data included for ICE’s area of responsibility: There are some arrests that are shown as taking place in states that are outside their areas. We think this can happen when an ICE agent works in one area and arrests in another, but we’re not quite sure.\nConsider deleting any rows that aren’t in the states you care about if you choose to work with these AORs.",
     "crumbs": [
       "Recipes",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Downloading your local data from BLN</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Downloading arrests for your area</span>"
     ]
   },
   {

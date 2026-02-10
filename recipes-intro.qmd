@@ -1,4 +1,4 @@
-# Story recipes
+# Story recipe index
 
 The following chapters lead you through reproducing some of the most common data-driven stories from around the country.
 
@@ -6,7 +6,7 @@ The following chapters lead you through reproducing some of the most common data
 
 Most reporeters have focused on arrests, even when the supplement the data with information from further along in the enforcement pipeline.
 
-* [Getting your local arrest data](recipes-arrest-download.qmd): How to download and isolate the timing of arrests
+* [Downloading your local arrest data](recipes-arrest-download.qmd): How to download and isolate the timing of arrests
 
 * [Preparing the data for analysis](recipes-arrest-import.qmd): Some suggestions on how to make your analysis easier.
 

@@ -1,4 +1,4 @@
-# Preface
+## Getting started
 
 [Big Local News]() has partnered with the [Deportation Data Project](deportationdata.org) to provide local reporters with simplified datasets and story recipes that can help them mine the millions of records of people caught in the immigration enforcement system.
 

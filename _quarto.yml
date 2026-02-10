@@ -39,7 +39,6 @@ book:
       - recipes-arrest-download.qmd
       - recipes-arrest-import.qmd
       - recipes-arrest-examples.qmd
-  #    - arrests-whereto.qmd
   #    - detention-intro.qmd
   #    - detention-trends.qmd
   #    - detention-facilities.qmd

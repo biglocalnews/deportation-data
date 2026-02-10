@@ -1,4 +1,4 @@
-# Downloading your local data from BLN
+# Downloading arrests for your area
 
 ```{r}
 #| label: get-aor-state-lists
@@ -6,13 +6,14 @@
 #| echo: false
 #| message: false
 #| warning: false
+#| error: true
 #| eval: true
 
 library(tidyverse)
 library(here)
 library(reactable)
 library(reactablefmtr)
-i_am("recipes-arrests-download.qmd")
+i_am("recipes-arrest-download.qmd")
 
 aor_index <- read_csv("data/aor_csv_summary.csv")
 state_index <- read_csv("data/state_csv_summary.csv")
