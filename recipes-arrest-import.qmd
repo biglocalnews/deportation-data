@@ -3,9 +3,13 @@
 Once you've downloaded your data, you may want to keep only some of the arrests in your states. Two common ways to do this are:
 
 
-1. **Location of the first detention**: About 85 percent of the people arrested were booked into detention around the same time. We have recorded the first place that these arrestees were sent. There are two advantages to limiting your work to just people who were detained. First, you know what county and city the detention center was in, so you can get closer to your own area. Second, you may want to center  your story on people who were held, not everyone who was arrested.
+1. **Location of the first detention**: About 85 percent of the people arrested were booked into detention around the same time. We have recorded the first place that these arrestees were sent.
 
-2. **Site landmark**: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person's landmark is actually the location of the first detention. But in other cases, you'll see an abbreviation of a city or metro area in most of the landmark entries. You might want to use these to filter the arrests to something closer to your own area. This is kind of risky -- it's best done if you care less about exactly how many people were arrested in your area and more about what happened to them.^[[Caitlin McGlade's Github site](https://github.com/crmcglade/north-carolina-ice-arrests/tree/main) documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.]
+2. **Site landmark**: These are supposed to be descriptions of the arrest location, but they are, in practice, pretty general. In some cases, such as the mass arrest of Korean workers near Atlanta in September 2025, each person's landmark is actually the location of the first detention. But in other cases, you'll see an abbreviation of a city or metro area.
+
+Using Location of first detention limits your work to just people who were detained, but gives you the exact county and city the detention center was in, so you can get closer to your own area. It also allows you to center your story on people who were held, not everyone who was arrested.
+
+You might want to use these to filter the arrests to something closer to your own area. This is kind of risky -- it's best done if you care less about exactly how many people were arrested in your area and more about what happened to them.^[[Caitlin McGlade's Github site](https://github.com/crmcglade/north-carolina-ice-arrests/tree/main) documents how she used a combination of state, detainer information and landmark to isolate arrests in and around Charolotte, NC.]
 
 All of the examples that follow used the arrests that occurred in the Los Angeles Area of Responsibility.
 
@@ -21,11 +25,11 @@ Here is what your data might look like after you've brought it into a Google She
 
 Make sure to keep the `orig_row_number` column on the very left. It's important to have a column that shows you the order that the original file came in -- otherwise you can't un-sort it. (The row  number is the location in the original FOIA dataset.)
 
-Before you go any further, convert the spreadsheet to a "data table", which will make widen all of your columns and improve the chances that all of your rows and columns will stay together as you work.
+Before you go any further, convert the spreadsheet to a "data table", which will widen all of your columns and improve the chances that all of your rows and columns will stay together as you work.
 
 ![](assets/images/arrest-convert-table.png){width="85%"}
 
-From here, you can use sequential filters to look for the OPPOSITE of what you want to keep, and delete the rows that match. For example , to keep only the arrests that led to detention in Los Angeles or San Bernadino counties, I would select everything EXCEPT them in the list, then delete the matching rows.
+From here, you can use filters to look for the OPPOSITE of what you want to keep, and delete the rows that match. For example , to keep only the arrests that led to detention in Los Angeles or San Bernadino counties, I would select everything EXCEPT them in the list, then delete the matching rows and then unfilter.
 
 ## Assign date categories
 
@@ -77,13 +81,14 @@ Once you're sure you're at the top of the table, type in two consecutive rows of
 
 Repeat the process , changing 2024 to 2025 in the boxes. Again, make sure your cursor is in the first row of the table before you try to copy anything.
 
-Finally, remove the filter on the date column by choosing "None" in the filter by condition box, then filter the new, partially filled out  column for blanks. You can fill in "Neither" to fill out the rest of the rows, though it's not strictly needed.^[It's good practice that, whenever possible, you don't leave a empty values in your table. It just makes everything else less difficult and error-prone.]
+Finally, remove the filter on the date column by choosing "None" in the filter by condition box, then filter the new, partially filled out  column for blanks. You can fill in "Neither" (indicating that the arrest happened in neither your 2024 nor 2025 time period) to fill out the rest of the rows, though it's not strictly needed.^[It's good practice that, whenever possible, you don't leave a empty values in your table. It just makes everything else less difficult and error-prone.]
 
 Here's what the left portion of your spreadsheet might look like after a little formatting:
 
 ![](assets/images/arrest-dates-done.png)
 
 Your table is ready for some analysis.
+
 
 
 

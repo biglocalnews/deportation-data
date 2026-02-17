@@ -101,18 +101,4 @@ About 85 percent of the arrests could be matched to a detention. We used the Dat
 Less than half of the detainers could be matched to an arrest record. One reason is that detainers are much less likely to have a person identifier. We used the most recent detainer recorded for a person as a match, even if it was several years ago. The reason is that the detainers don't expire, and the person could have been incarcerated locally or at the state level the entire time. We did not include as a match any detainer after the arrest.
 
 
-## Progress
-
-::: todo
-
-* [x] Convert date-time to date only where no time is recorded
-* [x] Decide on how to deal with partial duplicates
-* [x] Collapse case status
-* [x] Collapse case category: Decided not to keep this
-* [x] Collapse program categories
-* [x] Add information on where arrested from detainer and first place of detention to the arrest table
-* [x] Add most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.
-* [ ] Run the recodes by an expert or two
-
-:::
 

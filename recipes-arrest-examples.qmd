@@ -4,15 +4,15 @@ This section reviews particular passages in stories and studies that you can rep
 
 * The Deportation Data Project's study, "[Immigration Enforcement in the First Nine Months of the Second Trump Administration](https://deportationdata.org/analysis/immigration-enforcement-first-nine-months-trump.html)", by Graeme Blair and David Hausman. This analysis uses a subset of arrests, but the basic patterns still hold whether or not you follow their methodology.
 
-* The Colorado Sun's deep dive into the profile of arrests in their area:  "[Ice arrested more than 3,500 people in Colorado in 2025 - including babies and the elderly](https://coloradosun.com/2025/12/31/ice-arrests-2025-data-deportation-data-project/)," by Taylor Dolven and Sandra Fish, and an earlier story on the [criminal histories in Colorado and Wyoming](https://coloradosun.com/2025/07/18/ice-arrests-colorado-wyoming-no-criminal-history/) published with WyoFile.
+* The Colorado Sun's deep dive into the profile of arrests in their area:  "[Ice arrested more than 3,500 people in Colorado in 2025 - including babies and the elderly](https://coloradosun.com/2025/12/31/ice-arrests-2025-data-deportation-data-project/)," by Taylor Dolven and Sandra Fish, and an earlier story on the [criminal histories of arrestees in Colorado and Wyoming](https://coloradosun.com/2025/07/18/ice-arrests-colorado-wyoming-no-criminal-history/) published with WyoFile.
 
 ![](assets/images/colo-sun-dec31.png){width=65% fig-align="center"}
 
-* The Washington Post's [comprehensive view of street arrests](https://wapo.st/46wte1r) (gift link), which go back to 2008. This analysis will be a shortened version of it, but the growth in "at-large" arrests is one of the most visible pieces of the enforcement surges.
+* The Washington Post's [comprehensive view of ICE street arrests](https://wapo.st/46wte1r) (gift link), which go back to 2008. The analysis in this recipe will be a shortened version of it, but the growth in "at-large" arrests is one of the most visible pieces of the enforcement surges.
 
 You can replicate these analyses using these three methods:
 
-* Recoding data into the exact categories you need, such as the timing categories shown in the last chapter.
+* Recoding data into the exact categories you need, such as the timing categories shown in the [last section](recipes-arrest-import#assign-date-categories).
 
 * Filtering the data to remove items you don't want to see. If you want to limit your work to just arrests since Inauguration Day 2025, consider filtering for those dates and copying the results to a new sheet before you get started.
 
@@ -22,8 +22,6 @@ Whenever you do your analysis, consider comparing your answers to those found in
 
 ## Criminal histories
 
-The New York Times, Stateline and the Colorado Sun have gone beyond knowing that most people arrested in 2025 lacked a known criminal conviction. They also looked at the charges and the proportion that were violent. The enhanced data from BLN includes charges and crime categories derived from other tables in the data collection.
-
 Here's what the Colorado Sun and WyoFile said, based on data through July 2025 :
 
 ::: blockquote
@@ -32,7 +30,7 @@ Most people arrested by U.S. Immigration and Customs Enforcement agents between 
 
 :::
 
-Below are a few ways you can look at the criminal background of people arrested in your area.
+The enhanced data from BLN includes charges and crime categories derived from other tables in the data collection. Below are a few ways you can look at the criminal background of people arrested in your area.
 
 All of the examples shown here are for the Los Angeles area of responsibility through October 15, 2025.
 
@@ -46,18 +44,17 @@ Look at this very general categorization as a first step by creating a simple pi
 
 ("Other immigration violator" is the way that ICE says that someone has no pending charges or convictions -- everyone they arrest is accused of violating immigration rules.)
 
-This analysis shows how important it is for you to distinguish patterns before and after the second Trump inauguration. In the Los Angeles area, most arrests were of people with criminal convictions since 2023, but the 2025 data shows a different pattern.
+This analysis shows how important it is for you to distinguish patterns before and after the second Trump inauguration. In the Los Angeles area in 2024, most arrests were of people with criminal convictions since 2023, but the 2025 data shows a different pattern.
 
-While not exactly the same, these numbers for the Los Angeles area are in rough agreement with the data from elsewhere, including the Colorado story. It suggests that ICE thinks there are pending criminal charges against many more immigrants in the previous year, but many fewer have actual convictions. This is most likely because ICE is more aggressively arresting people released from local jails by checking book-ins for fingerprint matches against immigration court orders. These detainers aren't necessarily honored by local authorities, but some reports have suggested ICE agents linger outside jails waiting for people to be released.
-
+While not exactly the same, these numbers for the Los Angeles area are in rough agreement with the data from elsewhere, including the Colorado story.
 
 ### Violent criminal history
 
-BLN has added a "special" code to the data, referring to special categories of criminal convictions. Here's what they look like for the Los Angeles area when combined with the criminality code. (The empty charge type means there is no special code -- it's all other crimes.)
+BLN has added a "special" code to the data, referring to special categories of criminal convictions. Here's what they look like for the Los Angeles area when combined with the criminality code in a pivot table. (The empty charge type means there is no special code -- it's all other crimes.)
 
 ![Crime types](assets/images/arrest-crimetype.png){fig-alt="Criminality by type of crime" width=80%}
 
-This shows the proportion of arrests of people with violent criminal histories has fallen, to 11 percent, in the Los Angeles area. This is higher than in other parts of the country.
+This shows the proportion of arrests of people with violent criminal histories has fallen, from 18 to 11 percent, in the Los Angeles area. This is still higher than in other parts of the country.
 
 ### Most frequent charges
 
@@ -65,7 +62,7 @@ The Colorado Sun / WyoFile data through June surprisingly showed that the most f
 
 ![Arrest charges](assets/images/arrest-commoncharge-2025.png){fig-alt="Most common crime charge in LA is drug trafficking followed by DUI" width=80%}
 
-You can see that you probably want to combine similar types of crimes rather than counting DUI and Traffice Offense as separate charge. You can do this by using another BLN-added column `bln_charge_group`, which combines crimes based on their standard FBI codes into more general groupings. For instance, all homicides are grouped together instead of being broken out by a specific type. Here's a portion of the Los Angeles data showing the different ways you can look at homicides:
+You can see that you probably want to combine similar types of crimes rather than counting DUI and Traffic Offense as separate charges. You can do this by using another BLN-added column `bln_charge_group`, which combines crimes based on their standard FBI codes into more general groupings. For instance, all homicides are grouped together instead of being broken out by a specific type. Here's a portion of the Los Angeles data showing the different ways you can look at homicides:
 
 ![Charge groupings](assets/images/arrest-chargegroups-example.png){width=90%}
 
@@ -75,7 +72,7 @@ Here is the pivot table that shows these more general charge groups:
 
 ## Custodial vs. at-large arrests
 
-BLN has used Homeland Security's definitions of the apprehension method, distinguishing between what they call "custodial" and "at-large" arrests. You can think of at-large arrests the same way some people have written about street arrests, or arrests that happen in the community. These are any arrests made that was not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.
+BLN has used Homeland Security's definitions of the apprehension method, distinguishing between what they call "custodial" and "at-large" arrests. You can think of at-large arrests the same way some people have written about "street arrests", or arrests that happen in the community. These are any arrests made that were not part of a transfer from a detention center, jail or prison. One marked difference from previous years is that ICE is making many more of these arrests as shown in this weekly chart from the DDP paper.
 
 ![](assets/images/ddp-street-arrests.png){width=80% fig-align="center"}
 
@@ -111,15 +108,15 @@ Among the youngest people arrested in Colorado was a baby girl born in 2024, the
 
 To find the same thing for your area:
 
-1. Filter for dates since Jan. 20, 2025
-2. Sort the table by birth year, in descending order
-3. Look across the table to see what happened to that toddler
+1. Sort the table by birth year, in descending order
+2. Filter for dates since Jan. 20, 2025
+3. Look across the table to see what happened to the toddler in the first row.
 
 ![Find youngest](assets/images/arrests-find-youngest.png)
 
-Here, the  youngest is a Mexican boy born in 2023, arrested on January 28 and removed the next day to Honduras, according to the data.
+Here, one of the youngest is a Mexican boy born in 2023, arrested on January 28 and removed the next day to Honduras, according to the data.
 
-You can reverse the sorting and filter for "No criminal conviction" to find the oldest person without a criminal conviction - a Mexican man in his late 70s, arrested in public in September, who left voluntarily on the same day.
+You can reverse the sorting and filter for "No criminal conviction" to find the oldest people without a criminal conviction - one is a Mexican man in his late 70s, arrested in public in September, who left voluntarily on the same day.
 
 ![Oldest Non-criminal](assets/images/arrest-oldest-noncriminal.png)
 
