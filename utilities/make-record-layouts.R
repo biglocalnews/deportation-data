@@ -42,7 +42,7 @@ descriptions =
     "bln_charge" = "BLN charge description",
     "bln_charge_group_code" = "2-digit crime code, to make for fewer categories",
     "bln_charge_group" = "Description of the 2-digit crime code",
-    "bln_charge_special" = "Special types of charges"
+    "bln_charge_special" = "Special types of charges",
     "birth_year" = NA_character_,
     "citizenship_country" = NA_character_,
     "gender" = NA_character_,
@@ -56,12 +56,12 @@ descriptions =
     "detention_state" = NA_character_,
     "detention_city" = NA_character_,
     "detention_county" = NA_character_,
-    "detention_days_after" = "# of days after the arrest that the detention began. Negative numbers reflect detentions that are recorded as starting a day or two after the arrest",
+    "detention_days_after" = "# of days after the arrest that the detention began. Negative numbers reflect detentions that are recorded as starting just before the arrest",
     "detainer_state" = "State of the most recent detainer",
     "detainer_facility" = "Name of the most recent detainer facility ",
     "detainer_city" = NA_character_,
     "detainer_county" = "Detainer county based on geocoding of the facility name and city -- approximate",
-    "detainer_days_before" = "# of days before the arrest that the detainer was sent. Negative numbers reflect detainers apparently entered up to several days after the arrest"
+    "detainer_days_before" = "# of days before the arrest that the detainer was sent. Negative numbers reflect detainers apparently entered up to several days before the arrest"
   ) |>
   enframe(name = "varname", value = "description")
 

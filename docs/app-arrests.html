@@ -235,13 +235,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 3%">
-<col style="width: 11%">
-<col style="width: 4%">
-<col style="width: 3%">
-<col style="width: 76%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: right;">position</th>
@@ -306,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">apprehension_method_recoded</td>
 <td style="text-align: left;">character</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">At-large or Custodial</td>
+<td style="text-align: left;">At-large or Custodial, see <a href="./app-common-defs.html">common definitions</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">9</td>
@@ -320,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">bln_arrest_charge_code</td>
 <td style="text-align: left;">character</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">FBI 4-digit code for the crime recorded in detentions that best matches the arrest</td>
+<td style="text-align: left;">See <a href="./app-common-defs.html">common definitions</a> for details</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">11</td>
@@ -348,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">bln_charge_special</td>
 <td style="text-align: left;">character</td>
 <td style="text-align: right;">53153</td>
-<td style="text-align: left;">Special types of charges: No criminal conviction; Violent; Traffic; Immigration; or Drug. Blank if none of those apply</td>
+<td style="text-align: left;">Special types of charges</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">15</td>
@@ -376,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">case_status_recoded</td>
 <td style="text-align: left;">character</td>
 <td style="text-align: right;">8931</td>
-<td style="text-align: left;">Removed; Voluntarily returned, Active case , Released, or Other. See methdology for details</td>
+<td style="text-align: left;">See see <a href="./app-common-defs.html">common definitions</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">19</td>
@@ -432,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">detention_days_after</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: right;">52399</td>
-<td style="text-align: left;"># of days after the arrest that the detention began. Negative numbers reflect detentions that are recorded as starting a day or two after the arrest</td>
+<td style="text-align: left;"># of days after the arrest that the detention began. Negative numbers reflect detentions that are recorded as starting just before the arrest</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">27</td>
@@ -467,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">detainer_days_before</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: right;">206906</td>
-<td style="text-align: left;"># of days before the arrest that the detainer was sent. Negative numbers reflect detainers apparently entered up to several days after the arrest</td>
+<td style="text-align: left;"># of days before the arrest that the detainer was sent. Negative numbers reflect detainers apparently entered up to several days before the arrest</td>
 </tr>
 </tbody>
 </table>
@@ -495,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>Use the assigned state from the original data.</p></li>
 <li><p>If the Area of Responsibility was entirely within one state, use that state. This filled in a lot of the rows from Texas, California and New York City.</p></li>
-<li><p>Match a detention to an arrest based on the person ID and the date, and use the state of the first detention location. There is some error in this in areas that cross state lines, such as St.&nbsp;Louis or Kansas City or Washington D.C. , where the major detention location is just across a state border.</p></li>
+<li><p>Match a detention to an arrest based on the person ID and the date, and use the state of the first detention location. There is some error in areas that cross state lines, such as Kansas City or Washington D.C. , where the first detention location is usually across a state border.</p></li>
 <li><p>Match a detainer to an arrest based on the person ID and the date. A detainer can be anytime before an arrest and this data only goes back to 2023, so we used the most recent detainer state before the arrest.</p></li>
 <li><p>The landmark site is often unclear, such as in Atlanta, where they seem to code anything in that area of responsibility as an Atlanta landmark. But elsewhere it’s a lot clearer, such as general metro areas around Minneapolis or Dallas. We counted the number of arrests for each landmark by state in the original data. If one state accounted for at least 90 percent of the arrests at that landmark, we used that state. Otherwise, we left it blank.</p></li>
 </ol>
@@ -527,26 +520,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="detention-details" class="level2">
 <h2 class="anchored" data-anchor-id="detention-details">Detention details</h2>
-<p>About 85 percent of the arrests could be matched to a detention. We used the Data Deportation Project’s criteria for determining whether a detention stay matched up with an arrest: If the arrest was less than <strong>CHECK THIS! I FORGET WHAT I LANDED ON</strong> 7 days before, or less than 3 days after the detention, we considered it a match. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention.</p>
+<p>About 85 percent of the arrests could be matched to a detention. We used the <a href="https://deportationdata.org/analysis/immigration-enforcement-first-nine-months-trump.html">Deportation Data Project’s criteria</a> to match a detention to an arrest: The detention must be within 10 days of the arrest, or less than 5 days before the arrest. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention, with negative numbers indicating the arrest was recorded after the detention.</p>
 </section>
 <section id="detainer-details" class="level2">
 <h2 class="anchored" data-anchor-id="detainer-details">Detainer details</h2>
 <p>Less than half of the detainers could be matched to an arrest record. One reason is that detainers are much less likely to have a person identifier. We used the most recent detainer recorded for a person as a match, even if it was several years ago. The reason is that the detainers don’t expire, and the person could have been incarcerated locally or at the state level the entire time. We did not include as a match any detainer after the arrest.</p>
-</section>
-<section id="progress" class="level2">
-<h2 class="anchored" data-anchor-id="progress">Progress</h2>
-<div class="todo">
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Convert date-time to date only where no time is recorded</label></li>
-<li><label><input type="checkbox" checked="">Decide on how to deal with partial duplicates</label></li>
-<li><label><input type="checkbox" checked="">Collapse case status</label></li>
-<li><label><input type="checkbox" checked="">Collapse case category: Decided not to keep this</label></li>
-<li><label><input type="checkbox" checked="">Collapse program categories</label></li>
-<li><label><input type="checkbox" checked="">Add information on where arrested from detainer and first place of detention to the arrest table</label></li>
-<li><label><input type="checkbox" checked="">Add most serious conviction code / category from the detention, detainer and old removal data. The best-case is detention, detainer might still have pending charge.</label></li>
-<li><label><input type="checkbox">Run the recodes by an expert or two</label></li>
-</ul>
-</div>
 
 
 </section>

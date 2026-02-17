@@ -52,7 +52,7 @@ We were able to estimate a state for almost all of the missing information by ta
 
 2. If the Area of Responsibility was entirely within one state, use that state. This filled in a lot of the rows from Texas, California and New York City.
 
-3. Match a detention to an arrest based on the person ID and the date, and use the state of the first detention location.   There is some error in this in areas that cross state lines, such as St. Louis or Kansas City or Washington D.C. , where the major detention location is just across a state border.
+3. Match a detention to an arrest based on the person ID and the date, and use the state of the first detention location.   There is some error in areas that cross state lines, such as Kansas City or Washington D.C. , where the first detention location is usually across a state border.
 
 4. Match a detainer to an arrest based on the person ID and the date. A detainer can be anytime before an arrest and this data only goes back to 2023, so we used the most recent detainer state before the arrest.
 
@@ -94,7 +94,7 @@ This breakout doesn't exactly match what some news organizations have done, whic
 
 ## Detention details
 
-About 85 percent of the arrests could be matched to a detention. We used the Data Deportation Project's criteria for determining whether a detention stay matched up with an arrest: If the arrest was less than **CHECK THIS! I FORGET WHAT I LANDED ON**  7 days before, or less than 3 days after the detention, we considered it a match. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention.
+About 85 percent of the arrests could be matched to a detention. We used the [Deportation Data Project's criteria](https://deportationdata.org/analysis/immigration-enforcement-first-nine-months-trump.html) to match a detention to an arrest: The detention must be within 10 days of the arrest, or less than 5 days before the arrest. This caught some of the delays we saw in the arrest dates. The table includes the number of days the arrest was recorded before the detention, with negative numbers indicating the arrest was recorded after the detention.
 
 ## Detainer details
 

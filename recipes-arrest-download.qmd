@@ -44,10 +44,11 @@ We expect most reporters will work with files for their state or a few neighbori
 #| message: false
 #| eval: true
 
-google_bucket <- "https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/"
+
+google_bucket <- "https://data.biglocalnews.org/deportation-data/arrests/"
 
 # example url
-#https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ak_ice_arrests.csv
+#https://data.biglocalnews.org/deportation-data/arrests/ak_ice_arrests.csv
 
 state_index |>
   select ( state_name, row_count, file_name) |>
@@ -61,7 +62,6 @@ state_index |>
     columns = list (
       state_name = colDef(name="State",
                         cell=function (value, index) {
-                          # FIX THIS TO THE ACTUAL DATA SOURCE
                           url <- paste0(google_bucket, state_index[index, "file_name"])
                           htmltools::tags$a(href=url, value)
                           }
@@ -90,10 +90,11 @@ There is some inconsistency in the data included for ICE's area of responsibilit
 #| message: false
 #| eval: true
 
-google_bucket <- "https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/"
+google_bucket <- "https://data.biglocalnews.org/deportation-data/arrests/"
 
 # example url
-#https://storage.googleapis.com/bln-sarah-icetest/deportation-data/arrest_csvs/ak_ice_arrests.csv
+#https://data.biglocalnews.org/deportation-data/arrests/ak_ice_arrests.csv
+
 
 aor_index |>
   select ( aor_name, states, row_count, file_name) |>
@@ -107,7 +108,6 @@ aor_index |>
     columns = list (
       aor_name = colDef(name="Area of Responsibility",
                         cell=function (value, index) {
-                          # FIX THIS TO THE ACTUAL DATA SOURCE
                           url <- paste0(google_bucket, aor_index[index, "file_name"])
                           htmltools::tags$a(href=url, value)
                           }
