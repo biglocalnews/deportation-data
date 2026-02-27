@@ -8,11 +8,11 @@ Each update to the data generally requires another lawsuit by the project, which
 
 There are nearly than 375,000 apprehensions representing about 300,000 people in the arrest data alone. Detentions -- people held in ICE facilities -- cover about 1.6 individual steps in the system, as the federal government moves people from place to place.
 
-The project itself allows users to filter and download the raw data, which is a great place to start for people who know how to program or can handle detailed and complicated datsets.
-
-But before you delve into working on your own, consider whether some other sources might provide what your story needs. All of these sources start with the deportation project's original files, but provide different views of the data that might need your needs.
+The project has created slicers for [arrests](https://deportationdata-ice-arrests.share.connect.posit.cloud/) ,  [detentions](https://deportationdata-ice-detention-stays.share.connect.posit.cloud/) and [detainer requests](https://deportationdata-ice-detainers.share.connect.posit.cloud/). It also has [daily population counts for every detention facility](https://deportationdata-ice-detention-facilities-daily-population.share.connect.posit.cloud/) -- a great place to start if you want to get a sense of the general activity level in your area. 
 
 ## Other sources
+
+Before delving into the detailed data yourself, consider whether one of the other organizations working with the ICE dataset might have something simple you can use instead: 
 
 ### Relevant Research
 

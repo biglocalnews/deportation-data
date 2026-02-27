@@ -13,7 +13,7 @@ book:
     style: floating
 
 
-  title: "Immigration enforcement story recipes"
+  title: "Big Local News immigration enforcement reporting recipes"
   subtitle: "Based on data provided by the Deportation Data Project"
   page-navigation: true
   reader-mode: false
@@ -23,6 +23,8 @@ book:
     - name: Sarah Cohen
       affiliations:
         - name: Big Local News, Stanford University
+          url: "https://biglocalnews.org/content/about/"
+      email: cohensh@stanford.edu
 
   chapters:
   - index.qmd

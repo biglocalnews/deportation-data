@@ -1,4 +1,4 @@
-# Story recipe index
+# Reporting recipe index
 
 The following chapters lead you through reproducing some of the most common data-driven stories from around the country.
 
