@@ -29,9 +29,9 @@ The detention data is the most complex, but also the richest, data in the system
 
 There are two kinds of stories that the detentions table can help with: The number of people held in your area, and for how long; and the distance people were sent, especially in the first few days.
 
-BLN is providing a day-by-day count of people in each facility, both as a total number of people who were there at any point in a day, and the number who were there overnight. We've also included some daily statistics on how long people spent in the facility, which is most useful when you are interested in overstays at short-term holding and processing centers that lack beds or showers.
+~~FUTURE: BLN  providing a day-by-day count of people in each facility, both as a total number of people who were there at any point in a day, and the number who were there overnight. We've also included some daily statistics on how long people spent in the facility, which is most useful when you are interested in overstays at short-term holding and processing centers that lack beds or showers.~~
 
-We have enhanced the detention data to include the county and state of the detention facility, total distance traveled by an immigrant during a detention stay, and the distance they traveled in the first week.
+~~FUTURE: We have enhanced the detention data to include the county and state of the detention facility, total distance traveled by an immigrant during a detention stay, and the distance they traveled in the first week.~~
 
 ### Detainers
 

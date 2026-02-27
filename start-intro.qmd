@@ -2,13 +2,21 @@
 
 ![Deportation Data Project](assets/images/ddp-coversheet.png)
 
-The [Deportation Data Project](https://deportationdata.org) is the most widely used effort at documenting arrests, detentions and removals in the immigration system.  Run by Graeme Blair of UCLA and David Hausman of Berkeley Law, the project and its lawyers began suing the federal government for individual level records about a decade ago and finally won access to some of the desired datasets, which they now make available to anyone on their website. It is actively updating information from Immigration and Customs Enforcement, or ICE.^[Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven't yet been analyzed or cleaned by the project.]  As of this writing, the project posts some of the original FOIA data through Oct. 15, 2025. It is trying to get the agency to correct recent versions of the remaining tables.
+The [Deportation Data Project](https://deportationdata.org) is the most widely used effort at documenting arrests, detentions and removals in the immigration system.  The project is run by [Graeme Blair](https://graemeblair.com/), a political scientist at UCLA, and David Hausman, a professor at UC Berkeley Law. For years, they and their lawyers have been suing Homeland Security and its agencies for useful individual-level data on immigration enforcement datasets. They make the results of that effort available to anyone. 
+
+The project is actively updating information from Immigration and Customs Enforcement, or ICE.^[Customs and Border Patrol, or CBP, has not yet provided data that is compatible with the ICE data, and the immigration courts run by the Justice Department provide completely different datasets, which haven't yet been analyzed or cleaned by the project.]  As of this writing, the it posts some of the original FOIA data through Oct. 15, 2025. It is trying to get the agency to correct recent versions of the remaining tables.
 
 Each update to the data generally requires another lawsuit by the project, which means there is no standard release schedule even though the courts have told ICE to produce the files.
 
 There are nearly than 375,000 apprehensions representing about 300,000 people in the arrest data alone. Detentions -- people held in ICE facilities -- cover about 1.6 individual steps in the system, as the federal government moves people from place to place.
 
-The project has created slicers for [arrests](https://deportationdata-ice-arrests.share.connect.posit.cloud/) ,  [detentions](https://deportationdata-ice-detention-stays.share.connect.posit.cloud/) and [detainer requests](https://deportationdata-ice-detainers.share.connect.posit.cloud/). It also has [daily population counts for every detention facility](https://deportationdata-ice-detention-facilities-daily-population.share.connect.posit.cloud/) -- a great place to start if you want to get a sense of the general activity level in your area. 
+Along with raw data files shared by the project, it has also created filters that let users take smaller cuts. All of these are well documented on the website: 
+
+* [arrests](https://deportationdata-ice-arrests.share.connect.posit.cloud/) ,  
+* [detention stays](https://deportationdata-ice-detention-stays.share.connect.posit.cloud/)  
+* [detainer requests](https://deportationdata-ice-detainers.share.connect.posit.cloud/), and 
+* [daily population counts for every detention facility](https://deportationdata-ice-detention-facilities-daily-population.share.connect.posit.cloud/)
+
 
 ## Other sources
 
