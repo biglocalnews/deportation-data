@@ -1,6 +1,6 @@
 ## Getting started
 
-[Big Local News](https://biglocalnews.org/content/about/) has partnered with the [Deportation Data Project](deportationdata.org) to provide local reporters with simplified datasets and reporting recipes that can help them mine the millions of records of people caught in the immigration enforcement system.
+[Big Local News](https://biglocalnews.org/content/about/) is working with the [Deportation Data Project](deportationdata.org) to provide local reporters with simplified datasets and reporting recipes that can help them mine the millions of records of people caught in the immigration enforcement system.
 
 BLN has enhanced some of the data specifically for local stories. But every story idea can't be boiled down to simple instructions. We encourage you to contact us for help when you have a story idea that might come from these records.
 

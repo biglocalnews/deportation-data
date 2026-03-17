@@ -39,7 +39,7 @@ A detainer is a request that an immigrant who is jailed locally be held for ICE.
 
 The detainer data is of most use if you want to report on how your local jails work with ICE, either using the 287g program (which deputizes local law enforcement to act on ICE's behalf) or with detainers. You can check whether your local jail is part of [the 287g program on ICE's website](https://www.ice.gov/identify-and-arrest/287g. (Look for the downloadable Excel spreadsheet toward the bottom of the page.)
 
-This table is missing information about what happened to the detainer about 40 percent of the time, making it of limited use. We have added the location of the facility for the detainer in the arrest data for those that ended in an ICE arrest, but we are not providing enhanced data or reporting recipes for this aspect of the data collection. You can filter and download the raw data [using the slicer](https://deportationdata-ice-detainers.share.connect.posit.cloud/) from the Deportation Data Project's site.
+This table is missing information about what happened to the detainer about 40 percent of the time, making it of limited use. We have added the location of the facility for the detainer in the arrest data for those that ended in an ICE arrest. In the future, we expect to provide enhanced detainer data that will link it to detentions and arrests, hopefully filling in some of the missing information on whether ICE picked up people after detainers. You can filter and download the raw data [using the slicer](https://deportationdata-ice-detainers.share.connect.posit.cloud/) from the Deportation Data Project's site.
 
 ![](/assets/images/detainer-slicer.png)
 
